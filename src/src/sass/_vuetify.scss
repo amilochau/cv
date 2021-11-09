@@ -1,0 +1,38 @@
+.v-select__selections {
+  white-space: nowrap;
+}
+  
+.v-chip--x-small {
+  font-size: 12px;
+  height: 18px;
+
+  .v-chip__content {
+    line-height: 1;
+    padding: 8px;
+  }
+}
+
+.v-input.v-text-field--single-line {
+  .v-text-field__details {
+    display: none;
+  }
+}
+
+.v-list-item__action {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.v-toolbar__content,
+.v-toolbar__extension {
+  > .v-btn, > .v-text-field {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+}
+
+/* Fix breaking change from vuetify 2.4.0 */
+.row {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}

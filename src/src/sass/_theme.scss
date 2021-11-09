@@ -1,0 +1,30 @@
+.theme--light {
+  .app-toolbar {
+    background-color: map-get($grey, 'lighten-5') !important;
+  }
+  .app-navigation-close {
+    color: map-get($grey, 'darken-1') !important;
+  }
+  .step-btn-icon.active {
+    border-bottom: map-get($blue, 'darken-2') solid 2px;
+    color: map-get($blue, 'darken-2');
+  }
+  
+  .v-dialog .table-card {
+    background-color: map-get($grey, 'lighten-4') !important;
+  }
+}
+
+.theme--dark {
+  .app-toolbar {
+    background-color: map-get($grey, 'darken-4') !important;
+  }
+  .step-btn-icon.active {
+    border-bottom: map-get($blue, 'lighten-2') solid 2px;
+    color: map-get($blue, 'lighten-2');
+  }
+  
+  .v-dialog .table-card {
+    background-color: map-get($grey, 'darken-4') !important;
+  }
+}
