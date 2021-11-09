@@ -1,19 +1,19 @@
-name: Deploy application (DEV)
+name: Deploy application (PRD)
 
 on:
   workflow_dispatch:
 
-concurrency: deploy_app_dev
+concurrency: deploy_app_prd
 
 env:
   PROJECT_WORKSPACE: './src'
   PROJECT_OUTPUT: './src/dist'
   INFRA_DEPLOY_TEMPLATE_PATH: '**/static-web-apps/template.bicep'
-  INFRA_DEPLOY_PARAMETERS_PATH: '**/.github/infrastructure/deploy-app.dev.json'
-  INFRA_RG_NAME: 'mil-cv-dev-rg'
+  INFRA_DEPLOY_PARAMETERS_PATH: '**/.github/infrastructure/deploy-app.prd.json'
+  INFRA_RG_NAME: 'mil-cv-prd-rg'
   INFRA_RG_LOCATION: 'westeurope'
-  INFRA_APP_NAME: 'mil-cv-dev-swa'
-  TEMPLATES_VERSION: amilochau/create-static-web-apps-template
+  INFRA_APP_NAME: 'mil-cv-prd-swa'
+  TEMPLATES_VERSION: v6
 
 jobs:
   deploy_infra:
@@ -37,11 +37,11 @@ jobs:
     name: Deploy application
     needs: deploy_infra
     runs-on: ubuntu-latest
-    environment: DEV
+    environment: PRD
     steps:
       - uses: actions/checkout@v2
       - name: Deploy Azure Functions application
-        uses: amilochau/github-actions/deploy/static-web-apps@amilochau/create-actions-swa #TODO Change to v1!
+        uses: amilochau/github-actions/deploy/static-web-apps@v1
         with:
           projectWorkspace: ${{ env.PROJECT_WORKSPACE }}
           projectOutput: ${{ env.PROJECT_OUTPUT }}
