@@ -1,0 +1,74 @@
+name: Deploy application (DEV)
+
+on:
+  workflow_dispatch:
+
+concurrency: deploy_app_dev
+
+env:
+  WORSKPACE_BUILD: './src'
+  WORSKPACE_OUTPUT: './src/dist'
+  INFRA_DEPLOY_TEMPLATE_PATH: '**/static-web-apps/template.bicep'
+  INFRA_DEPLOY_PARAMETERS_PATH: '**/.github/infrastructure/deploy-app.dev.json'
+  INFRA_RG_NAME: 'mil-cv-dev-rg'
+  INFRA_RG_LOCATION: 'westeurope'
+  INFRA_APP_NAME: 'mil-cv-dev-swa'
+  NODE_VERSION: 16.x
+  TEMPLATES_VERSION: amilochau/create-static-web-apps-template
+
+jobs:
+  deploy_infra:
+    name: Deploy infrastructure
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2 # For parameters file
+        with:
+          path: trips
+      - name: Deploy infrastructure
+        uses: amilochau/github-actions/deploy/infrastructure@v1
+        with:
+          azureTemplateVersion: ${{ env.TEMPLATES_VERSION }}
+          azureCredentials: ${{ secrets.AZURE_CREDENTIALS }}
+          resourceGroupName: ${{ env.INFRA_RG_NAME }}
+          resourceGroupLocation: ${{ env.INFRA_RG_LOCATION }}
+          templateFilePath: ${{ env.INFRA_DEPLOY_TEMPLATE_PATH }}
+          parametersFilePath: ${{ env.INFRA_DEPLOY_PARAMETERS_PATH }}
+
+  deploy_app:
+    name: Deploy application
+    needs: deploy_infra
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '3.1.x' # See https://github.com/Azure/azure-functions-dotnet-worker/wiki/Known-issues#net-core-31-dependency
+      - name: Deploy Azure Functions application
+        uses: amilochau/github-actions/deploy/functions@v1
+        with:
+          projectsToBuild: ${{ env.PROJECTS_BUILD }}
+          azureCredentials: ${{ secrets.AZURE_CREDENTIALS }}
+          applicationName: ${{ env.INFRA_APP_NAME }}
+          projectsToPublishPath: ${{ env.PROJECTS_PUBLISH }}
+          healthUrl: ${{ env.INFRA_HEALTH }}
+
+  deploy_app:
+    name: Deploy application
+    needs: deploy_infra
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build And Deploy
+        id: deploy
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_YELLOW_SMOKE_0C375A703 }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          action: 'upload'
+          app_location: ${{ env.WORSKPACE_BUILD }}
+          output_location: ${{ env.WORSKPACE_OUTPUT }}
