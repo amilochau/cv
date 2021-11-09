@@ -40,29 +40,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Setup .NET Core
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: ${{ env.DOTNET_VERSION }}
-      - name: Setup .NET Core
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: '3.1.x' # See https://github.com/Azure/azure-functions-dotnet-worker/wiki/Known-issues#net-core-31-dependency
-      - name: Deploy Azure Functions application
-        uses: amilochau/github-actions/deploy/functions@v1
-        with:
-          projectsToBuild: ${{ env.PROJECTS_BUILD }}
-          azureCredentials: ${{ secrets.AZURE_CREDENTIALS }}
-          applicationName: ${{ env.INFRA_APP_NAME }}
-          projectsToPublishPath: ${{ env.PROJECTS_PUBLISH }}
-          healthUrl: ${{ env.INFRA_HEALTH }}
-
-  deploy_app:
-    name: Deploy application
-    needs: deploy_infra
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
       - name: Build And Deploy
         id: deploy
         uses: Azure/static-web-apps-deploy@v1
