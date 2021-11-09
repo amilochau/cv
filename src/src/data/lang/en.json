@@ -96,6 +96,9 @@
   "components": {
     "offline": {
       "title": "You lost your Internet connection..."
+    },
+    "listItems": {
+      "avatar": "Avatar"
     }
   },
   "enums": {
