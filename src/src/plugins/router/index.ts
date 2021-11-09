@@ -9,7 +9,7 @@ import i18n from '../i18n';
 
 Vue.use(Router);
 
-const route = (path: any, name: any, component: any, requiresAuth: any, props: any, children: any) => {
+const route: (path: any, name: any, component: any, requiresAuth: any, props: any, children: any) => any = (path, name, component, requiresAuth, props, children) => {
   const hasChildren = Array.isArray(children);
 
   return {
