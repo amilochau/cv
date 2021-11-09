@@ -6,14 +6,13 @@ on:
 concurrency: deploy_app_dev
 
 env:
-  WORSKPACE_BUILD: './src'
-  WORSKPACE_OUTPUT: './src/dist'
+  PROJECT_WORKSPACE: './src'
+  PROJECT_OUTPUT: './src/dist'
   INFRA_DEPLOY_TEMPLATE_PATH: '**/static-web-apps/template.bicep'
   INFRA_DEPLOY_PARAMETERS_PATH: '**/.github/infrastructure/deploy-app.dev.json'
   INFRA_RG_NAME: 'mil-cv-dev-rg'
   INFRA_RG_LOCATION: 'westeurope'
   INFRA_APP_NAME: 'mil-cv-dev-swa'
-  NODE_VERSION: 16.x
   TEMPLATES_VERSION: amilochau/create-static-web-apps-template
 
 jobs:
@@ -49,3 +48,11 @@ jobs:
           action: 'upload'
           app_location: ${{ env.WORSKPACE_BUILD }}
           output_location: ${{ env.WORSKPACE_OUTPUT }}
+
+      - name: Deploy Azure Functions application
+        uses: amilochau/github-actions/deploy/static-web-apps@amilochau/create-actions-swa #TODO Change to v1!
+        with:
+          projectWorkspace: ${{ env.PROJECT_WORKSPACE }}
+          projectOutput: ${{ env.PROJECT_OUTPUT }}
+          azureStaticWebAppsApiToken: ${{ secrets.SWA_TOKEN }}
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
