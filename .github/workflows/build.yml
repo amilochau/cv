@@ -13,8 +13,7 @@ on:
     - src/**
 
 env:
-  WORSKPACE_BUILD: './src'
-  NODE_VERSION: 16.x
+  PROJECT_WORKSPACE: './src'
 
 jobs:
   build:
@@ -22,21 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
-      - name: Use Node.js
-        uses: actions/setup-node@v2
+      - name: Build and test project
+        uses: amilochau/github-actions/build/node@v1
         with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
-      - name: Restore dependencies
-        shell: bash
-        run: npm ci
-        working-directory: ${{ env.WORSKPACE_BUILD }}
-      - name: Build application
-        shell: bash
-        run: npm run build
-        working-directory: ${{ env.WORSKPACE_BUILD }}
-      - name: Test application
-        shell: bash
-        run: npm test --if-present
-        working-directory: ${{ env.WORSKPACE_BUILD }}
+          projectWorkspace: ${{ env.PROJECT_WORKSPACE }}
