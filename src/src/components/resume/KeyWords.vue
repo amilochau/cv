@@ -24,6 +24,6 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class KeyWords extends Vue {
-  @Prop({ type: Array, required: true }) public topics!: []
+  @Prop({ type: Array, required: true }) public topics!: [];
 }
 </script>

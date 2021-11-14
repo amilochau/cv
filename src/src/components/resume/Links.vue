@@ -16,6 +16,6 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class Links extends Vue {
-  @Prop({ type: Array, required: true }) public links!: IListItem[]
+  @Prop({ type: Array, required: true }) public links!: IListItem[];
 }
 </script>
