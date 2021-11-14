@@ -92,13 +92,6 @@
       "french": "French"
     }
   },
-  "format": {
-    "days": {
-      "s": "{days} day",
-      "p": "{days} days"
-    },
-    "keyValue": "{key}: {value}"
-  },
   "badges": {
     "wip": "WIP"
   },

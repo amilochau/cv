@@ -30,7 +30,6 @@
 </template>
 
 <script lang="ts">
-import { IPage } from '@/models/definitions';
 import { Component, Vue } from 'vue-property-decorator';
 
 @Component
