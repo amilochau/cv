@@ -41,7 +41,17 @@
                   {{ job.place }}
                 </v-chip>
               </p>
-              <p><em>{{ job.description }}</em></p>
+              <p class="text--secondary font-italic">{{ job.description }}</p>
+              <div v-if="job.missions">
+                <p>{{ $t('resume.experiences.missions') }}</p>
+                <ul>
+                  <li
+                   v-for="(mission, k) in job.missions"
+                   :key="k">
+                   {{ mission.title }}
+                  </li>
+                </ul>
+              </div>
             </v-card-text>
           </v-card>
         </v-timeline-item>

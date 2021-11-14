@@ -97,7 +97,9 @@
   },
   "resume": {
     "experiences": {
-      "title": "Expériences"
+      "title": "Expériences",
+      "missions": "Principales missions :",
+      "realizations": "Principales réalisations :"
     },
     "keyWords": {
       "title": "Mots-clés"
