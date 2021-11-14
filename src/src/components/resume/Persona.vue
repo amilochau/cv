@@ -25,6 +25,9 @@
       <v-btn
         v-for="(action, i) in actions"
         :key="i"
+        :href="action.href"
+        target="_blank"
+        rel="noopener"
         icon>
         <v-icon>{{ action.icon }}</v-icon>
       </v-btn>

@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row>
-      <v-col cols="12" sm="4">
+      <v-col cols="12" md="4">
         <resume-persona
           :image="currentResume.image"
           :name="currentResume.name"
@@ -13,9 +13,11 @@
         <resume-links
           :links="currentResume.links"/>
       </v-col>
-      <v-col cols="12" sm="8">
-        <resume-experiences/>
-        <resume-training/>
+      <v-col cols="12" md="8">
+        <resume-experiences
+          :experiences="currentResume.experiences"/>
+        <resume-training
+          :trainings="currentResume.trainings"/>
       </v-col>
     </v-row>
   </v-container>
@@ -36,34 +38,30 @@ export default class HomePage extends Vue {
       actions: [
         {
           icon: 'mdi-linkedin',
+          href: 'https://www.linkedin.com/in/antoine-milochau/?locale=en_US',
         },
         {
           icon: 'mdi-github',
-        },
-        {
-          icon: 'mdi-twitter',
-        },
-        {
-          icon: 'mdi-email',
+          href: 'https://github.com/amilochau',
         },
       ],
       topics: [
         {
-          icon: 'mdi-linkedin',
+          title: 'Develoment',
         },
         {
-          icon: 'mdi-github',
+          title: 'DevOps',
         },
         {
-          icon: 'mdi-twitter',
+          title: 'Architecture',
         },
         {
-          icon: 'mdi-email',
+          title: 'Management',
         },
       ],
       links: [
         {
-          title: 'Personal projects',
+          title: 'Personal',
           icon: 'mdi-home-city',
           disableTranslation: true,
           items: [
@@ -77,14 +75,22 @@ export default class HomePage extends Vue {
               title: 'Roadmap',
               icon: 'mdi-chart-gantt',
               disableTranslation: true,
+              href: 'https://github.com/amilochau/.github/blob/main/docs/roadmap.md',
             },
             {
               title: 'Architecture',
               icon: 'mdi-sitemap',
               disableTranslation: true,
+              badge: 'badges.wip',
             },
           ],
         },
+      ],
+      experiences: [
+
+      ],
+      trainings: [
+
       ],
     },
     [CultureType.French]: {
@@ -95,34 +101,30 @@ export default class HomePage extends Vue {
       actions: [
         {
           icon: 'mdi-linkedin',
+          href: 'https://www.linkedin.com/in/antoine-milochau/',
         },
         {
           icon: 'mdi-github',
-        },
-        {
-          icon: 'mdi-twitter',
-        },
-        {
-          icon: 'mdi-email',
+          href: 'https://github.com/amilochau',
         },
       ],
       topics: [
         {
-          icon: 'mdi-linkedin',
+          title: 'Développement',
         },
         {
-          icon: 'mdi-github',
+          title: 'DevOps',
         },
         {
-          icon: 'mdi-twitter',
+          title: 'Architecture',
         },
         {
-          icon: 'mdi-email',
+          title: 'Management',
         },
       ],
       links: [
         {
-          title: 'Projects personnels',
+          title: 'Personnel',
           icon: 'mdi-home-city',
           disableTranslation: true,
           items: [
@@ -136,17 +138,25 @@ export default class HomePage extends Vue {
               title: 'Roadmap',
               icon: 'mdi-chart-gantt',
               disableTranslation: true,
+              href: 'https://github.com/amilochau/.github/blob/main/docs/roadmap.md',
             },
             {
               title: 'Architecture',
               icon: 'mdi-sitemap',
               disableTranslation: true,
+              badge: 'badges.wip',
             },
           ],
         },
       ],
+      experiences: [
+
+      ],
+      trainings: [
+
+      ],
     },
-  }
+  };
 
   get currentCulture() {
     if (!this.$route.params.lang.localeCompare('fr', undefined, { sensitivity: 'base' })) {
