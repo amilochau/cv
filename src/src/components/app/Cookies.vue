@@ -11,7 +11,7 @@
       <v-btn
         class="info"
         text
-        :to="{ name: 'home/Privacy' }">{{ $t('app.cookies.read') }}</v-btn>
+        :to="{ name: 'Privacy' }">{{ $t('app.cookies.read') }}</v-btn>
       <v-btn
         class="success"
         text

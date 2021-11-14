@@ -10,7 +10,7 @@
         no-action>
         <template #activator>
           <v-list-item-content>
-            <v-list-item-title>{{ item.disableTranslation ? itme.item :  $t(item.title) }}</v-list-item-title>
+            <v-list-item-title>{{ item.disableTranslation ? item.title :  $t(item.title) }}</v-list-item-title>
           </v-list-item-content>
         </template>
         <template v-for="(subItem, j) in item.items.filter(x => display(x))">
@@ -31,7 +31,7 @@
             :href="subItem.href"
             :disabled="subItem.disabled"
             :inactive="subItem.inactive"
-            :target="subItem.target"
+            :target="subItem.href ? '_blank' : undefined"
             exact
             class="pl-4"
             rel="noopener"
@@ -84,7 +84,7 @@
         :href="item.href"
         :disabled="item.disabled"
         :inactive="item.inactive"
-        :target="item.target"
+        :target="item.href ? '_blank' : undefined"
         exact
         rel="noopener"
         @click="item.event ? $emit(item.event, item.eventArg) : null">

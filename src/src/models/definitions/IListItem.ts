@@ -12,7 +12,6 @@ export default interface IListItem {
   to?: string | Location;
   disabled?: boolean;
   inactive?: boolean;
-  target?: string;
   avatar?: string;
   header?: string;
   divider?: boolean;
