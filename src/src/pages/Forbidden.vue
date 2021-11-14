@@ -8,7 +8,7 @@
         <p>{{ $t('pages.forbidden.description') }}</p>
         <v-btn
           :disabled="loading"
-          :to="{ name: 'home/Home' }"
+          :to="{ name: 'Home' }"
           outlined
           color="primary">{{ $t('pages.forbidden.buttonText') }}</v-btn>
       </v-col>

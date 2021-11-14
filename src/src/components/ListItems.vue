@@ -10,7 +10,7 @@
         no-action>
         <template #activator>
           <v-list-item-content>
-            <v-list-item-title>{{ item.disableTranslation ? itme.item :  $t(item.title) }}</v-list-item-title>
+            <v-list-item-title>{{ item.disableTranslation ? item.title :  $t(item.title) }}</v-list-item-title>
           </v-list-item-content>
         </template>
         <template v-for="(subItem, j) in item.items.filter(x => display(x))">

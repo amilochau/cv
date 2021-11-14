@@ -11,7 +11,6 @@
     <span class="text-h6 mx-4 nowrap-with-ellipsis">{{ $t('app.header.bar.title') }}</span>
     <v-spacer/>
     <app-header-settings/>
-    <app-header-help/>
   </v-app-bar>
 </template>
 

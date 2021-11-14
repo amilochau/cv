@@ -8,7 +8,7 @@
         <p>{{ $t('pages.notFound.description') }}</p>
         <v-btn
           :disabled="loading"
-          :to="{ name: 'home/Home' }"
+          :to="{ name: 'Home' }"
           outlined
           color="primary">{{ $t('pages.notFound.buttonText') }}</v-btn>
       </v-col>
