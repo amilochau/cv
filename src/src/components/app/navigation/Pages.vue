@@ -13,15 +13,15 @@
       </v-list-item>
     </v-list>
     <v-divider class="pb-2"/>
-    <list-items :items="navigationDrawerItems"/>
+    <list-items :list="drawer"/>
   </span>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import { mapActions } from 'vuex';
-import navigationDrawerItems from '../../../data/layout/navigation/drawer';
-import { IListItem } from '../../../models/definitions';
+import drawer from '../../../data/layout/navigation/drawer.json';
+import { IList } from '../../../models/definitions';
 
 @Component({
   methods: {
@@ -29,7 +29,7 @@ import { IListItem } from '../../../models/definitions';
   },
 })
 export default class NavigationPages extends Vue {
-  public navigationDrawerItems: IListItem[] = navigationDrawerItems;
+  public drawer: IList = drawer;
 
   public toggleDrawer!: () => Promise<void>;
 }

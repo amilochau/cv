@@ -1,0 +1,17 @@
+{
+  "items": [
+    {
+      "title": { "text": "app.navigation.home" },
+      "icon": "mdi-home",
+      "action": { "to": { "name": "Home" } }
+    },
+    {
+      "divider": true
+    },
+    {
+      "title": { "text": "app.navigation.privacy" },
+      "icon": "mdi-gavel",
+      "action": { "to": { "name": "Privacy" } }
+    }
+  ]
+}

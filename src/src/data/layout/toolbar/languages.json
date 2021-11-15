@@ -1,0 +1,17 @@
+{
+  "items": [
+    {
+      "header": { "text": "app.header.settings.languages.title" }
+    },
+    {
+      "title": { "text": "app.header.settings.languages.english" },
+      "avatar": "img/us/24.png",
+      "action": { "event": "to", "eventArg": "en" }
+    },
+    {
+      "title": { "text": "app.header.settings.languages.french" },
+      "avatar": "img/fr/24.png",
+      "action": { "event": "to", "eventArg": "fr" }
+    }
+  ]
+}

@@ -21,7 +21,7 @@
     </template>
     <v-card class="pb-1">
       <list-items
-        :items="toolbarLanguagesItems"
+        :list="languages"
         dense
         @to="setLanguage"/>
       <v-divider/>
@@ -47,8 +47,8 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import { mapActions, mapGetters } from 'vuex';
-import toolbarLanguagesItems from '../../../data/layout/toolbar/languages';
-import { IListItem } from '../../../models/definitions';
+import languages from '../../../data/layout/toolbar/languages.json';
+import { IList } from '../../../models/definitions';
 
 @Component({
   computed: {
@@ -59,7 +59,7 @@ import { IListItem } from '../../../models/definitions';
   },
 })
 export default class Settings extends Vue {
-  public toolbarLanguagesItems: IListItem[] = toolbarLanguagesItems;
+  public languages: IList = languages;
   public darkTheme!: boolean;
 
   public changeTheme!: (darkTheme: boolean) => Promise<void>;

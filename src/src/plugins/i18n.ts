@@ -22,11 +22,14 @@ const i18n = new VueI18n({
 });
 
 const formatExperienceDate = (value: string) => moment(value).format('MMM YYYY');
+const formatTrainingDate = (value: string) => moment(value).format('YYYY');
 
 Vue.filter('formatExperienceDate', formatExperienceDate);
+Vue.filter('formatTrainingDate', formatTrainingDate);
 
 export default i18n;
 
 export {
   formatExperienceDate,
+  formatTrainingDate,
 };
