@@ -2,7 +2,7 @@
   <v-card
     class="mt-2">
     <v-card-title>
-      <v-icon left>mdi-numeric</v-icon>
+      <v-icon left>mdi-ticket-confirmation</v-icon>
       {{ $t('resume.metrics.title') }}
     </v-card-title>
     <v-card-text>
