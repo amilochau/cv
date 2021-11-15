@@ -1,7 +1,8 @@
 <template>
   <v-list
     class="py-0"
-    dense>
+    dense
+    :three-line="list.threeLine">
     <template v-for="(item, i) in list.items">
       <v-list-group
         v-if="item.items"
@@ -11,7 +12,7 @@
         no-action>
         <template #activator>
           <v-list-item-content>
-            <v-list-item-title>{{ list.disableTranslation ? item.title.text :  $t(item.title.text) }}</v-list-item-title>
+            <v-list-item-title class="multi-line">{{ list.disableTranslation ? item.title.text :  $t(item.title.text) }}</v-list-item-title>
             <v-list-item-subtitle v-if="item.subtitle">{{ list.disableTranslation ? item.subtitle.text :  $t(item.subtitle.text) }}</v-list-item-subtitle>
           </v-list-item-content>
         </template>
@@ -43,12 +44,18 @@
             </v-list-item-action>
             <v-list-item-avatar
               v-else-if="subItem.avatar"
-              tile
-              size="24px">
+              :size="item.avatar.size ? item.avatar.size : '24px'"
+              :color="subItem.avatar.color"
+              :rounded="subItem.avatar.label">
               <img
+                v-if="subItem.avatar.src"
                 :alt="$t('components.listItems.avatar')"
-                :src="`${baseUrl}${subItem.avatar}`"
-                width="24px">
+                :src="`${baseUrl}${subItem.avatar.src}`"
+                :width="item.avatar.size ? item.avatar.size : '24px'">
+              <span
+                v-else-if="subItem.avatar.title">
+                {{ list.disableTranslation ? subItem.avatar.title.text : $t(subItem.avatar.title.text) }}
+              </span>
             </v-list-item-avatar>
             <v-list-item-content>
               <v-list-item-title>{{ list.disableTranslation ? subItem.title.text : $t(subItem.title.text) }}</v-list-item-title>
@@ -92,15 +99,21 @@
         </v-list-item-action>
         <v-list-item-avatar
           v-else-if="item.avatar"
-          tile
-          size="24px">
+          :size="item.avatar.size ? item.avatar.size : '24px'"
+          :color="item.avatar.color"
+          :rounded="item.avatar.label">
           <img
+            v-if="item.avatar.src"
             :alt="$t('components.listItems.avatar')"
-            :src="`${baseUrl}${item.avatar}`"
-            width="24px">
+            :src="`${baseUrl}${item.avatar.src}`"
+            :width="item.avatar.size ? item.avatar.size : '24px'">
+          <span
+            v-else-if="item.avatar.title">
+            {{ list.disableTranslation ? item.avatar.title.text : $t(item.avatar.title.text) }}
+          </span>
         </v-list-item-avatar>
         <v-list-item-content>
-          <v-list-item-title>{{ list.disableTranslation ? item.title.text : $t(item.title.text) }}</v-list-item-title>
+          <v-list-item-title class="multi-line">{{ list.disableTranslation ? item.title.text : $t(item.title.text) }}</v-list-item-title>
           <v-list-item-subtitle v-if="item.subtitle">{{ list.disableTranslation ? item.subtitle.text : $t(item.subtitle.text) }}</v-list-item-subtitle>
         </v-list-item-content>
         <v-chip

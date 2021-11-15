@@ -20,6 +20,14 @@ export interface IBadge {
   small?: boolean;
 }
 
+export interface IAvatar {
+  title?: IText;
+  src?: string;
+  color?: string;
+  label?: boolean;
+  size?: string;
+}
+
 export interface IListItem {
   items?: IListItem[];
 
@@ -33,7 +41,7 @@ export interface IListItem {
   inactive?: boolean;
 
   icon?: string;
-  avatar?: string;
+  avatar?: IAvatar;
   badge?: IBadge;
 }
 
@@ -41,4 +49,5 @@ export interface IList {
   items: IListItem[];
   disableTranslation?: boolean;
   expandGroups?: boolean;
+  threeLine?: boolean;
 }

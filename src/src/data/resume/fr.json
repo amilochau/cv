@@ -177,5 +177,22 @@
         "action": { "href": "https://docs.microsoft.com/fr-fr/users/amilochau" }
       }
     ]
+  },
+  "metrics": {
+    "disableTranslation": true,
+    "items": [
+      {
+        "avatar": { "title": { "text": "10" }, "color": "primary white--text", "size": "36px" },
+        "title": { "text": "Années d'expérience dans l'IT" }
+      },
+      {
+        "avatar": { "title": { "text": "137" }, "color": "primary white--text", "size": "36px" },
+        "title": { "text": "Resources Azure personnnelles" }
+      },
+      {
+        "avatar": { "title": { "text": "4" }, "color": "primary white--text", "size": "36px" },
+        "title": { "text": "Tasses de café par jour" }
+      }
+    ]
   }
 }

@@ -12,6 +12,8 @@
           :topics='currentResume.topics'/>
         <resume-training
           :trainings='currentResume.trainings'/>
+        <resume-metrics
+          :metrics='currentResume.metrics'/>
         <resume-links
           :links='currentResume.links'/>
       </v-col>

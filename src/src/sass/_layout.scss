@@ -25,16 +25,6 @@
   word-break: break-all;
 }
 
-.step-btn-icon {
-  &.active {
-    border-radius: 0;
-    margin-bottom: 4px;
-  }
-  .number {
-    font-style: normal;
-  }
-}
-
 %nowrap-with-ellipsis {
   white-space: nowrap;
   overflow: hidden;
