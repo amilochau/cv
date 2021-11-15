@@ -13,7 +13,7 @@
         <template #activator>
           <v-list-item-content>
             <v-list-item-title class="multi-line">{{ list.disableTranslation ? item.title.text :  $t(item.title.text) }}</v-list-item-title>
-            <v-list-item-subtitle v-if="item.subtitle">{{ list.disableTranslation ? item.subtitle.text :  $t(item.subtitle.text) }}</v-list-item-subtitle>
+            <v-list-item-subtitle v-if="item.subtitle" class="multi-line">{{ list.disableTranslation ? item.subtitle.text :  $t(item.subtitle.text) }}</v-list-item-subtitle>
           </v-list-item-content>
         </template>
         <template v-for="(subItem, j) in item.items">
@@ -114,7 +114,7 @@
         </v-list-item-avatar>
         <v-list-item-content>
           <v-list-item-title class="multi-line">{{ list.disableTranslation ? item.title.text : $t(item.title.text) }}</v-list-item-title>
-          <v-list-item-subtitle v-if="item.subtitle">{{ list.disableTranslation ? item.subtitle.text : $t(item.subtitle.text) }}</v-list-item-subtitle>
+          <v-list-item-subtitle v-if="item.subtitle" class="multi-line">{{ list.disableTranslation ? item.subtitle.text : $t(item.subtitle.text) }}</v-list-item-subtitle>
         </v-list-item-content>
         <v-chip
           v-if="item.badge"
