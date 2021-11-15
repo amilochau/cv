@@ -92,19 +92,11 @@
       "french": "Français"
     }
   },
-  "format": {
-    "days": {
-      "s": "{days} jour",
-      "p": "{days} jours"
-    },
-    "keyValue": "{key} : {value}"
-  },
-  "badges": {
-    "wip": "En cours"
-  },
   "resume": {
     "experiences": {
-      "title": "Expériences"
+      "title": "Expériences",
+      "missions": "Principales missions :",
+      "realizations": "Principales réalisations :"
     },
     "keyWords": {
       "title": "Mots-clés"

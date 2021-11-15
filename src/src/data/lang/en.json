@@ -92,19 +92,11 @@
       "french": "French"
     }
   },
-  "format": {
-    "days": {
-      "s": "{days} day",
-      "p": "{days} days"
-    },
-    "keyValue": "{key}: {value}"
-  },
-  "badges": {
-    "wip": "WIP"
-  },
   "resume": {
     "experiences": {
-      "title": "Experiences"
+      "title": "Experiences",
+      "missions": "Main missions:",
+      "realizations": "Main realizations:"
     },
     "keyWords": {
       "title": "Top topics"

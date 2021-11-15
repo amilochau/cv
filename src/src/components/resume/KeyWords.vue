@@ -2,6 +2,7 @@
   <v-card
     class="mt-2">
     <v-card-title>
+      <v-icon left>mdi-filter</v-icon>
       {{ $t('resume.keyWords.title') }}
     </v-card-title>
     <v-card-text>

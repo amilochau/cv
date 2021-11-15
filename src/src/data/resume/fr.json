@@ -1,0 +1,181 @@
+{
+  "image": "https://tbivision.com/files/2020/10/Bill-Gates-headshot-1024x732.jpg",
+  "name": "Antoine MILOCHAU",
+  "job": "Architecte applicatif",
+  "description": "Architecte applicatif, j'explore et j'implémente de nombreuses technologies Microsoft chez SPVIE Assurances. Contactez-moi pour en apprendre plus sur mes projets.",
+  "actions": [
+    {
+      "icon": "mdi-linkedin",
+      "href": "https://www.linkedin.com/in/antoine-milochau/"
+    },
+    {
+      "icon": "mdi-github",
+      "href": "https://github.com/amilochau"
+    }
+  ],
+  "topics": [
+    {
+      "title": "Développement"
+    },
+    {
+      "title": "DevOps"
+    },
+    {
+      "title": "Architecture"
+    },
+    {
+      "title": "Management"
+    }
+  ],
+  "links": {
+    "disableTranslation": true,
+    "expandGroups": true,
+    "items": [
+      {
+        "title": { "text": "Personnel" },
+        "icon": "mdi-home-city",
+        "items": [
+          {
+            "title": { "text": "Vision" },
+            "icon": "mdi-television-ambient-light",
+            "badge": { "text": "WIP" }
+          },
+          {
+            "title": { "text": "Roadmap" },
+            "icon": "mdi-chart-gantt",
+            "action": { "href": "https://github.com/amilochau/.github/blob/main/docs/roadmap.md" }
+          },
+          {
+            "title": { "text": "Architecture" },
+            "icon": "mdi-sitemap",
+            "badge": { "text": "WIP" }
+          }
+        ]
+      }
+    ]
+  },
+  "experiences": [
+    {
+      "company": "SPVIE Technology",
+      "jobs": [
+        {
+          "title": "Architecte applicatif",
+          "place": "Suresnes, France",
+          "startDate": "2020-05-04"
+        }
+      ]
+    },
+    {
+      "company": "MONOPRIX ONLINE",
+      "jobs": [
+        {
+          "title": "Lead Developer",
+          "place": "Clichy, France",
+          "startDate": "2019-07-01",
+          "endDate": "2020-04-30"
+        }
+      ]
+    },
+    {
+      "company": "TOTAL Raffinage Chimie",
+      "jobs": [
+        {
+          "title": "Ingénieur Contrôle Avancé",
+          "place": "Courbevoie, France",
+          "startDate": "2018-04-01",
+          "endDate": "2019-06-20",
+          "context": "Division 'Supply, Sales & Optimization', spécialisé dans l'optimisation des mélanges de carburant",
+          "description": "Des outils (notamment des applications) et des méthodes (notamment des guides et formations aux techniciens) permettent aux raffineries d'optimiser leur production.",
+          "missions": [
+            {
+              "title": "Management de projets",
+              "description": "Gestion des projets d'applications (existantes et futures) : priorisation des besoins, coordination des travaux, architecture IT, reporting."
+            },
+            {
+              "title": "Lead technique",
+              "desccription": "Définition des architectures et technologies cibles, lien avec les développeurs (internes et externes, prestations au forfait et en régie). Participation au développement d'applications Web et Desktop. Technlologies utilisées en développement : ASP.NET Core, vue.js. Environ 20 projets, 35 applications suivis (dont 10 applications en tant que propriétaire)."
+            },
+            {
+              "title": "Scrum Master",
+              "description": "Mise en place d'une organisation agile (Scrum): sprints, rituels, dashboards, conduite du changement."
+            },
+            {
+              "title": "DevOps",
+              "description": "Mise en place d'Azure DevOps, depuis le ticketing au déploiement continu. Configuration des agents privés, introduction de code review, déploiement on premise et dans Azure. Gestion de la transformation des process et accompagnement des utilisateurs."
+            }
+          ],
+          "results": [
+            {
+              "title": "Applications du département migrées dans Azure DevOps (environ 20 projects)"
+            },
+            {
+              "title": "Application business réécrite from scratch (rôle de PO & Architecte) dans les temps"
+            },
+            {
+              "title": "Mise en place progressive d'une architecture en microservices"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Infeeny",
+      "client": "SeLoger",
+      "jobs": [
+        {
+          "title": "Ingénieur d'études .NET",
+          "place": "Paris, France",
+          "startDate": "2017-11-06",
+          "endDate": "2018-03-23"
+        }
+      ]
+    },
+    {
+      "company": "TOTAL Raffinage Chimie",
+      "jobs": [
+        {
+          "title": "Ingénieur Contrôle Avancé",
+          "place": "Feyzin, France",
+          "startDate": "2014-09-12",
+          "endDate": "2017-11-03"
+        },
+        {
+          "title": "Apprenti Ingénieur",
+          "place": "Feyzin, France",
+          "startDate": "2011-12-05",
+          "endDate": "2014-09-11"
+        },
+        {
+          "title": "Apprenti Ingénieur",
+          "place": "Leuna, Allemagne",
+          "startDate": "2013-05-06",
+          "endDate": "2013-08-30"
+        }
+      ]
+    }
+  ],
+  "trainings": {
+    "disableTranslation": true,
+    "items": [
+      {
+        "header": { "text": "Formation initiale" }
+      },
+      {
+        "title": { "text": "Ecole Centrale de Nantes" },
+        "subtitle": { "text": "Diplôme d'Ingénieur généraliste" },
+        "badge": { "text": "2014", "label": true, "outlined": true, "icon": "mdi-calendar-range-outline" }
+      },
+      {
+        "divider": true
+      },
+      {
+        "header": { "text": "Formation continue" }
+      },
+      {
+        "title": { "text": "Microsoft Learn" },
+        "badge": { "text": "2021", "label": true, "outlined": true, "icon": "mdi-calendar-range-outline" },
+        "action": { "href": "https://docs.microsoft.com/fr-fr/users/amilochau" }
+      }
+    ]
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "image": "https://tbivision.com/files/2020/10/Bill-Gates-headshot-1024x732.jpg",
+  "name": "Antoine MILOCHAU",
+  "job": "Software Architect",
+  "description": "I'm a Software Architect, exploring and implementation many of Microsoft technologies at SPVIE Assurances. Contact me to learn more on my projects.",
+  "actions": [
+    {
+      "icon": "mdi-linkedin",
+      "href": "https://www.linkedin.com/in/antoine-milochau/?locale=en_US"
+    },
+    {
+      "icon": "mdi-github",
+      "href": "https://github.com/amilochau"
+    }
+  ],
+  "topics": [
+    {
+      "title": "Develoment"
+    },
+    {
+      "title": "DevOps"
+    },
+    {
+      "title": "Architecture"
+    },
+    {
+      "title": "Management"
+    }
+  ],
+  "links": {
+    "disableTranslation": true,
+    "items": [
+      {
+        "title": { "text": "Personal" },
+        "icon": "mdi-home-city",
+        "items": [
+          {
+            "title": { "text": "Vision" },
+            "icon": "mdi-television-ambient-light",
+            "badge": { "text": "WIP" }
+          },
+          {
+            "title": { "text": "Roadmap" },
+            "icon": "mdi-chart-gantt",
+            "action": { "href": "https://github.com/amilochau/.github/blob/main/docs/roadmap.md" }
+          },
+          {
+            "title": { "text": "Architecture" },
+            "icon": "mdi-sitemap",
+            "badge": { "text": "WIP" }
+          }
+        ]
+      }
+    ]
+  },
+  "experiences": [
+    {
+      "company": "SPVIE Technology",
+      "jobs": [
+        {
+          "title": "Software Architect",
+          "place": "Suresnes, France",
+          "startDate": "2020-05-04"
+        }
+      ]
+    },
+    {
+      "company": "MONOPRIX ONLINE",
+      "jobs": [
+        {
+          "title": "Lead Developer",
+          "place": "Clichy, France",
+          "startDate": "2019-07-01",
+          "endDate": "2020-04-30"
+        }
+      ]
+    },
+    {
+      "company": "TOTAL Refining & Chemicals",
+      "jobs": [
+        {
+          "title": "Advanced Process Control Engineer",
+          "place": "Courbevoie, France",
+          "startDate": "2018-04-01",
+          "endDate": "2019-06-20"
+        }
+      ]
+    },
+    {
+     "company": "Infeeny",
+     "client": "SeLoger",
+     "jobs": [
+        {
+          "title": ".NET Engineer",
+          "place": "Paris, France",
+          "startDate": "2017-11-06",
+          "endDate": "2018-03-23"
+        }
+      ]
+    },
+    {
+      "company": "TOTAL Refining & Chemicals",
+      "jobs": [
+        {
+          "title": "Advanced Process Control Engineer",
+          "place": "Feyzin, France",
+          "startDate": "2011-12-05",
+          "endDate": "2017-11-03"
+        }
+      ]
+    }
+  ],
+  "trainings": {
+    "disableTranslation": true,
+    "expandGroups": true,
+    "items": [
+      {
+        "header": { "text": "Initial training" }
+      },
+      {
+        "title": { "text": "Ecole Centrale de Nantes" },
+        "subtitle": { "text": "Master of Engineering" },
+        "badge": { "text": "2014", "label": true, "outlined": true, "icon": "mdi-calendar-range-outline" }
+      },
+      {
+        "divider": true
+      },
+      {
+        "header": { "text": "Continuous training" }
+      },
+      {
+        "title": { "text": "Microsoft Learn" },
+        "badge": { "text": "2021", "label": true, "outlined": true, "icon": "mdi-calendar-range-outline" },
+        "action": { "href": "https://docs.microsoft.com/en-us/users/amilochau" }
+      }
+    ]
+  }
+}
