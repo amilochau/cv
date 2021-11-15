@@ -16,6 +16,11 @@
     },
     "repositoryUrl": {
       "value": "https://github.com/amilochau/cv"
+    },
+    "customDomains": {
+      "value": [
+        "cv-dev.milochau.com"
+      ]
     }
   }
 }
