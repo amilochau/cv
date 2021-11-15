@@ -104,6 +104,9 @@
     "links": {
       "title": "Top links"
     },
+    "metrics": {
+      "title": "Metrics"
+    },
     "persona": {
       "image": "Persona"
     },
