@@ -2,7 +2,7 @@ import { Location } from 'vue-router';
 
 export interface IText {
   text: string;
-} 
+}
 
 export interface IAction {
   to?: string | Location;
@@ -28,7 +28,7 @@ export interface IListItem {
   title?: IText;
   subtitle?: IText;
   action?: IAction;
-  
+
   disabled?: boolean;
   inactive?: boolean;
 
