@@ -47,7 +47,8 @@ jobs:
       - name: Deploy Static Web Apps application
         uses: amilochau/github-actions/deploy/static-web-apps@amilochau/enable-arm-templates-outputs # TODO Set v1 back
         with:
+          azureCredentials: ${{ secrets.AZURE_CREDENTIALS }}
+          staticWebAppsId: ${{ needs.deploy_infra.outputs.resourceId }}
           projectWorkspace: ${{ env.PROJECT_WORKSPACE }}
           projectOutput: ${{ env.PROJECT_OUTPUT }}
-          staticWebAppsId: ${{ needs.deploy_infra.outputs.resourceId }}
           githubToken: ${{ secrets.GITHUB_TOKEN }}
