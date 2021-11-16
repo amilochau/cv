@@ -19,15 +19,12 @@ jobs:
   deploy_infra:
     name: Deploy infrastructure
     runs-on: ubuntu-latest
-    outputs:
-      resourceId: ${{ steps.deploy_infra_step.outputs.resourceId }}
     steps:
       - uses: actions/checkout@v2 # For parameters file
         with:
           path: application
       - name: Deploy infrastructure
         uses: amilochau/github-actions/deploy/infrastructure@amilochau/enable-arm-templates-outputs # TODO Set v1 back
-        id: deploy_infra_step
         with:
           azureTemplateVersion: ${{ env.TEMPLATES_VERSION }}
           azureCredentials: ${{ secrets.AZURE_CREDENTIALS }}
@@ -48,7 +45,7 @@ jobs:
         uses: amilochau/github-actions/deploy/static-web-apps@amilochau/enable-arm-templates-outputs # TODO Set v1 back
         with:
           azureCredentials: ${{ secrets.AZURE_CREDENTIALS }}
-          staticWebAppsId: ${{ needs.deploy_infra.outputs.resourceId }}
+          applicationName : ${{ env.INFRA_APP_NAME }}
           projectWorkspace: ${{ env.PROJECT_WORKSPACE }}
           projectOutput: ${{ env.PROJECT_OUTPUT }}
           githubToken: ${{ secrets.GITHUB_TOKEN }}
