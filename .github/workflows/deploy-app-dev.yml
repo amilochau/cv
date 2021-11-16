@@ -42,7 +42,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: DEV
     steps:
-      - run: echo ${{ jobs.deploy_infra.outputs.resourceId }}
+      - run: echo ${{ needs.deploy_infra.outputs.resourceId }}
       - uses: actions/checkout@v2
       - name: Deploy Azure Functions application
         uses: amilochau/github-actions/deploy/static-web-apps@amilochau/enable-arm-templates-outputs # TODO Set v1 back
