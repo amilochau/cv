@@ -44,10 +44,10 @@ jobs:
     steps:
       - run: echo ${{ needs.deploy_infra.outputs.resourceId }}
       - uses: actions/checkout@v2
-      - name: Deploy Azure Functions application
+      - name: Deploy Static Web Apps application
         uses: amilochau/github-actions/deploy/static-web-apps@amilochau/enable-arm-templates-outputs # TODO Set v1 back
         with:
           projectWorkspace: ${{ env.PROJECT_WORKSPACE }}
           projectOutput: ${{ env.PROJECT_OUTPUT }}
-          azureStaticWebAppsApiToken: ${{ needs.deploy_infra.outputs.resourceId }}
+          staticWebAppsId: ${{ needs.deploy_infra.outputs.resourceId }}
           githubToken: ${{ secrets.GITHUB_TOKEN }}
