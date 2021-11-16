@@ -24,7 +24,7 @@ jobs:
         with:
           path: cv
       - name: Deploy infrastructure
-        uses: amilochau/github-actions/deploy/infrastructure@v1
+        uses: amilochau/github-actions/deploy/infrastructure@amilochau/enable-arm-templates-outputs # TODO Set v1 back 
         with:
           azureTemplateVersion: ${{ env.TEMPLATES_VERSION }}
           azureCredentials: ${{ secrets.AZURE_CREDENTIALS }}
@@ -41,7 +41,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Deploy Azure Functions application
-        uses: amilochau/github-actions/deploy/static-web-apps@v1
+        uses: amilochau/github-actions/deploy/static-web-apps@amilochau/enable-arm-templates-outputs # TODO Set v1 back
         with:
           projectWorkspace: ${{ env.PROJECT_WORKSPACE }}
           projectOutput: ${{ env.PROJECT_OUTPUT }}
