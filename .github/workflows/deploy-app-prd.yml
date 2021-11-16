@@ -8,8 +8,8 @@ concurrency: deploy_app_prd
 env:
   PROJECT_WORKSPACE: './src'
   PROJECT_OUTPUT: './src/dist'
-  INFRA_DEPLOY_TEMPLATE_PATH: '**/static-web-apps/template.bicep'
-  INFRA_DEPLOY_PARAMETERS_PATH: '**/.github/infrastructure/deploy-app.prd.json'
+  INFRA_DEPLOY_TEMPLATE_PATH: './templates/static-web-apps/template.bicep'
+  INFRA_DEPLOY_PARAMETERS_PATH: './application/.github/infrastructure/deploy-app.prd.json'
   INFRA_RG_NAME: 'mil-cv-prd-rg'
   INFRA_RG_LOCATION: 'westeurope'
   INFRA_APP_NAME: 'mil-cv-prd-swa'
@@ -22,7 +22,18 @@ jobs:
     steps:
       - uses: actions/checkout@v2 # For parameters file
         with:
-          path: cv
+          path: application
+      - name: Login on Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Detach Static Web Apps
+        shell: pwsh
+        run: |
+          if ((az staticwebapp list --resource-group ${{ env.INFRA_RG_NAME }} | ConvertFrom-Json).Count -gt 0)
+          {
+            az staticwebapp disconnect --name ${{ env.INFRA_APP_NAME }}
+          }
       - name: Deploy infrastructure
         uses: amilochau/github-actions/deploy/infrastructure@v1
         with:
@@ -37,13 +48,13 @@ jobs:
     name: Deploy application
     needs: deploy_infra
     runs-on: ubuntu-latest
-    environment: PRD
     steps:
       - uses: actions/checkout@v2
-      - name: Deploy Azure Functions application
+      - name: Deploy Static Web Apps application
         uses: amilochau/github-actions/deploy/static-web-apps@v1
         with:
+          azureCredentials: ${{ secrets.AZURE_CREDENTIALS }}
+          applicationName : ${{ env.INFRA_APP_NAME }}
           projectWorkspace: ${{ env.PROJECT_WORKSPACE }}
           projectOutput: ${{ env.PROJECT_OUTPUT }}
-          azureStaticWebAppsApiToken: ${{ secrets.SWA_TOKEN }}
           githubToken: ${{ secrets.GITHUB_TOKEN }}
