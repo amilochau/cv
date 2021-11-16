@@ -19,6 +19,8 @@ jobs:
   deploy_infra:
     name: Deploy infrastructure
     runs-on: ubuntu-latest
+    outputs:
+      resourceId: ${{ steps.deploy_infra_step.outputs.resourceId }}
     steps:
       - uses: actions/checkout@v2 # For parameters file
         with:
@@ -33,10 +35,6 @@ jobs:
           resourceGroupLocation: ${{ env.INFRA_RG_LOCATION }}
           templateFilePath: ${{ env.INFRA_DEPLOY_TEMPLATE_PATH }}
           parametersFilePath: ${{ env.INFRA_DEPLOY_PARAMETERS_PATH }}
-      - run: |
-          echo Output:
-          echo ${{ steps.deploy_infra_step.outputs.resourceName }}
-          echo :Tuptuo
 
   deploy_app:
     name: Deploy application
@@ -44,12 +42,12 @@ jobs:
     runs-on: ubuntu-latest
     environment: DEV
     steps:
-      - run: echo ${{ steps.deploy_infra_step.outputs.resourceName }}
+      - run: echo ${{ jobs.deploy_infra.outputs.resourceId }}
       - uses: actions/checkout@v2
       - name: Deploy Azure Functions application
         uses: amilochau/github-actions/deploy/static-web-apps@amilochau/enable-arm-templates-outputs # TODO Set v1 back
         with:
           projectWorkspace: ${{ env.PROJECT_WORKSPACE }}
           projectOutput: ${{ env.PROJECT_OUTPUT }}
-          azureStaticWebAppsApiToken: ${{ secrets.SWA_TOKEN }}
+          azureStaticWebAppsApiToken: ${{ jobs.deploy_infra.outputs.resourceId }}
           githubToken: ${{ secrets.GITHUB_TOKEN }}
