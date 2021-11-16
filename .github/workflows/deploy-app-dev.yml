@@ -30,7 +30,7 @@ jobs:
       - name: Detach Static Web Apps
         shell: pwsh
         run: |
-          if ((az staticwebapp list --resource-group ${{ env.INFRA_RG_NAME }}) | ConvertFrom-Json).Count -gt 0)
+          if ((az staticwebapp list --resource-group ${{ env.INFRA_RG_NAME }} | ConvertFrom-Json).Count -gt 0)
           {
             az staticwebapp disconnect --name ${{ env.INFRA_APP_NAME }}
           }
