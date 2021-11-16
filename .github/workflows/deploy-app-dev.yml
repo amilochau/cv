@@ -49,5 +49,5 @@ jobs:
         with:
           projectWorkspace: ${{ env.PROJECT_WORKSPACE }}
           projectOutput: ${{ env.PROJECT_OUTPUT }}
-          azureStaticWebAppsApiToken: ${{ jobs.deploy_infra.outputs.resourceId }}
+          azureStaticWebAppsApiToken: ${{ needs.deploy_infra.outputs.resourceId }}
           githubToken: ${{ secrets.GITHUB_TOKEN }}
