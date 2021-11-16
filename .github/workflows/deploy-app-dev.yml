@@ -24,8 +24,8 @@ jobs:
         with:
           path: application
       - name: Deploy infrastructure
+        uses: amilochau/github-actions/deploy/infrastructure@amilochau/enable-arm-templates-outputs # TODO Set v1 back
         id: deploy_infra_step
-        uses: amilochau/github-actions/deploy/infrastructure@amilochau/enable-arm-templates-outputs # TODO Set v1 back 
         with:
           azureTemplateVersion: ${{ env.TEMPLATES_VERSION }}
           azureCredentials: ${{ secrets.AZURE_CREDENTIALS }}
