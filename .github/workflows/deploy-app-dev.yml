@@ -16,26 +16,26 @@ env:
   TEMPLATES_VERSION: amilochau/fix-repository-branch-swa
 
 jobs:
-  #deploy_infra:
-  #  name: Deploy infrastructure
-  #  runs-on: ubuntu-latest
-  #  steps:
-  #    - uses: actions/checkout@v2 # For parameters file
-  #      with:
-  #        path: application
-  #    - name: Deploy infrastructure
-  #      uses: amilochau/github-actions/deploy/infrastructure@amilochau/enable-arm-templates-outputs # TODO Set v1 back
-  #      with:
-  #        azureTemplateVersion: ${{ env.TEMPLATES_VERSION }}
-  #        azureCredentials: ${{ secrets.AZURE_CREDENTIALS }}
-  #        resourceGroupName: ${{ env.INFRA_RG_NAME }}
-  #        resourceGroupLocation: ${{ env.INFRA_RG_LOCATION }}
-  #        templateFilePath: ${{ env.INFRA_DEPLOY_TEMPLATE_PATH }}
-  #        parametersFilePath: ${{ env.INFRA_DEPLOY_PARAMETERS_PATH }}
+  deploy_infra:
+    name: Deploy infrastructure
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2 # For parameters file
+        with:
+          path: application
+      - name: Deploy infrastructure
+        uses: amilochau/github-actions/deploy/infrastructure@amilochau/enable-arm-templates-outputs # TODO Set v1 back
+        with:
+          azureTemplateVersion: ${{ env.TEMPLATES_VERSION }}
+          azureCredentials: ${{ secrets.AZURE_CREDENTIALS }}
+          resourceGroupName: ${{ env.INFRA_RG_NAME }}
+          resourceGroupLocation: ${{ env.INFRA_RG_LOCATION }}
+          templateFilePath: ${{ env.INFRA_DEPLOY_TEMPLATE_PATH }}
+          parametersFilePath: ${{ env.INFRA_DEPLOY_PARAMETERS_PATH }}
 
   deploy_app:
     name: Deploy application
-    #needs: deploy_infra
+    needs: deploy_infra
     runs-on: ubuntu-latest
     environment: DEV
     steps:
