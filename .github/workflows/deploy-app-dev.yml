@@ -33,7 +33,10 @@ jobs:
           resourceGroupLocation: ${{ env.INFRA_RG_LOCATION }}
           templateFilePath: ${{ env.INFRA_DEPLOY_TEMPLATE_PATH }}
           parametersFilePath: ${{ env.INFRA_DEPLOY_PARAMETERS_PATH }}
-      - run: echo ${{ steps.deploy_infra.outputs.swaName }}
+      - run: |
+        echo Output:
+        echo ${{ steps.deploy_infra.outputs.swaName }}
+        echo :Tuptuo
 
   deploy_app:
     name: Deploy application
