@@ -24,7 +24,7 @@ jobs:
         with:
           path: application
       - name: Deploy infrastructure
-        id: deploy_infra
+        id: deploy_infra_step
         uses: amilochau/github-actions/deploy/infrastructure@amilochau/enable-arm-templates-outputs # TODO Set v1 back 
         with:
           azureTemplateVersion: ${{ env.TEMPLATES_VERSION }}
@@ -35,7 +35,7 @@ jobs:
           parametersFilePath: ${{ env.INFRA_DEPLOY_PARAMETERS_PATH }}
       - run: |
           echo Output:
-          echo ${{ steps.deploy_infra.outputs.swaName }}
+          echo ${{ steps.deploy_infra_step.outputs.swaName }}
           echo :Tuptuo
 
   deploy_app:
@@ -44,7 +44,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: DEV
     steps:
-      - run: echo ${{ steps.deploy_infra.outputs.swaName }}
+      - run: echo ${{ steps.deploy_infra_step.outputs.swaName }}
       - uses: actions/checkout@v2
       - name: Deploy Azure Functions application
         uses: amilochau/github-actions/deploy/static-web-apps@amilochau/enable-arm-templates-outputs # TODO Set v1 back
