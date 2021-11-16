@@ -23,6 +23,17 @@ jobs:
       - uses: actions/checkout@v2 # For parameters file
         with:
           path: application
+      - name: Login on Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Detach Static Web Apps
+        shell: pwsh
+        run: |
+          if ((az staticwebapp list --resource-group ${{ env.INFRA_RG_NAME }} | ConvertFrom-Json).Count -gt 0)
+          {
+            az staticwebapp disconnect --name ${{ env.INFRA_APP_NAME }}
+          }
       - name: Deploy infrastructure
         uses: amilochau/github-actions/deploy/infrastructure@v1
         with:
@@ -37,7 +48,6 @@ jobs:
     name: Deploy application
     needs: deploy_infra
     runs-on: ubuntu-latest
-    environment: PRD
     steps:
       - uses: actions/checkout@v2
       - name: Deploy Static Web Apps application
