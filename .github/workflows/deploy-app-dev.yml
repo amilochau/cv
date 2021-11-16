@@ -23,15 +23,17 @@ jobs:
       - uses: actions/checkout@v2 # For parameters file
         with:
           path: application
-      #- name: Login on Azure
-      #  uses: azure/login@v1
-      #  with:
-      #    creds: ${{ secrets.AZURE_CREDENTIALS }}
-      #- name: Detach Static Web Apps
-      #  id: get-secrets
-      #  shell: pwsh
-      #  run: |
-      #    az staticwebapp disconnect --name '${{ env.INFRA_APP_NAME }}'
+      - name: Login on Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Detach Static Web Apps
+        shell: pwsh
+        run: |
+          if ((az staticwebapp list --resource-group ${{ env.INFRA_RG_NAME }}) | ConvertFrom-Json).Count -gt 0)
+          {
+            az staticwebapp disconnect --name ${{ env.INFRA_APP_NAME }}
+          }
       - name: Deploy infrastructure
         uses: amilochau/github-actions/deploy/infrastructure@amilochau/enable-arm-templates-outputs # TODO Set v1 back
         with:
