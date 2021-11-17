@@ -9,6 +9,7 @@ import { createValidate, createVuetify, i18n, router, store } from '@/plugins'
 
 // Custom CSS
 import 'roboto-fontface/css/roboto/roboto-fontface.css'
+import { logInformation, LogStyle } from './plugins/logger'
 
 Vue.config.productionTip = false
 
@@ -41,3 +42,16 @@ if ('caches' in window) {
     }))
   })
 }
+
+// Add custom messages on console
+logInformation('===================', LogStyle.Header)
+logInformation('Welcome to this CV!', LogStyle.Header)
+logInformation('===================', LogStyle.Header)
+logInformation('Don\'t hesitate to contact me:')
+logInformation('  - if you want to learn more on my projects')
+logInformation('  - if you want to hire me :)')
+logInformation('===================', LogStyle.Header)
+logInformation('Discover my GitHub projects here: https://github.com/amilochau')
+logInformation('Discover my LinkedIn page here: https://linkedin.com/in/antoine-milochau')
+logInformation('Contact me here: WIP [the target page is still under construction, see https://github.com/amilochau/cv/issues/14]')
+logInformation('===================', LogStyle.Header)
