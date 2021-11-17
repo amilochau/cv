@@ -29,12 +29,26 @@
                   mdi-calendar-range-outline
                 </v-icon>
                 {{ job.startDate | formatExperienceDate }}
-                <span v-if="job.endDate"> — {{ job.endDate | formatExperienceDate }}</span>
+                <span v-if="job.endDate">&nbsp;— {{ job.endDate | formatExperienceDate }}</span>
               </v-chip>
               <v-chip
                 label
                 outlined
-                class="ml-2">
+                class="ml-2"
+                v-if="job.isCurrent">
+                <v-icon left>
+                  mdi-fire
+                </v-icon>
+                {{ $t('resume.experiences.current') }}
+                <span v-if="job.endDate">&nbsp;— {{ job.endDate | formatExperienceDate }}</span>
+              </v-chip>
+              <v-chip
+                label
+                outlined
+                class="ml-2"
+                :href="job.placeUri"
+                target="_blank"
+                rel="noopener">
                 <v-icon left>
                   mdi-map-marker-outline
                 </v-icon>

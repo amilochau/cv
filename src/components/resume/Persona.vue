@@ -20,18 +20,9 @@
     <v-card-text>
       {{ description }}
     </v-card-text>
-    <v-card-actions>
-      <v-spacer/>
-      <v-btn
-        v-for="(action, i) in actions"
-        :key="i"
-        :href="action.href"
-        target="_blank"
-        rel="noopener"
-        icon>
-        <v-icon>{{ action.icon }}</v-icon>
-      </v-btn>
-    </v-card-actions>
+    <v-card-text>
+      <list-items :list="actions"/>
+    </v-card-text>
   </v-card>
 </template>
 

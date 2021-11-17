@@ -95,6 +95,7 @@
   "resume": {
     "experiences": {
       "title": "Experiences",
+      "current": "Current",
       "missions": "Main missions:",
       "realizations": "Main realizations:"
     },
@@ -108,7 +109,9 @@
       "title": "Metrics"
     },
     "persona": {
-      "image": "Persona"
+      "image": "Persona",
+      "linkedIn": "LinkedIn",
+      "gitHub": "GitHub"
     },
     "training": {
       "title": "Training"
