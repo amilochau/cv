@@ -45,10 +45,10 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import { mapActions, mapGetters } from 'vuex';
-import languages from '../../../data/layout/toolbar/languages.json';
-import { IList } from '../../../models/definitions';
+import { Component, Vue } from 'vue-property-decorator'
+import { mapActions, mapGetters } from 'vuex'
+import languages from '../../../data/layout/toolbar/languages.json'
+import { IList } from '../../../models/definitions'
 
 @Component({
   computed: {
@@ -60,17 +60,18 @@ import { IList } from '../../../models/definitions';
 })
 export default class Settings extends Vue {
   public languages: IList = languages;
+
   public darkTheme!: boolean;
 
   public changeTheme!: (darkTheme: boolean) => Promise<void>;
 
-  public setTheme(theme: boolean) {
-    this.$vuetify.theme.dark = theme;
-    this.changeTheme(theme);
+  public setTheme (theme: boolean) {
+    this.$vuetify.theme.dark = theme
+    this.changeTheme(theme)
   }
 
-  public setLanguage(lang: string) {
-    this.$router.replace({ params: { lang } });
+  public setLanguage (lang: string) {
+    this.$router.replace({ params: { lang } })
   }
 }
 </script>

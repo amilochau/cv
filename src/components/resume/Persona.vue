@@ -36,14 +36,18 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component
 export default class Persona extends Vue {
   @Prop({ type: String, required: true }) public image!: string;
+
   @Prop({ type: String, required: true }) public name!: string;
+
   @Prop({ type: String, required: true }) public job!: string;
+
   @Prop({ type: String, required: true }) public description!: string;
+
   @Prop({ type: Array, required: true }) public actions!: [];
 }
 </script>

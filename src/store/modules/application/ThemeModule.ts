@@ -1,4 +1,4 @@
-import { Module } from 'vuex';
+import { Module } from 'vuex'
 
 interface IThemeModuleState {
   darkTheme: boolean;
@@ -13,15 +13,15 @@ const ThemeModule: Module<IThemeModuleState, {}> = {
     darkTheme: (state) => state.darkTheme,
   },
   actions: {
-    changeTheme({ commit }, darkTheme) {
-      commit('THEME', darkTheme);
+    changeTheme ({ commit }, darkTheme) {
+      commit('THEME', darkTheme)
     },
   },
   mutations: {
-    THEME(state, payload) {
-      state.darkTheme = payload;
+    THEME (state, payload) {
+      state.darkTheme = payload
     },
   },
-};
+}
 
-export default ThemeModule;
+export default ThemeModule

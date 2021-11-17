@@ -1,9 +1,9 @@
-import modules from '@/store';
-import Vue from 'vue';
-import Vuex from 'vuex';
-import VuexPersistence from 'vuex-persist';
+import modules from '@/store'
+import Vue from 'vue'
+import Vuex from 'vuex'
+import VuexPersistence from 'vuex-persist'
 
-Vue.use(Vuex);
+Vue.use(Vuex)
 
 // Store user-defined state into localStorage
 const vuexLocal = new VuexPersistence({
@@ -11,12 +11,12 @@ const vuexLocal = new VuexPersistence({
   modules: [
     'theme',
   ],
-});
+})
 
 // Register vuex modules
 const vuex = new Vuex.Store({
   modules,
   plugins: [vuexLocal.plugin],
-});
+})
 
-export default vuex;
+export default vuex

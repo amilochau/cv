@@ -1,5 +1,5 @@
-import CultureType from './CultureType';
+import CultureType from './CultureType'
 
 export {
   CultureType,
-};
+}

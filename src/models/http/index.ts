@@ -1,5 +1,5 @@
-import IErrorMessages from './IErrorMessages';
+import IErrorMessages from './IErrorMessages'
 
 export {
   IErrorMessages,
-};
+}

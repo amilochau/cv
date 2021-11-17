@@ -15,8 +15,8 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import { mapActions } from 'vuex';
+import { Component, Vue } from 'vue-property-decorator'
+import { mapActions } from 'vuex'
 
 @Component({
   methods: {

@@ -1,4 +1,4 @@
-import { LocaleMessages } from 'vue-i18n';
+import { LocaleMessages } from 'vue-i18n'
 
 export default interface IErrorMessages {
   message: string | LocaleMessages;

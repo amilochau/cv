@@ -14,13 +14,13 @@
 </template>
 
 <script lang="ts">
-import axios from 'axios';
-import moment from 'moment';
-import numeral from 'numeral';
-import { LocaleMessages } from 'vue-i18n';
-import { Component, Prop, Vue, Watch } from 'vue-property-decorator';
-import { mapActions } from 'vuex';
-import EventBus from '../event-bus';
+import axios from 'axios'
+import moment from 'moment'
+import numeral from 'numeral'
+import { LocaleMessages } from 'vue-i18n'
+import { Component, Prop, Vue, Watch } from 'vue-property-decorator'
+import { mapActions } from 'vuex'
+import EventBus from '../event-bus'
 
 @Component({
   methods: {
@@ -30,11 +30,12 @@ import EventBus from '../event-bus';
 export default class RootPage extends Vue {
   @Prop({ type: String, default: 'en' }) public lang!: string;
 
-  get title() {
-    return this.meta.title;
+  get title () {
+    return this.meta.title
   }
-  get description() {
-    return this.meta.description;
+
+  get description () {
+    return this.meta.description
   }
 
   public meta: LocaleMessages | { title?: string, description?: string } = {
@@ -44,70 +45,74 @@ export default class RootPage extends Vue {
 
   public changeTitle!: (title: string) => Promise<void>;
 
-  @Watch('$route') public onRouteChanged() {
-    this.setMeta();
+  @Watch('$route') public onRouteChanged () {
+    this.setMeta()
   }
-  @Watch('meta') public onMetaChanged() {
+
+  @Watch('meta') public onMetaChanged () {
     if (this.title) {
-      const title = this.title as string;
-      document.title = `${title} — CV`;
-      this.changeTitle(title);
+      const title = this.title as string
+      document.title = `${title} — CV`
+      this.changeTitle(title)
     } else {
-      document.title = 'CV';
-      this.changeTitle('CV');
+      document.title = 'CV'
+      this.changeTitle('CV')
     }
   }
 
-  public created() {
-    this.setLanguage(this.lang);
-    this.bootstrapMeta();
-    this.bootstrapRedirections();
-  }
-  public beforeRouteUpdate(to: any, from: any, next: any) {
-    this.setLanguage(to.params.lang);
-    next();
+  public created () {
+    this.setLanguage(this.lang)
+    this.bootstrapMeta()
+    this.bootstrapRedirections()
   }
 
-  public setLanguage(lang: string) {
-    document.querySelector('html')?.setAttribute('lang', lang);
-    this.$i18n.locale = lang;
-    this.$vuetify.lang.current = lang;
-    axios.defaults.headers.common['Accept-Language'] = lang;
-    moment.locale(lang);
-    numeral.locale(lang);
+  public beforeRouteUpdate (to: any, from: any, next: any) {
+    this.setLanguage(to.params.lang)
+    next()
   }
 
-  public bootstrapMeta() {
-    if (typeof document === 'undefined') { return; }
-    this.setMeta();
+  public setLanguage (lang: string) {
+    // eslint-disable-next-line no-unused-expressions
+    document.querySelector('html')?.setAttribute('lang', lang)
+    this.$i18n.locale = lang
+    this.$vuetify.lang.current = lang
+    axios.defaults.headers.common['Accept-Language'] = lang
+    moment.locale(lang)
+    numeral.locale(lang)
   }
-  public setMeta() {
-    const key: string = `meta.${this.$route.name}`;
-    const meta = this.$t(key) as LocaleMessages;
-    this.meta = meta || this.getFallbackMeta();
+
+  public bootstrapMeta () {
+    if (typeof document === 'undefined') { return }
+    this.setMeta()
   }
-  public getFallbackMeta() {
+
+  public setMeta () {
+    const key = `meta.${this.$route.name}`
+    const meta = this.$t(key) as LocaleMessages
+    this.meta = meta || this.getFallbackMeta()
+  }
+
+  public getFallbackMeta () {
     if (process.env.NODE_ENV === 'development') {
-      // tslint:disable-next-line:no-console
-      console.warn('No meta defined for route ' + (this.$route.name));
+      console.warn(`No meta defined for route ${this.$route.name}`)
     }
-    return {};
+    return {}
   }
 
-  public bootstrapRedirections() {
+  public bootstrapRedirections () {
     EventBus.$on('goto-forbidden', () => {
-      this.$router.push({ name: 'Forbidden' });
-    });
+      this.$router.push({ name: 'Forbidden' })
+    })
     EventBus.$on('goto-notfound', () => {
-      this.$router.push({ name: 'NotFound' });
-    });
+      this.$router.push({ name: 'NotFound' })
+    })
     EventBus.$on('goto-login', () => {
       if (window.location.pathname) {
-        this.$router.push({ name: 'account/Login', query: { returnUrl: window.location.pathname } });
+        this.$router.push({ name: 'account/Login', query: { returnUrl: window.location.pathname } })
       } else {
-        this.$router.push({ name: 'account/Login' });
+        this.$router.push({ name: 'account/Login' })
       }
-    });
+    })
   }
 }
 </script>

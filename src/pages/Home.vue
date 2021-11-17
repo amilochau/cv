@@ -26,24 +26,24 @@
 </template>
 
 <script lang='ts'>
-import resume from '@/data/resume';
-import { CultureType } from '@/models/business/application';
-import { Component, Vue } from 'vue-property-decorator';
+import resume from '@/data/resume'
+import { CultureType } from '@/models/business/application'
+import { Component, Vue } from 'vue-property-decorator'
 
 @Component
 export default class HomePage extends Vue {
   public resume = resume;
 
-  get currentCulture() {
+  get currentCulture () {
     if (!this.$route.params.lang.localeCompare('fr', undefined, { sensitivity: 'base' })) {
-      return CultureType.French;
+      return CultureType.French
     } else {
-      return CultureType.English;
+      return CultureType.English
     }
   }
 
-  get currentResume() {
-    return this.resume[this.currentCulture];
+  get currentResume () {
+    return this.resume[this.currentCulture]
   }
 }
 </script>

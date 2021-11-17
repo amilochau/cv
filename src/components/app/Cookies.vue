@@ -25,43 +25,43 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component
 export default class Cookies extends Vue {
   @Prop({ type: String, default: '.AspNet.Consent' }) public cookieName!: string;
 
-  public showCookiesBar: boolean = false;
+  public showCookiesBar = false;
 
-  public created() {
-    let cookieFound = false;
-    const name = this.cookieName + '=';
-    const decodedCookie = decodeURIComponent(document.cookie);
-    const ca = decodedCookie.split(';');
+  public created () {
+    let cookieFound = false
+    const name = `${this.cookieName}=`
+    const decodedCookie = decodeURIComponent(document.cookie)
+    const ca = decodedCookie.split(';')
     for (const value of ca) {
-      let c = value;
+      let c = value
       while (c.charAt(0) === ' ') {
-        c = c.substring(1);
+        c = c.substring(1)
       }
       if (c.indexOf(name) === 0) {
-        cookieFound = true;
+        cookieFound = true
       }
     }
-    this.showCookiesBar = !cookieFound;
+    this.showCookiesBar = !cookieFound
   }
 
-  public acceptCookies() {
-    const d = new Date();
-    d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
-    document.cookie = `${this.cookieName}=yes; expires=${d.toUTCString()}; path=/; samesite=lax`;
-    this.showCookiesBar = false;
+  public acceptCookies () {
+    const d = new Date()
+    d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000))
+    document.cookie = `${this.cookieName}=yes; expires=${d.toUTCString()}; path=/; samesite=lax`
+    this.showCookiesBar = false
   }
 
-  public refuseCookies() {
-    const d = new Date();
-    d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
-    document.cookie = `${this.cookieName}=no; expires=${d.toUTCString()}; path=/; samesite=lax`;
-    this.showCookiesBar = false;
+  public refuseCookies () {
+    const d = new Date()
+    d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000))
+    document.cookie = `${this.cookieName}=no; expires=${d.toUTCString()}; path=/; samesite=lax`
+    this.showCookiesBar = false
   }
 }
 </script>

@@ -1,16 +1,14 @@
-import Routes from '@/data/routes';
-import store from '@/plugins/vuex';
-import Vue from 'vue';
-import Router, { RawLocation, Route, RouteConfig } from 'vue-router';
-import scrollBehavior from './scroll-behavior';
+import Routes from '@/data/routes'
+import store from '@/plugins/vuex'
+import Vue from 'vue'
+import Router, { RawLocation, Route, RouteConfig } from 'vue-router'
+import RootPage from '@/pages/Root.vue'
+import i18n from './i18n'
 
-import RootPage from '@/pages/Root.vue';
-import i18n from '../i18n';
-
-Vue.use(Router);
+Vue.use(Router)
 
 const route: (path: any, name: any, component: any, requiresAuth: any, props: any, children: any) => any = (path, name, component, requiresAuth, props, children) => {
-  const hasChildren = Array.isArray(children);
+  const hasChildren = Array.isArray(children)
 
   return {
     path,
@@ -28,8 +26,8 @@ const route: (path: any, name: any, component: any, requiresAuth: any, props: an
         r.children,
       ))
       : [],
-  };
-};
+  }
+}
 
 const routes = Routes
   .map((r: any) => route(
@@ -39,7 +37,7 @@ const routes = Routes
     r.requiresAuth,
     r.props,
     r.children,
-  ));
+  ))
 
 const routesWithRedirection: RouteConfig[] = [
   {
@@ -51,21 +49,20 @@ const routesWithRedirection: RouteConfig[] = [
   {
     path: '*',
     redirect: (to) => {
-      const lang = i18n.locale;
-      return `/${lang}${to.path}`;
+      const lang = i18n.locale
+      return `/${lang}${to.path}`
     },
   },
-];
+]
 
 const router = new Router({
   mode: 'history',
-  scrollBehavior,
   routes: routesWithRedirection,
-});
+})
 
 router.beforeEach((to: Route, from: Route, next: (to?: RawLocation | false | ((vm: Vue) => any) | void) => void) => {
   // Abort previous loading indicator
-  store.dispatch('load/stopLoading');
+  store.dispatch('load/stopLoading')
 
   if (to.matched.some((record) => record.meta.requiresAuth)) {
     // this route requires auth, check if logged in
@@ -73,35 +70,33 @@ router.beforeEach((to: Route, from: Route, next: (to?: RawLocation | false | ((v
     if (!store.getters['user/logged']) {
       next({
         name: 'account/Login', params: { lang: to.params.lang }, query: { returnUrl: to.fullPath },
-      });
+      })
     }
   }
-  next(); // make sure to always call next()!
-});
+  next() // make sure to always call next()!
+})
 
 // Keep navigation
-Vue.navigationHistory = [];
+Vue.navigationHistory = []
 
 router.beforeEach((to: Route, from: Route, next: (to?: RawLocation | false | ((vm: Vue) => any) | void) => void) => {
-  // TODO Ignore routes here
-
-  const navigationHistory = Vue.navigationHistory;
-  const position = { x: window.pageXOffset, y: window.pageYOffset };
+  const navigationHistory = Vue.navigationHistory
+  const position = { x: window.pageXOffset, y: window.pageYOffset }
 
   // Avoid storing too long history
   if (navigationHistory.length >= 10) {
-    navigationHistory.splice(0, navigationHistory.length / 2);
+    navigationHistory.splice(0, navigationHistory.length / 2)
   }
 
   // Find last position
-  const currentPathIndex = navigationHistory.findIndex((x: any) => x.path === from.fullPath);
+  const currentPathIndex = navigationHistory.findIndex((x: any) => x.path === from.fullPath)
   if (currentPathIndex !== -1) {
-    navigationHistory[currentPathIndex].position = position;
+    navigationHistory[currentPathIndex].position = position
   } else {
-    navigationHistory.push({ path: from.fullPath, position });
+    navigationHistory.push({ path: from.fullPath, position })
   }
 
-  next();
-});
+  next()
+})
 
-export default router;
+export default router

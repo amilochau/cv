@@ -2,6 +2,7 @@
   "recommendations": [
     "eg2.vscode-npm-script",
     "octref.vetur",
-    "editorconfig.editorconfig"
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint"
   ]
 }

@@ -3,4 +3,4 @@ enum CultureType {
   French = 1,
 }
 
-export default CultureType;
+export default CultureType
