@@ -6,7 +6,7 @@ on:
 concurrency: deploy_app_prd
 
 env:
-  PROJECT_WORKSPACE: ''
+  PROJECT_WORKSPACE: '.'
   PROJECT_OUTPUT: './dist'
   INFRA_DEPLOY_TEMPLATE_PATH: './templates/static-web-apps/template.bicep'
   INFRA_DEPLOY_PARAMETERS_PATH: './application/.github/infrastructure/deploy-app.prd.json'
