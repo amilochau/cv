@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import { Route } from 'vue-router';
 import { PositionResult } from 'vue-router/types/router';
-import goTo from 'vuetify/src/services/goto';
+import goTo from 'vuetify/lib/services/goto';
 
 const waitForReadystate = async () => {
   if (
@@ -38,16 +38,12 @@ export default async (to: Route, from: Route, savedPosition: void | { x: number,
     }
   }
 
-  return new Promise(async (resolve) => {
-    if (options.duration) {
-      setTimeout(() => {
-        window.requestAnimationFrame(async () => {
-          // tslint:disable-next-line:no-console
-          await goTo(scrollTo, options).catch((err) => console.log(err)).then(() => resolve());
-        });
-      }, 200);
-    } else {
-      await goTo(scrollTo, options);
-    }
+  return new Promise((resolve, reject) => {
+    window.requestAnimationFrame(async () => {
+      // tslint:disable-next-line:no-console
+      await goTo(scrollTo, options)
+        .catch(reject)
+        .finally(resolve);
+    });
   });
 };
