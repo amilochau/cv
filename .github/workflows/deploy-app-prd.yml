@@ -6,8 +6,6 @@ on:
 concurrency: deploy_app_prd
 
 env:
-  PROJECT_WORKSPACE: './src'
-  PROJECT_OUTPUT: './src/dist'
   INFRA_DEPLOY_TEMPLATE_PATH: './templates/static-web-apps/template.bicep'
   INFRA_DEPLOY_PARAMETERS_PATH: './application/.github/infrastructure/deploy-app.prd.json'
   INFRA_RG_NAME: 'mil-cv-prd-rg'
@@ -55,6 +53,4 @@ jobs:
         with:
           azureCredentials: ${{ secrets.AZURE_CREDENTIALS }}
           applicationName : ${{ env.INFRA_APP_NAME }}
-          projectWorkspace: ${{ env.PROJECT_WORKSPACE }}
-          projectOutput: ${{ env.PROJECT_OUTPUT }}
           githubToken: ${{ secrets.GITHUB_TOKEN }}
