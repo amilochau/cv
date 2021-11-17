@@ -12,8 +12,8 @@
 </template>
 
 <script lang="ts">
-import { IList } from '@/models/definitions';
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { IList } from '@/models/definitions'
+import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component
 export default class Links extends Vue {

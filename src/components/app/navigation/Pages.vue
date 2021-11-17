@@ -18,10 +18,10 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import { mapActions } from 'vuex';
-import drawer from '../../../data/layout/navigation/drawer.json';
-import { IList } from '../../../models/definitions';
+import { Component, Vue } from 'vue-property-decorator'
+import { mapActions } from 'vuex'
+import drawer from '../../../data/layout/navigation/drawer.json'
+import { IList } from '../../../models/definitions'
 
 @Component({
   methods: {

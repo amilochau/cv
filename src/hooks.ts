@@ -1,15 +1,13 @@
-// tslint:disable:interface-name
-
-import Component from 'vue-class-component';
-import 'vue-class-component/hooks';
-import { RawLocation, Route } from 'vue-router';
+import Component from 'vue-class-component'
+import 'vue-class-component/hooks'
+import { RawLocation, Route } from 'vue-router'
 
 // Register the router hooks with their names
 Component.registerHooks([
   'beforeRouteEnter',
   'beforeRouteLeave',
   'beforeRouteUpdate',
-]);
+])
 
 declare module 'vue/types/vue' {
   // Augment component instance type

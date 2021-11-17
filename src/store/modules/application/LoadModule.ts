@@ -1,4 +1,4 @@
-import { Module } from 'vuex';
+import { Module } from 'vuex'
 
 interface ILoadModuleState {
   progress: {
@@ -23,33 +23,33 @@ const LoadModule: Module<ILoadModuleState, {}> = {
     offline: (state) => state.offline,
   },
   actions: {
-    startLoading({ commit }) {
-      commit('LOAD_START');
+    startLoading ({ commit }) {
+      commit('LOAD_START')
     },
-    stopLoading({ commit }) {
-      commit('LOAD_STOP');
+    stopLoading ({ commit }) {
+      commit('LOAD_STOP')
     },
-    setOnline({ commit }) {
-      commit('ONLINE');
+    setOnline ({ commit }) {
+      commit('ONLINE')
     },
-    setOffline({ commit }) {
-      commit('OFFLINE');
+    setOffline ({ commit }) {
+      commit('OFFLINE')
     },
   },
   mutations: {
-    LOAD_START(state) {
-      state.progress.loading = true;
+    LOAD_START (state) {
+      state.progress.loading = true
     },
-    LOAD_STOP(state) {
-      state.progress.loading = false;
+    LOAD_STOP (state) {
+      state.progress.loading = false
     },
-    ONLINE(state) {
-      state.offline = false;
+    ONLINE (state) {
+      state.offline = false
     },
-    OFFLINE(state) {
-      state.offline = true;
+    OFFLINE (state) {
+      state.offline = true
     },
   },
-};
+}
 
-export default LoadModule;
+export default LoadModule

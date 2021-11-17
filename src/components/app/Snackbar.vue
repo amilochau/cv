@@ -38,40 +38,42 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import EventBus from '../../event-bus';
-import { IErrorMessages } from '../../models/http';
+import { Component, Vue } from 'vue-property-decorator'
+import EventBus from '../../event-bus'
+import { IErrorMessages } from '../../models/http'
 
 @Component
 export default class SnackbarEvent extends Vue {
   public errorMessages: IErrorMessages = {
     message: '',
   };
-  public expanded: boolean = false;
-  public enabled: boolean = false;
 
-  public created() {
+  public expanded = false;
+
+  public enabled = false;
+
+  public created () {
     EventBus.$on('info', (errorMessages: IErrorMessages) => {
-      this.enableSnackbar(errorMessages, 'info', 'mdi-information');
-    });
+      this.enableSnackbar(errorMessages, 'info', 'mdi-information')
+    })
     EventBus.$on('success', (errorMessages: IErrorMessages) => {
-      this.enableSnackbar(errorMessages, 'success', 'mdi-checkbox-marked-circle');
-    });
+      this.enableSnackbar(errorMessages, 'success', 'mdi-checkbox-marked-circle')
+    })
     EventBus.$on('warning', (errorMessages: IErrorMessages) => {
-      this.enableSnackbar(errorMessages, 'warning', 'mdi-alert-octagon');
-    });
+      this.enableSnackbar(errorMessages, 'warning', 'mdi-alert-octagon')
+    })
     EventBus.$on('error', (errorMessages: IErrorMessages) => {
-      this.enableSnackbar(errorMessages, 'error', 'mdi-alert');
-    });
+      this.enableSnackbar(errorMessages, 'error', 'mdi-alert')
+    })
   }
 
-  public enableSnackbar(errorMessages: IErrorMessages, color: string, icon: string) {
-    this.errorMessages.message = errorMessages.message;
-    this.errorMessages.details = errorMessages.details;
-    this.errorMessages.color = errorMessages.color || color;
-    this.errorMessages.icon = errorMessages.icon || icon;
-    this.errorMessages.timeout = errorMessages.timeout || 10000;
-    this.enabled = true;
+  public enableSnackbar (errorMessages: IErrorMessages, color: string, icon: string) {
+    this.errorMessages.message = errorMessages.message
+    this.errorMessages.details = errorMessages.details
+    this.errorMessages.color = errorMessages.color || color
+    this.errorMessages.icon = errorMessages.icon || icon
+    this.errorMessages.timeout = errorMessages.timeout || 10000
+    this.enabled = true
   }
 }
 </script>

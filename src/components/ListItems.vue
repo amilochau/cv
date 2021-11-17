@@ -132,18 +132,19 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
-import { IList } from '../models/definitions';
+import { Component, Prop, Vue } from 'vue-property-decorator'
+import { IList } from '../models/definitions'
 
 @Component
 export default class ListItems extends Vue {
   @Prop({ type: Object, required: true }) public list!: IList;
+
   @Prop({ type: Boolean, default: false }) public dense!: boolean;
 
   public baseUrl: string = process.env.BASE_URL;
 
-  get dividerClass() {
-    if (!this.dense) { return 'my-2'; } else { return undefined; }
+  get dividerClass () {
+    if (!this.dense) { return 'my-2' } else { return undefined }
   }
 }
 </script>

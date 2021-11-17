@@ -1,4 +1,4 @@
-import { Location } from 'vue-router';
+import { Location } from 'vue-router'
 
 export interface IText {
   text: string;

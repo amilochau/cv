@@ -30,11 +30,11 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue } from 'vue-property-decorator'
 
 @Component
 export default class PrivacyPage extends Vue {
-  public applicationName: string = 'CV';
+  public applicationName = 'CV';
 }
 </script>
 

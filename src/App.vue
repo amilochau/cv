@@ -5,8 +5,8 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import { mapActions, mapGetters } from 'vuex';
+import { Component, Vue } from 'vue-property-decorator'
+import { mapActions, mapGetters } from 'vuex'
 
 @Component({
   computed: {
@@ -18,36 +18,38 @@ import { mapActions, mapGetters } from 'vuex';
 })
 export default class AppPage extends Vue {
   public setOnline!: () => Promise<void>;
+
   public setOffline!: () => Promise<void>;
 
   public darkTheme!: boolean;
 
-  public created() {
-    this.$vuetify.theme.dark = this.darkTheme;
+  public created () {
+    this.$vuetify.theme.dark = this.darkTheme
   }
-  public async mounted() {
+
+  public async mounted () {
     if (typeof window !== 'undefined') {
       if (navigator.onLine) {
-        await this.setOnline();
+        await this.setOnline()
       } else {
-        await this.setOffline();
+        await this.setOffline()
       }
 
       const onlineHandler = () => {
-        this.setOnline();
-      };
+        this.setOnline()
+      }
 
       const offlineHandler = () => {
-        this.setOffline();
-      };
+        this.setOffline()
+      }
 
-      window.addEventListener('online', onlineHandler);
-      window.addEventListener('offline', offlineHandler);
+      window.addEventListener('online', onlineHandler)
+      window.addEventListener('offline', offlineHandler)
 
       this.$once('hook:beforeDestroy', () => {
-        window.removeEventListener('online', onlineHandler);
-        window.removeEventListener('offline', offlineHandler);
-      });
+        window.removeEventListener('online', onlineHandler)
+        window.removeEventListener('offline', offlineHandler)
+      })
     }
   }
 }

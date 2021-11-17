@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+
 const webpack = require('webpack')
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
@@ -6,22 +8,22 @@ module.exports = {
   css: {
     loaderOptions: {
       sass: {
-        additionalData: '@import "~@/sass/main.scss"'
-      }
-    }
+        additionalData: '@import "~@/sass/main.scss"',
+      },
+    },
   },
   transpileDependencies: [
     'vuetify',
-    'vuex-persist'
+    'vuex-persist',
   ],
   productionSourceMap: false,
   configureWebpack: {
     plugins: [
       new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /en|fr/),
-      new VuetifyLoaderPlugin()
-    ]
+      new VuetifyLoaderPlugin(),
+    ],
   },
   chainWebpack: config => {
     config.plugins.delete('prefetch')
-  }
+  },
 }
