@@ -1,7 +1,7 @@
+import modules from '@/store'
 import Vue from 'vue'
 import Vuex from 'vuex'
 import VuexPersistence from 'vuex-persist'
-import modules from '@/store'
 
 Vue.use(Vuex)
 

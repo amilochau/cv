@@ -48,9 +48,7 @@
     "@typescript-eslint/parser": "^4.33.0",
     "@vue/cli-plugin-babel": "^4.5.15",
     "@vue/cli-plugin-eslint": "~4.5.15",
-    "@vue/cli-plugin-router": "^4.5.15",
     "@vue/cli-plugin-typescript": "^4.5.15",
-    "@vue/cli-plugin-vuex": "^4.5.15",
     "@vue/cli-service": "^4.5.15",
     "@vue/eslint-config-standard": "^5.1.2",
     "@vue/eslint-config-typescript": "^7.0.0",
@@ -91,6 +89,7 @@
       "@typescript-eslint/ban-types": "off",
       "@typescript-eslint/explicit-module-boundary-types": "off",
       "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-unused-vars": "error",
       "array-bracket-spacing": [
         "error",
         "never"
@@ -174,6 +173,7 @@
       "no-sequences": "error",
       "no-tabs": "error",
       "no-trailing-spaces": "error",
+      "no-unused-vars": "off",
       "no-useless-constructor": "error",
       "no-useless-rename": "error",
       "no-useless-return": "error",

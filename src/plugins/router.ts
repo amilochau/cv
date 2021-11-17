@@ -1,10 +1,9 @@
-import Router, { RawLocation, Route, RouteConfig } from 'vue-router'
-import Vue from 'vue'
 import Routes from '@/data/routes'
-import RootPage from '@/pages/Root.vue'
 import store from '@/plugins/vuex'
-import i18n from '../i18n'
-import scrollBehavior from './scroll-behavior'
+import Vue from 'vue'
+import Router, { RawLocation, Route, RouteConfig } from 'vue-router'
+import RootPage from '@/pages/Root.vue'
+import i18n from './i18n'
 
 Vue.use(Router)
 
@@ -58,7 +57,6 @@ const routesWithRedirection: RouteConfig[] = [
 
 const router = new Router({
   mode: 'history',
-  scrollBehavior,
   routes: routesWithRedirection,
 })
 
