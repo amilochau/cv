@@ -1,14 +1,16 @@
 <template>
   <div class="d-flex fill-height">
-    <app-navigation-drawer/>
-    <app-header-bar/>
+    <app-header-settings/>
     <v-main>
       <app-progress-bar :lazy-delay="200"/>
       <app-cookies/>
       <v-fade-transition mode="out-in">
-        <router-view/>
+        <v-container class="fill-height py-0">
+          <router-view/>
+        </v-container>
       </v-fade-transition>
     </v-main>
+    <app-footer/>
     <app-snackbar/>
   </div>
 </template>

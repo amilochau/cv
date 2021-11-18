@@ -4,6 +4,7 @@ import Vue from 'vue'
 import Router, { RawLocation, Route, RouteConfig } from 'vue-router'
 import RootPage from '@/pages/Root.vue'
 import i18n from './i18n'
+import { Position, PositionResult } from 'vue-router/types/router'
 
 Vue.use(Router)
 
@@ -55,24 +56,34 @@ const routesWithRedirection: RouteConfig[] = [
   },
 ]
 
+const scrollBehavior: (to: Route, from: Route, savedPosition: void | Position) => PositionResult | Promise<PositionResult> | null | undefined = (to, from, savedPosition) => {
+  if (to.hash) {
+    return {
+      selector: to.hash,
+    }
+  } else if (savedPosition) {
+    return {
+      x: savedPosition.x,
+      y: savedPosition.y,
+    }
+  } else {
+    return {
+      x: 0,
+      y: 0,
+    }
+  }
+}
+
 const router = new Router({
   mode: 'history',
   routes: routesWithRedirection,
+  scrollBehavior: scrollBehavior,
 })
 
 router.beforeEach((to: Route, from: Route, next: (to?: RawLocation | false | ((vm: Vue) => any) | void) => void) => {
   // Abort previous loading indicator
   store.dispatch('load/stopLoading')
 
-  if (to.matched.some((record) => record.meta.requiresAuth)) {
-    // this route requires auth, check if logged in
-    // if not, redirect to login page.
-    if (!store.getters['user/logged']) {
-      next({
-        name: 'account/Login', params: { lang: to.params.lang }, query: { returnUrl: to.fullPath },
-      })
-    }
-  }
   next() // make sure to always call next()!
 })
 
