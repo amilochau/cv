@@ -14,8 +14,8 @@
           :trainings='currentResume.trainings'/>
         <resume-metrics
           :metrics='currentResume.metrics'/>
-        <resume-links
-          :links='currentResume.links'/>
+        <resume-projects
+          :projects='currentResume.projects'/>
       </v-col>
       <v-col cols='12' md='8'>
         <resume-experiences

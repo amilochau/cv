@@ -59,7 +59,7 @@
       "header22": "Traitement général des données",
       "text22": "La collecte de vos données personnelles est justifiée par le fonctionnement de l'application {name}. {name} vous apporte un certain nombre de services, tels que proposés dès la page d'accueil de l'application. La plupart des données collectées sont directement liées au traitement des fonctionnalités associées à ces besoins. Ces données sont stockées dès que vous commencez à utiliser l'application. Les informations de connexion, de navigation et d'erreur nous fournissent des moyens d'effectuer une analyse statistique de l'utilisation et du fonctionnement de {name}.",
       "header23": "Public visé",
-      "text23": "Seuls les utilisateurs enregistrés dans {nom} sont concernés par la collecte de données personnelles : toutes les données collectées sont associées à un compte d'utilisateur enregistré.",
+      "text23": "Seuls les utilisateurs enregistrés dans {name} sont concernés par la collecte de données personnelles : toutes les données collectées sont associées à un compte d'utilisateur enregistré.",
       "header24": "Destinataire des données",
       "text24": "Aucune donnée personnelle n'est transmise à, ni utilisée par un tiers. Chaque utilisateur enregistré (disposant d'un compte utilisateur personnel) peut également accéder à ses propres informations. Un utilisateur anonyme ne peut pas accéder aux informations des autres utilisateurs.",
       "header25": "Supervision du traitement des données",
@@ -95,20 +95,23 @@
   "resume": {
     "experiences": {
       "title": "Expériences",
+      "current": "En cours",
       "missions": "Principales missions :",
       "realizations": "Principales réalisations :"
     },
     "keyWords": {
       "title": "Mots-clés"
     },
-    "links": {
-      "title": "Liens principaux"
+    "projects": {
+      "title": "Projets personnels"
     },
     "metrics": {
       "title": "Métriques"
     },
     "persona": {
-      "image": "Persona"
+      "image": "Persona",
+      "linkedIn": "LinkedIn",
+      "gitHub": "GitHub"
     },
     "training": {
       "title": "Formation"

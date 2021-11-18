@@ -3,16 +3,20 @@
   "name": "Antoine MILOCHAU",
   "job": "Architecte applicatif",
   "description": "Architecte applicatif, j'explore et j'implémente de nombreuses technologies Microsoft chez SPVIE Assurances. Contactez-moi pour en apprendre plus sur mes projets.",
-  "actions": [
-    {
-      "icon": "mdi-linkedin",
-      "href": "https://www.linkedin.com/in/antoine-milochau/"
-    },
-    {
-      "icon": "mdi-github",
-      "href": "https://github.com/amilochau"
-    }
-  ],
+  "actions": {
+    "items": [
+      {
+        "title": { "text": "resume.persona.linkedIn" },
+        "icon": "mdi-linkedin",
+        "action": { "href": "https://www.linkedin.com/in/antoine-milochau" }
+      },
+      {
+        "title": { "text": "resume.persona.gitHub" },
+        "icon": "mdi-github",
+        "action": { "href": "https://github.com/amilochau" }
+      }
+    ]
+  },
   "topics": [
     {
       "title": "Développement"
@@ -27,18 +31,70 @@
       "title": "Management"
     }
   ],
-  "links": {
+  "projects": {
     "disableTranslation": true,
     "expandGroups": true,
     "items": [
       {
-        "title": { "text": "Personnel" },
-        "icon": "mdi-home-city",
+        "title": { "text": "Applications" },
+        "items": [
+          {
+            "title": { "text": "milochau.com" },
+            "icon": "mdi-cog-outline",
+            "action": { "href": "https://milochau.com" }
+          },
+          {
+            "title": { "text": "Carte de voyages" },
+            "icon": "mdi-map-marker-outline",
+            "badge": { "text": "WIP", "color": "info" },
+            "action": { "href": "https://trips.milochau.com" }
+          },
+          {
+            "title": { "text": "Service d'emails" },
+            "icon": "mdi-email-outline",
+            "action": { "href": "https://github.com/amilochau/emails" }
+          },
+          {
+            "title": { "text": "CV" },
+            "icon": "mdi-card-account-details-outline",
+            "badge": { "text": "WIP", "color": "info" },
+            "action": { "href": "https://cv.milochau.com" }
+          },
+          {
+            "title": { "text": "Mariage" },
+            "icon": "mdi-ring"
+          }
+        ]
+      },
+      {
+        "title": { "text": "Librairies" },
+        "items": [
+          {
+            "title": { "text": "NuGet - Milochau.Core" },
+            "icon": "mdi-dot-net",
+            "action": { "href": "https://www.nuget.org/packages?q=Milochau.Core.*" }
+          },
+          {
+            "title": { "text": "NuGet - MilNet" },
+            "icon": "mdi-dot-net",
+            "badge": { "text": "Déprécié", "color": "warning" },
+            "action": { "href": "https://www.nuget.org/packages?q=MilNet.*" }
+          },
+          {
+            "title": { "text": "npm - milnode" },
+            "icon": "mdi-nodejs",
+            "badge": { "text": "Déprécié", "color": "warning" },
+            "action": { "href": "https://www.npmjs.com/package/milnode" }
+          }
+        ]
+      },
+      {
+        "title": { "text": "Documentation" },
         "items": [
           {
             "title": { "text": "Vision" },
             "icon": "mdi-television-ambient-light",
-            "badge": { "text": "WIP" }
+            "badge": { "text": "WIP", "color": "info" }
           },
           {
             "title": { "text": "Roadmap" },
@@ -47,8 +103,8 @@
           },
           {
             "title": { "text": "Architecture" },
-            "icon": "mdi-sitemap",
-            "badge": { "text": "WIP" }
+            "icon": "mdi-sitemap-outline",
+            "badge": { "text": "WIP", "color": "info" }
           }
         ]
       }
@@ -61,7 +117,9 @@
         {
           "title": "Architecte applicatif",
           "place": "Suresnes, France",
-          "startDate": "2020-05-04"
+          "placeUri": "https://www.google.com/maps/place/AssurWare/@48.8713031,2.2275824,17z/data=!3m1!4b1!4m5!3m4!1s0x47e6652271fa816d:0x1dcd7d131570fb85!8m2!3d48.8713119!4d2.2297834",
+          "startDate": "2020-05-04",
+          "isCurrent": true
         }
       ]
     },
@@ -71,6 +129,7 @@
         {
           "title": "Lead Developer",
           "place": "Clichy, France",
+          "placeUri": "https://www.google.com/maps/place/Monoprix+Online/@48.9114806,2.3075256,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66fa859a7648f:0x9f092451007f953!8m2!3d48.9114745!4d2.3097094",
           "startDate": "2019-07-01",
           "endDate": "2020-04-30"
         }
@@ -82,6 +141,7 @@
         {
           "title": "Ingénieur Contrôle Avancé",
           "place": "Courbevoie, France",
+          "placeUri": "https://www.google.com/maps/place/Total+Tour+Coupole/@48.8927778,2.2411446,17z/data=!3m1!4b1!4m5!3m4!1s0x47fa657a1827f5af:0x968cbd4e5b7000ea!8m2!3d48.8930013!4d2.2434948",
           "startDate": "2018-04-01",
           "endDate": "2019-06-20",
           "context": "Division 'Supply, Sales & Optimization', spécialisé dans l'optimisation des mélanges de carburant",
@@ -125,6 +185,7 @@
         {
           "title": "Ingénieur d'études .NET",
           "place": "Paris, France",
+          "placeUri": "https://www.google.com/maps/place/SeLoger/@48.8912719,2.3484074,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66e66d3362e2b:0xbec65ee69f11fe85!8m2!3d48.8912719!4d2.3505961",
           "startDate": "2017-11-06",
           "endDate": "2018-03-23"
         }
@@ -136,18 +197,21 @@
         {
           "title": "Ingénieur Contrôle Avancé",
           "place": "Feyzin, France",
+          "placeUri": "https://www.google.com/maps/place/TotalEnergies+-+Plateforme+de+Feyzin/@45.6744667,4.8373246,15z/data=!4m5!3m4!1s0x47f4c3278e39ab05:0x17090fcabb1b7b9e!8m2!3d45.6737454!4d4.8471493",
           "startDate": "2014-09-12",
           "endDate": "2017-11-03"
         },
         {
           "title": "Apprenti Ingénieur",
           "place": "Feyzin, France",
+          "placeUri": "https://www.google.com/maps/place/TotalEnergies+-+Plateforme+de+Feyzin/@45.6744667,4.8373246,15z/data=!4m5!3m4!1s0x47f4c3278e39ab05:0x17090fcabb1b7b9e!8m2!3d45.6737454!4d4.8471493",
           "startDate": "2011-12-05",
           "endDate": "2014-09-11"
         },
         {
           "title": "Apprenti Ingénieur",
           "place": "Leuna, Allemagne",
+          "placeUri": "https://www.google.com/maps/place/TotalEnergies+Raffinerie+Mitteldeutschland+GmbH/@51.2844604,11.9829694,14z/data=!4m5!3m4!1s0x4171b83845c9fa2b:0xdcbcc2fa8c5bc63c!8m2!3d51.281246!4d11.9858734",
           "startDate": "2013-05-06",
           "endDate": "2013-08-30"
         }
@@ -186,7 +250,7 @@
         "title": { "text": "Années d'expérience dans l'IT" }
       },
       {
-        "avatar": { "title": { "text": "137" }, "color": "primary white--text", "size": "36px" },
+        "avatar": { "title": { "text": "144" }, "color": "primary white--text", "size": "36px" },
         "title": { "text": "Resources Azure personnnelles" }
       },
       {
