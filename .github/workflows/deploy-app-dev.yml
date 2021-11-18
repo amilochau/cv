@@ -17,6 +17,7 @@ jobs:
   deploy_infra:
     name: Deploy infrastructure
     runs-on: ubuntu-latest
+    environment: DEV
     steps:
       - uses: actions/checkout@v2 # For parameters file
         with:
