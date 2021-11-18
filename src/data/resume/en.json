@@ -19,15 +19,19 @@
   },
   "topics": [
     {
+      "key": "dev",
       "title": "Develoment"
     },
     {
+      "key": "devops",
       "title": "DevOps"
     },
     {
+      "key": "archi",
       "title": "Architecture"
     },
     {
+      "key": "management",
       "title": "Management"
     }
   ],

@@ -50,7 +50,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Deploy Static Web Apps application
-        uses: amilochau/github-actions/deploy/static-web-apps@v1
+        uses: amilochau/github-actions/deploy/static-web-apps@amilochau/fix-swa-build
         with:
           azureCredentials: ${{ secrets.AZURE_CREDENTIALS }}
           applicationName : ${{ env.INFRA_APP_NAME }}
