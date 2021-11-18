@@ -24,7 +24,7 @@
               <v-chip
                 label
                 outlined
-                class="experience-date">
+                class="mb-1 mr-2 experience-date">
                 <v-icon left>
                   mdi-calendar-range-outline
                 </v-icon>
@@ -34,7 +34,8 @@
               <v-chip
                 label
                 outlined
-                class="ml-2"
+                class="mb-1 mr-2"
+                color="error"
                 v-if="job.isCurrent">
                 <v-icon left>
                   mdi-fire
@@ -45,7 +46,7 @@
               <v-chip
                 label
                 outlined
-                class="ml-2"
+                class="mb-1"
                 :href="job.placeUri"
                 target="_blank"
                 rel="noopener">

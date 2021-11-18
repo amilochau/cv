@@ -20,13 +20,14 @@
     <v-card-text>
       {{ description }}
     </v-card-text>
-    <v-card-text>
+    <v-card-text class="pt-0">
       <list-items :list="actions"/>
     </v-card-text>
   </v-card>
 </template>
 
 <script lang="ts">
+import { IList } from '@/models/definitions'
 import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component
@@ -39,6 +40,6 @@ export default class Persona extends Vue {
 
   @Prop({ type: String, required: true }) public description!: string;
 
-  @Prop({ type: Array, required: true }) public actions!: [];
+  @Prop({ type: Object, required: true }) public actions!: IList;
 }
 </script>

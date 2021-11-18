@@ -31,18 +31,70 @@
       "title": "Management"
     }
   ],
-  "links": {
+  "projects": {
     "disableTranslation": true,
     "expandGroups": true,
     "items": [
       {
+        "title": { "text": "Applications" },
+        "items": [
+          {
+            "title": { "text": "milochau.com" },
+            "icon": "mdi-cog-outline",
+            "action": { "href": "https://milochau.com" }
+          },
+          {
+            "title": { "text": "Trips maps" },
+            "icon": "mdi-map-marker-outline",
+            "badge": { "text": "WIP", "color": "info" },
+            "action": { "href": "https://trips.milochau.com" }
+          },
+          {
+            "title": { "text": "Emails service" },
+            "icon": "mdi-email-outline",
+            "action": { "href": "https://github.com/amilochau/emails" }
+          },
+          {
+            "title": { "text": "CV" },
+            "icon": "mdi-card-account-details-outline",
+            "badge": { "text": "WIP", "color": "info" },
+            "action": { "href": "https://cv.milochau.com" }
+          },
+          {
+            "title": { "text": "Wedding" },
+            "icon": "mdi-ring"
+          }
+        ]
+      },
+      {
+        "title": { "text": "Libraries" },
+        "items": [
+          {
+            "title": { "text": "NuGet - Milochau.Core" },
+            "icon": "mdi-dot-net",
+            "action": { "href": "https://www.nuget.org/packages?q=Milochau.Core.*" }
+          },
+          {
+            "title": { "text": "NuGet - MilNet" },
+            "icon": "mdi-dot-net",
+            "badge": { "text": "Deprecated", "color": "warning" },
+            "action": { "href": "https://www.nuget.org/packages?q=MilNet.*" }
+          },
+          {
+            "title": { "text": "npm - milnode" },
+            "icon": "mdi-nodejs",
+            "badge": { "text": "Deprecated", "color": "warning" },
+            "action": { "href": "https://www.npmjs.com/package/milnode" }
+          }
+        ]
+      },
+      {
         "title": { "text": "Documentation" },
-        "icon": "mdi-book-open-page-variant-outline",
         "items": [
           {
             "title": { "text": "Vision" },
             "icon": "mdi-television-ambient-light",
-            "badge": { "text": "WIP" }
+            "badge": { "text": "WIP", "color": "info" }
           },
           {
             "title": { "text": "Roadmap" },
@@ -51,8 +103,8 @@
           },
           {
             "title": { "text": "Architecture" },
-            "icon": "mdi-sitemap",
-            "badge": { "text": "WIP" }
+            "icon": "mdi-sitemap-outline",
+            "badge": { "text": "WIP", "color": "info" }
           }
         ]
       }
