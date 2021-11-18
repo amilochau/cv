@@ -1,19 +1,17 @@
 <template>
-  <v-container class="fill-height">
-    <v-row align="center">
-      <v-col
-        class="text-center"
-        cols="12">
-        <h1 class="text-h3 primary--text mb-4">{{ $t('pages.notFound.title') }}</h1>
-        <p>{{ $t('pages.notFound.description') }}</p>
-        <v-btn
-          :disabled="loading"
-          :to="{ name: 'Home' }"
-          outlined
-          color="primary">{{ $t('pages.notFound.buttonText') }}</v-btn>
-      </v-col>
-    </v-row>
-  </v-container>
+  <v-row align="center">
+    <v-col
+      class="text-center"
+      cols="12">
+      <h1 class="text-h3 primary--text mb-4">{{ $t('pages.notFound.title') }}</h1>
+      <p>{{ $t('pages.notFound.description') }}</p>
+      <v-btn
+        :disabled="loading"
+        :to="{ name: 'Home' }"
+        outlined
+        color="primary">{{ $t('pages.notFound.buttonText') }}</v-btn>
+    </v-col>
+  </v-row>
 </template>
 
 <script lang="ts">

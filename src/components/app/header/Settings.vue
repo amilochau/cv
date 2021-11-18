@@ -12,6 +12,7 @@
           <v-btn
             v-on="{ ...menu.on, ...tooltip.on }"
             :aria-label="$t('app.header.settings.title')"
+            class="btn-menu-settings"
             icon>
             <v-icon>mdi-cog</v-icon>
           </v-btn>
@@ -75,3 +76,11 @@ export default class Settings extends Vue {
   }
 }
 </script>
+
+<style lang="sass" scoped>
+.btn-menu-settings
+  position: absolute
+  top: 12px
+  right: 12px
+  z-index: 2
+</style>

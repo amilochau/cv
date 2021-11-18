@@ -27,10 +27,10 @@
         }
       }
     },
-    "navigation": {
-      "close": "Close",
+    "footer": {
+      "home": "Home",
       "privacy": "Privacy",
-      "home": "Home"
+      "sourceCode": "Source code"
     }
   },
   "errors": {
@@ -42,12 +42,12 @@
   "pages": {
     "forbidden": {
       "title": "Whoops, 403",
-      "description": "You don't have enough privileges to access this page",
+      "description": "You don't have enough privileges to access this page.",
       "buttonText": "Get me out of here!"
     },
     "notFound": {
       "title": "Whoops, 404",
-      "description": "The page you were looking for does not exist",
+      "description": "The page you were looking for does not exist.",
       "buttonText": "Get me out of here!"
     },
     "privacy": {

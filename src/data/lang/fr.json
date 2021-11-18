@@ -27,10 +27,10 @@
         }
       }
     },
-    "navigation": {
-      "close": "Fermer",
+    "footer": {
+      "home": "Accueil",
       "privacy": "Confidentialité",
-      "home": "Accueil"
+      "sourceCode": "Code source"
     }
   },
   "errors": {
@@ -42,12 +42,12 @@
   "pages": {
     "forbidden": {
       "title": "Oups, erreur 403",
-      "description": "Vous n'avez pas suffisamment de droits pour accéder à cette page",
+      "description": "Vous n'avez pas suffisamment de droits pour accéder à cette page.",
       "buttonText": "Sortez-moi de là !"
     },
     "notFound": {
       "title": "Oups, erreur 404",
-      "description": "La page que vous cherchez n'existe pas",
+      "description": "La page que vous cherchez n'existe pas.",
       "buttonText": "Sortez-moi de là !"
     },
     "privacy": {
