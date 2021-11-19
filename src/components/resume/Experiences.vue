@@ -43,7 +43,6 @@
                 v-if="job.isCurrent">
                 <v-icon left>mdi-fire</v-icon>
                 {{ $t('resume.experiences.current') }}
-                <span v-if="job.endDate">&nbsp;— {{ job.endDate | formatExperienceDate }}</span>
               </v-chip>
               <v-chip
                 label
@@ -81,7 +80,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 export default class Experiences extends Vue {
   @Prop({ type: Array, required: true }) public experiences!: [];
 
-  public displayDurations = false;
+  public displayDurations = this.$vuetify.breakpoint.mobile;
 
   public toggleDatesDisplay () {
     this.displayDurations = !this.displayDurations

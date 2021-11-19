@@ -1,24 +1,20 @@
 <template>
   <v-row>
-    <v-col cols='12' md='4'>
+    <v-col cols="12" md="4">
       <resume-persona
-        :image='currentResume.image'
-        :name='currentResume.name'
-        :job='currentResume.job'
-        :description='currentResume.description'
-        :actions='currentResume.actions'/>
+        :persona="currentResume.persona"/>
       <resume-key-words
-        :topics='currentResume.topics'/>
+        :topics="currentResume.topics"/>
       <resume-training
-        :trainings='currentResume.trainings'/>
+        :trainings="currentResume.trainings"/>
       <resume-metrics
-        :metrics='currentResume.metrics'/>
+        :metrics="currentResume.metrics"/>
       <resume-projects
-        :projects='currentResume.projects'/>
+        :projects="currentResume.projects"/>
     </v-col>
-    <v-col cols='12' md='8'>
+    <v-col cols="12" md="8">
       <resume-experiences
-        :experiences='currentResume.experiences'/>
+        :experiences="currentResume.experiences"/>
     </v-col>
   </v-row>
 </template>
