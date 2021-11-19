@@ -24,12 +24,16 @@
               <v-chip
                 label
                 outlined
-                class="mb-1 mr-2 experience-date">
-                <v-icon left>
-                  mdi-calendar-range-outline
-                </v-icon>
-                {{ job.startDate | formatExperienceDate }}
-                <span v-if="job.endDate">&nbsp;— {{ job.endDate | formatExperienceDate }}</span>
+                class="mb-1 mr-2 experience-date"
+                @click="toggleDatesDisplay">
+                <v-icon left>mdi-calendar-range-outline</v-icon>
+                <span v-if="displayDurations">
+                  {{ job.startDate | formatDifference(job.endDate) }}
+                </span>
+                <span v-else>
+                  {{ job.startDate | formatExperienceDate }}
+                  <span v-if="job.endDate"> — {{ job.endDate | formatExperienceDate }}</span>
+                </span>
               </v-chip>
               <v-chip
                 label
@@ -37,9 +41,7 @@
                 class="mb-1 mr-2"
                 color="error"
                 v-if="job.isCurrent">
-                <v-icon left>
-                  mdi-fire
-                </v-icon>
+                <v-icon left>mdi-fire</v-icon>
                 {{ $t('resume.experiences.current') }}
                 <span v-if="job.endDate">&nbsp;— {{ job.endDate | formatExperienceDate }}</span>
               </v-chip>
@@ -50,9 +52,7 @@
                 :href="job.placeUri"
                 target="_blank"
                 rel="noopener">
-                <v-icon left>
-                  mdi-map-marker-outline
-                </v-icon>
+                <v-icon left>mdi-map-marker-outline</v-icon>
                 {{ job.place }}
               </v-chip>
             </p>
@@ -80,6 +80,12 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 @Component
 export default class Experiences extends Vue {
   @Prop({ type: Array, required: true }) public experiences!: [];
+
+  public displayDurations = false;
+
+  public toggleDatesDisplay () {
+    this.displayDurations = !this.displayDurations
+  }
 }
 </script>
 
