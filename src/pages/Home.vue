@@ -1,5 +1,6 @@
 <template>
   <v-row>
+    <resume-print-button/>
     <v-col cols="12" md="4">
       <resume-persona
         :persona="currentResume.persona"/>

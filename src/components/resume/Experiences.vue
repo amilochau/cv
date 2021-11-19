@@ -92,7 +92,7 @@ export default class Experiences extends Vue {
 
   public changeDialog = false
 
-  public toggleDatesDisplay () {
+  toggleDatesDisplay () {
     this.displayDurations = !this.displayDurations
   }
 }

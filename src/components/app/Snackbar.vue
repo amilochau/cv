@@ -4,7 +4,8 @@
     :color="errorMessages.color"
     v-model="enabled"
     top
-    right>
+    right
+    class="d-print-none">
     <v-row align="center">
       <v-col
         v-if="errorMessages.icon"

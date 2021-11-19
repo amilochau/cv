@@ -12,7 +12,7 @@
           <v-btn
             v-on="{ ...menu.on, ...tooltip.on }"
             :aria-label="$t('app.header.settings.title')"
-            class="btn-menu-settings"
+            class="btn-menu-settings d-print-none"
             icon>
             <v-icon>mdi-cog</v-icon>
           </v-btn>
