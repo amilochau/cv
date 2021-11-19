@@ -115,6 +115,21 @@
     },
     "training": {
       "title": "Training"
+    },
+    "change": {
+      "title": "Change is coming...",
+      "busy": "In office",
+      "free": "Free",
+      "status": "Current situation",
+      "ongoingTrial": "Ongoing trial period",
+      "trialDone": "Trial period ended",
+      "departureNoticed": "Ongoing departure notice",
+      "noNotice": "No departure notice filed",
+      "changeLikelihood": "Likelihood of upcoming change",
+      "ongoingProcess": "Recruitment process in progress",
+      "noProcess": "No recruitment process",
+      "noticePeriod": "Notice period",
+      "startFrom": "Start of a new position at the earliest"
     }
   }
 }

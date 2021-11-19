@@ -115,6 +115,21 @@
     },
     "training": {
       "title": "Formation"
+    },
+    "change": {
+      "title": "Change is coming...",
+      "busy": "En poste",
+      "free": "Libre",
+      "status": "Situation actuelle",
+      "ongoingTrial": "Période d'essai en cours",
+      "trialDone": "Période d'essai terminée",
+      "departureNoticed": "Préavis en cours",
+      "noNotice": "Aucun préavis déposé",
+      "changeLikelihood": "Probabilité de changement prochain",
+      "ongoingProcess": "Process de recrutement en cours",
+      "noProcess": "Aucun process de recrutement",
+      "noticePeriod": "Durée de préavis",
+      "startFrom": "Début d'un nouveau poste au plus tôt"
     }
   }
 }

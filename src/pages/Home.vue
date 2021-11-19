@@ -14,7 +14,8 @@
     </v-col>
     <v-col cols="12" md="8">
       <resume-experiences
-        :experiences="currentResume.experiences"/>
+        :experiences="currentResume.experiences"
+        :change="currentResume.change"/>
     </v-col>
   </v-row>
 </template>
