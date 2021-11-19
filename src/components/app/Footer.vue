@@ -3,7 +3,7 @@
     app
     absolute
     padless
-    class="text--secondary">
+    class="text--secondary d-print-none">
     <v-container>
       <v-divider/>
       <v-row

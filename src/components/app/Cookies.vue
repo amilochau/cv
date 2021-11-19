@@ -2,7 +2,7 @@
   <v-toolbar
     v-if="showCookiesBar"
     dense
-    class="cookies-menu primary white--text"
+    class="cookies-menu primary white--text d-print-none"
     height="72px">
     <v-icon color="white">mdi-cookie</v-icon>
     <span class="mx-4 nowrap cookies-title">{{ $t('app.cookies.title') }}</span>

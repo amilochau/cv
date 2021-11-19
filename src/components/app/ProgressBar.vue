@@ -2,7 +2,7 @@
   <v-progress-linear
     :active="lazyProgress"
     :indeterminate="progress.indeterminate"
-    class="progress-bar mt-0 mb-0"/>
+    class="progress-bar mt-0 mb-0 d-print-none"/>
 </template>
 
 <script lang="ts">
