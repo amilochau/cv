@@ -72,7 +72,9 @@
       </v-timeline-item>
     </v-timeline>
     <v-dialog v-model="changeDialog" width="400px">
-      <resume-change :change="change"/>
+      <resume-change
+        :change="change"
+        @close="changeDialog = false"/>
     </v-dialog>
   </div>
 </template>

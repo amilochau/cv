@@ -236,12 +236,13 @@
     ]
   },
   "change": {
-    "status": "In office",
+    "busy": true,
     "isTrialPeriod": false,
     "isDepartureNotice": false,
-    "changeLikelihoodInPercent": 80,
+    "changeLikelihoodInPercent": 0.8,
+    "ongoingProcess": false,
     "noticePeriodInDays": 90,
     "noticePeriodBufferInDays": 21,
-    "isDepartureEndOfMonth": true
+    "isDepartureEndOfMonth": false
   }
 }
