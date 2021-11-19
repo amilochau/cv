@@ -43,8 +43,7 @@
             <v-icon>mdi-close</v-icon>
           </v-btn>
         </v-app-bar>
-        <loadable-image
-          :src="persona.image"/>
+        <loadable-image :src="persona.image"/>
       </v-card>
     </v-dialog>
   </div>

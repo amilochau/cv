@@ -40,7 +40,8 @@
                 outlined
                 class="mb-1 mr-2"
                 color="error"
-                v-if="job.isCurrent">
+                v-if="job.isCurrent"
+                @click="changeDialog = true">
                 <v-icon left>mdi-fire</v-icon>
                 {{ $t('resume.experiences.current') }}
               </v-chip>
@@ -70,6 +71,9 @@
         </v-card>
       </v-timeline-item>
     </v-timeline>
+    <v-dialog v-model="changeDialog" width="400px">
+      <resume-change :change="change"/>
+    </v-dialog>
   </div>
 </template>
 
@@ -80,7 +84,11 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 export default class Experiences extends Vue {
   @Prop({ type: Array, required: true }) public experiences!: [];
 
+  @Prop({ type: Object, required: true }) public change!: any;
+
   public displayDurations = this.$vuetify.breakpoint.mobile;
+
+  public changeDialog = false
 
   public toggleDatesDisplay () {
     this.displayDurations = !this.displayDurations

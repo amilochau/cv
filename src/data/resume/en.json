@@ -234,5 +234,14 @@
         "title": { "text": "Cups of coffee per day" }
       }
     ]
+  },
+  "change": {
+    "status": "In office",
+    "isTrialPeriod": false,
+    "isDepartureNotice": false,
+    "changeLikelihoodInPercent": 80,
+    "noticePeriodInDays": 90,
+    "noticePeriodBufferInDays": 21,
+    "isDepartureEndOfMonth": true
   }
 }

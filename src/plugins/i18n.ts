@@ -1,6 +1,7 @@
 import en from '@/data/lang/en.json'
 import fr from '@/data/lang/fr.json'
 import moment from 'moment'
+import numeral from 'numeral'
 import 'numeral/locales/fr'
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
@@ -30,10 +31,25 @@ const formatDifference = (startDate: string, endDate: string) => {
     return moment.duration(moment().diff(startDate)).humanize()
   }
 }
+const formatDays = (days: number) => {
+  return moment.duration(days, 'days').humanize()
+}
+const formatDateFrom = (days: number, nextMonth: boolean) => {
+  const date = moment().add(days, 'days')
+  if (nextMonth) {
+    return date.add(1, 'months').startOf('month').format('LL')
+  } else {
+    return date.format('LL')
+  }
+}
+const formatPercents = (percent: number) => numeral(percent).format('0 %')
 
 Vue.filter('formatExperienceDate', formatExperienceDate)
 Vue.filter('formatTrainingDate', formatTrainingDate)
 Vue.filter('formatDifference', formatDifference)
+Vue.filter('formatDays', formatDays)
+Vue.filter('formatDateFrom', formatDateFrom)
+Vue.filter('formatPercents', formatPercents)
 
 export default i18n
 
@@ -41,4 +57,7 @@ export {
   formatExperienceDate,
   formatTrainingDate,
   formatDifference,
+  formatDays,
+  formatDateFrom,
+  formatPercents,
 }
