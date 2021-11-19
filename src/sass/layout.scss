@@ -1,0 +1,33 @@
+.cookies-menu {
+  position: fixed !important;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.progress-bar {
+  position: absolute !important;
+  z-index: 9;
+}
+
+.word-break {
+  word-break: break-all;
+}
+
+%nowrap-with-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.multi-line {
+  white-space: pre-line;
+}
+
+.nowrap-with-ellipsis {
+  @extend %nowrap-with-ellipsis;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

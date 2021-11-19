@@ -22,11 +22,9 @@ $material-light: ('background': #FAFAFA);
 $color-pack: false;
 
 // Custom styles
-@import './_colors';
-@import './_condensed';
-@import './_layout';
-@import './_theme';
-@import './_vuetify';
+@import './colors';
+@import './layout';
+@import './vuetify';
 
 // Change <v-toolbar> variables
 @import '~vuetify/src/components/VToolbar/_variables.scss';

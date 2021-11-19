@@ -38,7 +38,6 @@ export interface IListItem {
   action?: IAction;
 
   disabled?: boolean;
-  inactive?: boolean;
 
   icon?: string;
   avatar?: IAvatar;

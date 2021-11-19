@@ -34,7 +34,7 @@
             :to="subItem.action ? subItem.action.to : undefined"
             :href="subItem.action ? subItem.action.href : undefined"
             :disabled="subItem.disabled"
-            :inactive="subItem.inactive"
+            :inactive="!subItem.action"
             :target="subItem.action && subItem.action.href ? '_blank' : undefined"
             exact
             class="pl-4"
@@ -90,7 +90,7 @@
         :to="item.action ? item.action.to : undefined"
         :href="item.action ? item.action.href : undefined"
         :disabled="item.disabled"
-        :inactive="item.inactive"
+        :inactive="!item.action"
         :target="item.action && item.action.href ? '_blank' : undefined"
         exact
         rel="noopener"
