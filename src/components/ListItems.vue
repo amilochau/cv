@@ -8,8 +8,9 @@
         v-if="item.items"
         :key="i"
         :prepend-icon="item.icon"
-        :value="list.expandGroups"
-        no-action>
+        :value="expandGroups"
+        no-action
+        sub-group>
         <template #activator>
           <v-list-item-content>
             <v-list-item-title class="multi-line">{{ list.disableTranslation ? item.title.text :  $t(item.title.text) }}</v-list-item-title>
@@ -145,6 +146,16 @@ export default class ListItems extends Vue {
 
   get dividerClass () {
     if (!this.dense) { return 'my-2' } else { return undefined }
+  }
+
+  get expandGroups () {
+    if (this.list.expandGroups === 'mobile') {
+      return this.$vuetify.breakpoint.mobile
+    } else if (this.list.expandGroups === 'desktop') {
+      return !this.$vuetify.breakpoint.mobile
+    } else {
+      return this.list.expandGroups
+    }
   }
 }
 </script>
