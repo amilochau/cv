@@ -23,13 +23,22 @@ const i18n = new VueI18n({
 
 const formatExperienceDate = (value: string) => moment(value).format('MMM YYYY')
 const formatTrainingDate = (value: string) => moment(value).format('YYYY')
+const formatDifference = (startDate: string, endDate: string) => {
+  if (endDate) {
+    return moment.duration(moment(endDate).diff(startDate)).humanize()
+  } else {
+    return moment.duration(moment().diff(startDate)).humanize()
+  }
+}
 
 Vue.filter('formatExperienceDate', formatExperienceDate)
 Vue.filter('formatTrainingDate', formatTrainingDate)
+Vue.filter('formatDifference', formatDifference)
 
 export default i18n
 
 export {
   formatExperienceDate,
   formatTrainingDate,
+  formatDifference,
 }
