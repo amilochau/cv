@@ -62,15 +62,27 @@
               <v-list-item-title>{{ list.disableTranslation ? subItem.title.text : $t(subItem.title.text) }}</v-list-item-title>
               <v-list-item-subtitle v-if="subItem.subtitle">{{ list.disableTranslation ? subItem.subtitle.text : $t(subItem.subtitle.text) }}</v-list-item-subtitle>
             </v-list-item-content>
-            <v-chip
+            <v-list-item-action
               v-if="subItem.badge"
-              :color="subItem.badge.color"
-              :label="subItem.badge.label"
-              :outlined="subItem.badge.outlined"
-              :small="subItem.badge.small">
-              <v-icon v-if="subItem.badge.icon" left>{{ subItem.badge.icon }}</v-icon>
-              {{ list.disableTranslation ? subItem.badge.text : $t(subItem.badge.text) }}
-            </v-chip>
+              class="ml-2">
+              <v-icon v-if="!subItem.badge.text">
+                {{ subItem.badge.icon }}
+              </v-icon>
+              <v-chip
+                v-else
+                :color="subItem.badge.color"
+                :label="subItem.badge.label"
+                :outlined="subItem.badge.outlined"
+                :small="subItem.badge.small">
+                <v-icon
+                  v-if="subItem.badge.icon"
+                  :small="subItem.badge.small"
+                  left>
+                  {{ subItem.badge.icon }}
+                </v-icon>
+                {{ list.disableTranslation ? subItem.badge.text : $t(subItem.badge.text) }}
+              </v-chip>
+            </v-list-item-action>
           </v-list-item>
         </template>
       </v-list-group>
@@ -117,15 +129,27 @@
           <v-list-item-title class="multi-line">{{ list.disableTranslation ? item.title.text : $t(item.title.text) }}</v-list-item-title>
           <v-list-item-subtitle v-if="item.subtitle" class="multi-line">{{ list.disableTranslation ? item.subtitle.text : $t(item.subtitle.text) }}</v-list-item-subtitle>
         </v-list-item-content>
-        <v-chip
+        <v-list-item-action
           v-if="item.badge"
-          :color="item.badge.color"
-          :label="item.badge.label"
-          :outlined="item.badge.outlined"
-          :small="item.badge.small">
-          <v-icon v-if="item.badge.icon" left>{{ item.badge.icon }}</v-icon>
-          {{ list.disableTranslation ? item.badge.text : $t(item.badge.text) }}
-        </v-chip>
+          class="ml-2">
+          <v-icon v-if="!item.badge.text">
+            {{ item.badge.icon }}
+          </v-icon>
+          <v-chip
+            v-else
+            :color="item.badge.color"
+            :label="item.badge.label"
+            :outlined="item.badge.outlined"
+            :small="item.badge.small">
+            <v-icon
+              v-if="item.badge.icon"
+              :small="item.badge.small"
+              left>
+              {{ item.badge.icon }}
+            </v-icon>
+            {{ list.disableTranslation ? item.badge.text : $t(item.badge.text) }}
+          </v-chip>
+        </v-list-item-action>
       </v-list-item>
     </template>
     <slot/>

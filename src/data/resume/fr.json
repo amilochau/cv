@@ -53,7 +53,7 @@
           {
             "title": { "text": "Carte de voyages" },
             "icon": "mdi-map-marker-outline",
-            "badge": { "text": "WIP", "color": "info" },
+            "badge": { "text": "WIP", "color": "info", "small": true },
             "action": { "href": "https://trips.milochau.com" }
           },
           {
@@ -64,7 +64,7 @@
           {
             "title": { "text": "CV" },
             "icon": "mdi-card-account-details-outline",
-            "badge": { "text": "WIP", "color": "info" },
+            "badge": { "text": "WIP", "color": "info", "small": true },
             "action": { "href": "https://cv.milochau.com" }
           },
           {
@@ -84,13 +84,13 @@
           {
             "title": { "text": "NuGet - MilNet" },
             "icon": "mdi-dot-net",
-            "badge": { "text": "Déprécié", "color": "warning" },
+            "badge": { "text": "Déprécié", "color": "warning", "small": true },
             "action": { "href": "https://www.nuget.org/packages?q=MilNet.*" }
           },
           {
             "title": { "text": "npm - milnode" },
             "icon": "mdi-nodejs",
-            "badge": { "text": "Déprécié", "color": "warning" },
+            "badge": { "text": "Déprécié", "color": "warning", "small": true },
             "action": { "href": "https://www.npmjs.com/package/milnode" }
           }
         ]
@@ -101,7 +101,7 @@
           {
             "title": { "text": "Vision" },
             "icon": "mdi-television-ambient-light",
-            "badge": { "text": "WIP", "color": "info" }
+            "badge": { "text": "WIP", "color": "info", "small": true }
           },
           {
             "title": { "text": "Roadmap" },
@@ -111,7 +111,7 @@
           {
             "title": { "text": "Architecture" },
             "icon": "mdi-sitemap-outline",
-            "badge": { "text": "WIP", "color": "info" }
+            "badge": { "text": "WIP", "color": "info", "small": true }
           }
         ]
       }
@@ -234,7 +234,12 @@
       {
         "title": { "text": "Ecole Centrale de Nantes" },
         "subtitle": { "text": "Diplôme d'Ingénieur généraliste" },
-        "badge": { "text": "2014", "label": true, "outlined": true, "icon": "mdi-calendar-range-outline" }
+        "badge": { "text": "2014", "label": true, "outlined": true, "icon": "mdi-calendar-range-outline", "small": true }
+      },
+      {
+        "title": { "text": "TOEIC" },
+        "subtitle": { "text": "915 / 990" },
+        "badge": { "text": "2014", "label": true, "outlined": true, "icon": "mdi-calendar-range-outline", "small": true }
       },
       {
         "divider": true
@@ -244,8 +249,12 @@
       },
       {
         "title": { "text": "Microsoft Learn" },
-        "badge": { "text": "2021", "label": true, "outlined": true, "icon": "mdi-calendar-range-outline" },
+        "icon": "mdi-microsoft-azure",
         "action": { "href": "https://docs.microsoft.com/fr-fr/users/amilochau" }
+      },
+      {
+        "title": { "text": "Sauveteur Secouriste au Travail" },
+        "icon": "mdi-lifebuoy"
       }
     ]
   },
