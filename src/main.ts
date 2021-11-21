@@ -6,10 +6,11 @@ import Vue from 'vue'
 import App from '@/App.vue'
 import '@/components'
 import { createValidate, createVuetify, i18n, router, store } from '@/plugins'
+import { logInformation, LogStyle } from './plugins/logger'
 
 // Custom CSS
 import 'roboto-fontface/css/roboto/roboto-fontface.css'
-import { logInformation, LogStyle } from './plugins/logger'
+import './sass/main.scss'
 
 Vue.config.productionTip = false
 

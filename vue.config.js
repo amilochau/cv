@@ -5,13 +5,6 @@ const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
 module.exports = {
   assetsDir: 'assets',
-  css: {
-    loaderOptions: {
-      sass: {
-        additionalData: '@import "~@/sass/main.scss"',
-      },
-    },
-  },
   transpileDependencies: [
     'vuetify',
     'vuex-persist',
