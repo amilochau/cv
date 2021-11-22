@@ -8,9 +8,6 @@ import '@/components'
 import { createValidate, createVuetify, i18n, router, store } from '@/plugins'
 import { logInformation, LogStyle } from './plugins/logger'
 
-// Custom CSS
-import 'roboto-fontface/css/roboto/roboto-fontface.css'
-
 Vue.config.productionTip = false
 
 const vuetify = createVuetify()

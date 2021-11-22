@@ -3,7 +3,6 @@
 const webpack = require('webpack')
 
 module.exports = {
-  assetsDir: 'assets',
   transpileDependencies: [
     'vuetify',
     'vuex-persist',
