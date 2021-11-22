@@ -1,4 +1,15 @@
-// Colors
+@import '~vuetify/src/styles/styles.sass';
+
+// Custom colors
+
+$color-pack: false;
+@import './colors';
+
+// Override variables
+
+@import './layout';
+@import './vuetify';
+
 $material-dark: (
   'app-bar': #212121,
   'bottom-navigation': #424242,

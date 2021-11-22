@@ -10,7 +10,6 @@ import { logInformation, LogStyle } from './plugins/logger'
 
 // Custom CSS
 import 'roboto-fontface/css/roboto/roboto-fontface.css'
-import './sass/main.scss'
 
 Vue.config.productionTip = false
 

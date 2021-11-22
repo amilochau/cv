@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 
 const webpack = require('webpack')
-const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
 module.exports = {
   assetsDir: 'assets',
@@ -13,7 +12,6 @@ module.exports = {
   configureWebpack: {
     plugins: [
       new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /en|fr/),
-      new VuetifyLoaderPlugin(),
     ],
   },
   chainWebpack: config => {

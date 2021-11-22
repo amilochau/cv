@@ -65,6 +65,11 @@
   }
 }
 
+$colors: (
+  'grey': $grey,
+  'blue': $blue
+);
+
 @each $color_name, $color_color in $colors {
   @if ($color_name != 'shades') {
     @include global-color($color_name, map-get($color_color, 'base'));
