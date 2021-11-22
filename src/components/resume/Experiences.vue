@@ -95,6 +95,6 @@ export default class Experiences extends Vue {
 </script>
 
 <style lang="sass">
-  .experience-date
-    text-transform: capitalize
+.experience-date
+  text-transform: capitalize
 </style>
