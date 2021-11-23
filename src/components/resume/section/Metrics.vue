@@ -1,5 +1,7 @@
 <template>
-  <v-card elevation="1" class="mb-2">
+  <v-card
+    elevation="1"
+    class="mb-2">
     <v-card-title>
       <v-icon left>mdi-ticket-confirmation</v-icon>
       {{ $t('resume.metrics.title') }}

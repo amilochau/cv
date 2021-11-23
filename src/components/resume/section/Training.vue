@@ -1,5 +1,7 @@
 <template>
-  <v-card elevation="1" class="mb-2">
+  <v-card
+    elevation="1"
+    class="mb-2">
     <v-card-title>
       <v-icon left>mdi-school</v-icon>
       {{ $t('resume.training.title') }}

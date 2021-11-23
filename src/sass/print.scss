@@ -1,0 +1,32 @@
+// Mixins
+
+@mixin make-col($size) {
+  flex: 0 0 percentage($size / $grid-columns);
+  max-width: percentage($size / $grid-columns);
+}
+
+// Styles on print
+
+@media print {
+  // Force columns
+  @for $i from 1 through $grid-columns {
+    .p-col-#{$i} {
+      @include make-col($i);
+    }
+  }
+  
+  // Disable elevation
+  $z: 24;
+  @while $z >= 1 {
+    .theme--light.elevation-#{$z} {
+      @include elevation(0, $important: true);
+      border: thin solid map-get($material-light, 'dividers')
+    }
+    .theme--dark.elevation-#{$z} {
+      @include elevation(0, $important: true);
+      border: thin solid map-get($material-dark, 'dividers')
+    }
+
+    $z: $z - 1;
+  }
+}

@@ -6,14 +6,15 @@
     "job": "Software Architect",
     "description": "I'm a Software Architect, exploring and implementation many of Microsoft technologies at SPVIE Assurances. Contact me to learn more on my projects.",
     "actions": {
+      "disableTranslation": true,
       "items": [
         {
-          "title": { "text": "resume.persona.linkedIn" },
+          "title": { "text": "LinkedIn", "replacement": "antoine-milochau" },
           "icon": "mdi-linkedin",
           "action": { "href": "https://www.linkedin.com/in/antoine-milochau" }
         },
         {
-          "title": { "text": "resume.persona.gitHub" },
+          "title": { "text": "GitHub", "replacement": "amilochau" },
           "icon": "mdi-github",
           "action": { "href": "https://github.com/amilochau" }
         }
