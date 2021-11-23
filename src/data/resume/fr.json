@@ -123,11 +123,68 @@
       "company": "SPVIE Technology",
       "jobs": [
         {
-          "title": "Architecte applicatif",
+          "title": "Software Architect",
           "place": "Suresnes, FR",
           "placeUri": "https://www.google.com/maps/place/AssurWare/@48.8713031,2.2275824,17z/data=!3m1!4b1!4m5!3m4!1s0x47e6652271fa816d:0x1dcd7d131570fb85!8m2!3d48.8713119!4d2.2297834",
           "startDate": "2020-05-04",
-          "isCurrent": true
+          "isCurrent": true,
+          "context": "SPVIE Technology, DSI du groupe SPVIE Assurances",
+          "description": "SPVIE Technology développe les principales applications business pour le groupe SPVIE. L'environnement est 100% Web, 100% Azure, 100% Microsoft.",
+          "missions": [
+            {
+              "title": "Améliorations d'architecture",
+              "items": [
+                {
+                  "title": "Migration des applications existantes (vers .NET Core/.NET 6.0)"
+                },
+                {
+                  "title": "Revue d'architecture : mise en place de N-Tiers sur les applications legacy, pattern microservices sur les nouveaux projets"
+                },
+                {
+                  "title": "Création de frameworks d'entreprise : applications en ASP.NET Core ou Azure Functions, templates YAML de déploiement"
+                },
+                {
+                  "title": "Définition de schémas d'architecte et plans de migration vers une architecture scalable, résiliente"
+                }
+              ]
+            },
+            {
+              "title": "Accompagnement des équipes",
+              "items": [
+                {
+                  "title": "Team Leader d'une équipe de 6 développeurs (FR, CI, BL) pendant un an"
+                },
+                {
+                  "title": "Formation des développeurs sur les technologies (.NET, monitoring, qualité, patterns d'architecture...)"
+                },
+                {
+                  "title": "Accompagnement à la mise en place de méthode Scrum dans les équipes techniques"
+                }
+              ]
+            },
+            {
+              "title": "Automatisation des process (DevOps)",
+              "items": [
+                {
+                  "title": "Mise en place de CI/CD sur toutes les applications"
+                },
+                {
+                  "title": "Mise en place de IaC sur un scope restreint"
+                }
+              ]
+            },
+            {
+              "title": "Amélioration continue de la qualité",
+              "items": [
+                {
+                  "title": "Mise en place d'outils de suivi de la qualité et des performances (SonarCloud, Application Insights, Health checks"
+                },
+                {
+                  "title": "Introduction de tests unitaires et E2E sur les applications business"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -139,7 +196,33 @@
           "place": "Clichy, FR",
           "placeUri": "https://www.google.com/maps/place/Monoprix+Online/@48.9114806,2.3075256,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66fa859a7648f:0x9f092451007f953!8m2!3d48.9114745!4d2.3097094",
           "startDate": "2019-07-01",
-          "endDate": "2020-04-30"
+          "endDate": "2020-04-30",
+          "context": "Monoprix Online, filiale IT du groupe Monoprix",
+          "description": "Le site sarenza.com évolue en permanence pour répondre aux besoins des clients.",
+          "missions": [
+            {
+              "title": "Référent technique de sarenza.com",
+              "items": [
+                {
+                  "title": "Evolutions fonctionnelles et techniques du site sarenza.com"
+                },
+                {
+                  "title": "Définition de roadmap technique du Front-Office Sarenza"
+                },
+                {
+                  "title": "Mise en place de tests unitaires et mesures de qualité (SonarCloud) sur les applications"
+                }
+              ]
+            },
+            {
+              "title": "Création et animation de communautés de développeurs",
+              "items": [
+                {
+                  "title": "Création de guildes (modèles Spotify)"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -153,7 +236,7 @@
           "startDate": "2018-04-01",
           "endDate": "2019-06-20",
           "context": "Division 'Supply, Sales & Optimization', spécialisé dans l'optimisation des mélanges de carburant",
-          "description": "Des outils (notamment des applications) et des méthodes (notamment des guides et formations aux techniciens) permettent aux raffineries d'optimiser leur production.",
+          "description": "Des outils (applications) et des méthodes (algorithmes et réglages de machines) permettent aux raffineries d'optimiser leur production.",
           "missions": [
             {
               "title": "Management de projets",
@@ -171,17 +254,6 @@
               "title": "DevOps",
               "description": "Mise en place d'Azure DevOps, depuis le ticketing au déploiement continu. Configuration des agents privés, introduction de code review, déploiement on premise et dans Azure. Gestion de la transformation des process et accompagnement des utilisateurs."
             }
-          ],
-          "results": [
-            {
-              "title": "Applications du département migrées dans Azure DevOps (environ 20 projects)"
-            },
-            {
-              "title": "Application business réécrite from scratch (rôle de PO & Architecte) dans les temps"
-            },
-            {
-              "title": "Mise en place progressive d'une architecture en microservices"
-            }
           ]
         }
       ]
@@ -195,7 +267,19 @@
           "place": "Paris, FR",
           "placeUri": "https://www.google.com/maps/place/SeLoger/@48.8912719,2.3484074,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66e66d3362e2b:0xbec65ee69f11fe85!8m2!3d48.8912719!4d2.3505961",
           "startDate": "2017-11-06",
-          "endDate": "2018-03-23"
+          "endDate": "2018-03-23",
+          "context": "DSI du groupe SeLoger",
+          "description": "Le groupe SeLoger fait évoluer des sites à fort trafic, pour les particuliers et les agences immobilières.",
+          "missions": [
+            {
+              "title": "Développement d'applications Web",
+              "items": [
+                {
+                  "title": "Evolutions Front-End et Back-End des applications du groupe SeLoger"
+                }
+              ]
+            }
+          ]
         }
       ]
     },

@@ -48,7 +48,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import { mapActions, mapGetters } from 'vuex'
-import languages from '../../../data/layout/toolbar/languages.json'
+import languages from '../../../data/layout/languages.json'
 import { IList } from '../../../models/definitions'
 
 @Component({
