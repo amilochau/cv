@@ -89,13 +89,13 @@
       <v-subheader
         v-else-if="item.header"
         :key="i"
-        class="grey--text px-4">
+        class="grey--text px-4 d-print-none">
         {{ list.disableTranslation ? item.header.text : $t(item.header.text) }}
       </v-subheader>
       <v-divider
         v-else-if="item.divider"
         :key="i"
-        :class="dividerClass"/>
+        class="my-2"/>
       <v-list-item
         v-else
         :key="i"
@@ -164,13 +164,7 @@ import { IList } from '../models/definitions'
 export default class ListItems extends Vue {
   @Prop({ type: Object, required: true }) public list!: IList;
 
-  @Prop({ type: Boolean, default: false }) public dense!: boolean;
-
   public baseUrl: string = process.env.BASE_URL;
-
-  get dividerClass () {
-    if (!this.dense) { return 'my-2' } else { return undefined }
-  }
 
   get expandGroups () {
     if (this.list.expandGroups === 'mobile') {

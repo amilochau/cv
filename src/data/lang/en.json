@@ -76,7 +76,7 @@
     "Privacy": { "title": "Privacy", "description": "Privacy page" },
     "Forbidden": { "title": "Forbidden", "description": "Page for access to forbidden resources" },
     "NotFound": { "title": "Not found", "description": "Page for access to not found resources" },
-    "Home": { "title": "Home", "description": "Home page" }
+    "Home": { "title": "CV", "description": "CV page" }
   },
   "components": {
     "offline": {
@@ -93,6 +93,7 @@
     }
   },
   "resume": {
+    "print": "Print",
     "experiences": {
       "title": "Experiences",
       "current": "Current",
@@ -109,9 +110,7 @@
       "title": "Metrics"
     },
     "persona": {
-      "image": "Persona",
-      "linkedIn": "LinkedIn",
-      "gitHub": "GitHub"
+      "image": "Persona"
     },
     "training": {
       "title": "Training"

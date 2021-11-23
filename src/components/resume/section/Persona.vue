@@ -1,5 +1,7 @@
 <template>
-  <v-card elevation="1" class="mb-2">
+  <v-card
+    elevation="1"
+    class="mb-2">
     <v-card-title>
       <v-list-item>
         <v-list-item-avatar>
@@ -7,7 +9,7 @@
             :alt="$t('resume.persona.image')"
             :src="persona.thumbnail"
             class="cursor-pointer"
-            @click="dialog = true"/>
+            @click="pictureDialog = true"/>
         </v-list-item-avatar>
         <v-list-item-content>
           <v-list-item-title>
@@ -22,27 +24,26 @@
     <v-card-text>
       {{ persona.description }}
     </v-card-text>
-    <v-card-text class="pt-0">
+    <v-card-text class="d-print-none pt-0">
       <list-items :list="persona.actions"/>
     </v-card-text>
-    <v-dialog v-model="dialog" width="600px">
-      <v-card class="mx-auto">
-        <v-app-bar
-          flat
-          dense>
-          <v-icon left>mdi-account-box-outline</v-icon>
-          <v-toolbar-title>
-            {{ persona.name }}
-          </v-toolbar-title>
-          <v-spacer/>
-          <v-btn
-            icon
-            @click="dialog = false">
-            <v-icon>mdi-close</v-icon>
-          </v-btn>
-        </v-app-bar>
-        <loadable-image :src="persona.image"/>
-      </v-card>
+    <v-card-text class="d-none d-print-block pt-0">
+      <v-chip
+        v-for="(action, i) in persona.actions.items"
+        :key="i"
+        label
+        outlined
+        class="mr-2 mb-1">
+        <v-icon left>
+          {{ action.icon}}
+        </v-icon>
+        {{ action.title.replacement }}
+      </v-chip>
+    </v-card-text>
+    <v-dialog v-model="pictureDialog" width="600px">
+      <resume-dialog-change
+        :persona="persona"
+        @close="pictureDialog = false"/>
     </v-dialog>
   </v-card>
 </template>
@@ -54,6 +55,6 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 export default class Persona extends Vue {
   @Prop({ type: Object, required: true }) public persona!: any;
 
-  public dialog = false
+  public pictureDialog = false
 }
 </script>

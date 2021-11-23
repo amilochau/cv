@@ -6,14 +6,15 @@
     "job": "Architecte applicatif",
     "description": "Architecte applicatif, j'explore et j'implémente de nombreuses technologies Microsoft chez SPVIE Assurances. Contactez-moi pour en apprendre plus sur mes projets.",
     "actions": {
+      "disableTranslation": true,
       "items": [
         {
-          "title": { "text": "resume.persona.linkedIn" },
+          "title": { "text": "LinkedIn", "replacement": "antoine-milochau" },
           "icon": "mdi-linkedin",
           "action": { "href": "https://www.linkedin.com/in/antoine-milochau" }
         },
         {
-          "title": { "text": "resume.persona.gitHub" },
+          "title": { "text": "GitHub", "replacement": "amilochau" },
           "icon": "mdi-github",
           "action": { "href": "https://github.com/amilochau" }
         }

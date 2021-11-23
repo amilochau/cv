@@ -3,7 +3,7 @@
     app
     absolute
     padless
-    class="text--secondary d-print-none">
+    class="text--secondary d-print-none grey lighten-5">
     <v-container>
       <v-divider/>
       <v-row

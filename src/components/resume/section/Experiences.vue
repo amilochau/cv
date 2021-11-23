@@ -68,7 +68,7 @@
       </v-card-text>
     </v-card>
     <v-dialog v-model="changeDialog" width="400px">
-      <resume-change
+      <resume-dialog-change
         :change="change"
         @close="changeDialog = false"/>
     </v-dialog>
