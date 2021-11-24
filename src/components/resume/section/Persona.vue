@@ -37,7 +37,7 @@
         <v-icon left>
           {{ action.icon}}
         </v-icon>
-        {{ action.title.replacement }}
+        {{ action.title.replacement ? action.title.replacement : action.title.text }}
       </v-chip>
     </v-card-text>
     <v-dialog v-model="pictureDialog" width="600px">
