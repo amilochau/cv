@@ -76,7 +76,7 @@
     "Privacy": { "title": "Privacy", "description": "Privacy page" },
     "Forbidden": { "title": "Forbidden", "description": "Page for access to forbidden resources" },
     "NotFound": { "title": "Not found", "description": "Page for access to not found resources" },
-    "Home": { "title": "CV", "description": "CV page" }
+    "Home": { "title": "", "description": "CV page" }
   },
   "components": {
     "offline": {
@@ -129,6 +129,9 @@
       "noProcess": "No recruitment process",
       "noticePeriod": "Notice period",
       "startFrom": "Start of a new position at the earliest"
+    },
+    "call": {
+      "lastUpdate": "Last update: {lastUpdate}"
     }
   }
 }
