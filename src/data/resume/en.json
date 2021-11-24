@@ -260,5 +260,11 @@
     "noticePeriodInDays": 90,
     "noticePeriodBufferInDays": 21,
     "isDepartureEndOfMonth": false
+  },
+  "call": {
+    "icon": "mdi-human-greeting",
+    "color": "success",
+    "message": "Welcome on my resume!",
+    "lastUpdate": "2021-11-24"
   }
 }

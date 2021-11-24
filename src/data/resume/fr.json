@@ -374,5 +374,11 @@
     "noticePeriodInDays": 90,
     "noticePeriodBufferInDays": 21,
     "isDepartureEndOfMonth": false
+  },
+  "call": {
+    "icon": "mdi-human-greeting",
+    "color": "success",
+    "message": "Bienvenue sur mon CV !",
+    "lastUpdate": "2021-11-24"
   }
 }

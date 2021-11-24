@@ -22,6 +22,7 @@ const i18n = new VueI18n({
   messages,
 })
 
+const formatUpdateDate = (value: string) => moment(value).format('L')
 const formatExperienceDate = (value: string) => moment(value).format('MMM YYYY')
 const formatTrainingDate = (value: string) => moment(value).format('YYYY')
 const formatDifference = (startDate: string, endDate: string) => {
@@ -44,6 +45,7 @@ const formatDateFrom = (days: number, nextMonth: boolean) => {
 }
 const formatPercents = (percent: number) => numeral(percent).format('0 %')
 
+Vue.filter('formatUpdateDate', formatUpdateDate)
 Vue.filter('formatExperienceDate', formatExperienceDate)
 Vue.filter('formatTrainingDate', formatTrainingDate)
 Vue.filter('formatDifference', formatDifference)
@@ -54,6 +56,7 @@ Vue.filter('formatPercents', formatPercents)
 export default i18n
 
 export {
+  formatUpdateDate,
   formatExperienceDate,
   formatTrainingDate,
   formatDifference,

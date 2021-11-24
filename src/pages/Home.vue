@@ -14,6 +14,8 @@
         :projects="currentResume.projects"/>
     </v-col>
     <v-col cols="12" md="8" class="p-col-8">
+      <resume-section-call
+        :call="currentResume.call"/>
       <resume-section-experiences
         :experiences="currentResume.experiences"
         :change="currentResume.change"/>
