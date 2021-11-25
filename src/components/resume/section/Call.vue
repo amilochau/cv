@@ -1,44 +1,47 @@
 <template>
-  <v-banner
-    single-line
-    class="d-print-none">
-    <v-icon
-      slot="icon"
-      :color="call.color">
-      {{ call.icon }}
-    </v-icon>
-    <p class="text-h6 mb-0">{{ call.message }}</p>
-    <p
-      v-if="call.lastUpdate"
-      class="text-body-2 text--secondary font-weight-light mb-0">
-      {{ call.lastUpdate | formatUpdateDate | formatText('resume.call.lastUpdate') }}
-    </p>
-    <template v-slot:actions>
-      <v-btn
-        v-if="expanded"
-        text
-        color="deep-purple accent-4"
-        @click="$emit('reduce')">
-        <v-icon left>mdi-unfold-less-horizontal</v-icon>
-        {{ $t('resume.call.reduce') }}
-      </v-btn>
-      <v-btn
-        v-else
-        text
-        color="deep-purple accent-4"
-        @click="$emit('expand')">
-        <v-icon left>mdi-unfold-more-horizontal</v-icon>
-        {{ $t('resume.call.expand') }}
-      </v-btn>
-      <v-btn
-        text
-        color="deep-purple accent-4"
-        @click="print">
-        <v-icon left>mdi-printer</v-icon>
-        {{ $t('resume.call.print') }}
-      </v-btn>
-    </template>
-  </v-banner>
+  <v-alert
+    :color="call.color"
+    :icon="call.icon"
+    colored-border
+    border="bottom"
+    class="d-print-none mb-0">
+    <v-row class="no-gutters">
+      <v-col>
+        <h3 class="text-h6">
+          {{ call.message }}
+        </h3>
+        <div class="text-body text--secondary font-weight-light">
+          {{ call.lastUpdate | formatUpdateDate | formatText('resume.call.lastUpdate') }}
+        </div>
+      </v-col>
+      <v-col class="d-flex align-end pt-2">
+        <v-spacer/>
+        <v-btn
+          v-if="expanded"
+          text
+          color="deep-purple accent-4"
+          @click="$emit('reduce')">
+          <v-icon left>mdi-unfold-less-horizontal</v-icon>
+          {{ $t('resume.call.reduce') }}
+        </v-btn>
+        <v-btn
+          v-else
+          text
+          color="deep-purple accent-4"
+          @click="$emit('expand')">
+          <v-icon left>mdi-unfold-more-horizontal</v-icon>
+          {{ $t('resume.call.expand') }}
+        </v-btn>
+        <v-btn
+          text
+          color="deep-purple accent-4"
+          @click="print">
+          <v-icon left>mdi-printer</v-icon>
+          {{ $t('resume.call.print') }}
+        </v-btn>
+      </v-col>
+    </v-row>
+  </v-alert>
 </template>
 
 <script lang="ts">
