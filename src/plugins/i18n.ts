@@ -44,6 +44,9 @@ const formatDateFrom = (days: number, nextMonth: boolean) => {
   }
 }
 const formatPercents = (percent: number) => numeral(percent).format('0 %')
+const formatText = (arg0: any, text: string) => {
+  return i18n.t(text, { 0: arg0 })
+}
 
 Vue.filter('formatUpdateDate', formatUpdateDate)
 Vue.filter('formatExperienceDate', formatExperienceDate)
@@ -52,6 +55,7 @@ Vue.filter('formatDifference', formatDifference)
 Vue.filter('formatDays', formatDays)
 Vue.filter('formatDateFrom', formatDateFrom)
 Vue.filter('formatPercents', formatPercents)
+Vue.filter('formatText', formatText)
 
 export default i18n
 
@@ -63,4 +67,5 @@ export {
   formatDays,
   formatDateFrom,
   formatPercents,
+  formatText,
 }

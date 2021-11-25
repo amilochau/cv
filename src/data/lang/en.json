@@ -96,6 +96,7 @@
     "print": "Print",
     "experiences": {
       "title": "Experiences",
+      "dateFrom": "From {0}",
       "current": "Current",
       "missions": "Main missions:",
       "realizations": "Main realizations:"
@@ -131,7 +132,7 @@
       "startFrom": "Start of a new position at the earliest"
     },
     "call": {
-      "lastUpdate": "Last update: {lastUpdate}"
+      "lastUpdate": "Last update: {0}"
     }
   }
 }
