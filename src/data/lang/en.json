@@ -95,6 +95,7 @@
   "resume": {
     "experiences": {
       "title": "Experiences",
+      "divider": "/",
       "dateFrom": "From {0}",
       "current": "Current",
       "missions": "Main missions:",

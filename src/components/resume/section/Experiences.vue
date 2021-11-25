@@ -9,15 +9,16 @@
       :key="i"
       elevation="0"
       class="mb-2">
-      <v-card-subtitle>
-        {{ experience.company }}
-        <span v-if="experience.client"> / {{ experience.client }}</span>
-      </v-card-subtitle>
+      <v-card-title class="align-baseline">
+        {{ experience.job }}
+        <div v-if="experience.company" class="text-body-1 font-weight-light">
+          <span class="px-2">{{ $t('resume.experiences.divider') }}</span>
+          <span v-if="experience.client">{{ experience.client }} ({{ experience.company }})</span>
+          <span v-else>{{ experience.company }}</span>
+        </div>
+      </v-card-title>
       <v-card-text
-        v-for="(job, j) in experience.jobs"
-        :key="j"
         class="text--primary">
-        <p class="text-h5 font-weight-medium">{{ job.title }}</p>
         <p>
           <v-chip
             label
@@ -26,43 +27,44 @@
             @click="toggleDatesDisplay">
             <v-icon left>mdi-calendar-range-outline</v-icon>
             <span v-if="displayDurations">
-              {{ job.startDate | formatDifference(job.endDate) }}
+              {{ experience.startDate | formatDifference(experience.endDate) }}
             </span>
-            <span v-else-if="!job.endDate">
-              {{ job.startDate | formatExperienceDate | formatText('resume.experiences.dateFrom') }}
+            <span v-else-if="!experience.endDate">
+              {{ experience.startDate | formatExperienceDate | formatText('resume.experiences.dateFrom') }}
             </span>
             <span v-else>
-              {{ job.startDate | formatExperienceDate }}
-              <span> — {{ job.endDate | formatExperienceDate }}</span>
+              {{ experience.startDate | formatExperienceDate }}
+              <span> — {{ experience.endDate | formatExperienceDate }}</span>
             </span>
           </v-chip>
           <v-chip
+            v-if="!experience.endDate"
             label
             outlined
             class="mb-1 mr-2"
             color="error"
-            v-if="!job.endDate"
             @click="changeDialog = true">
             <v-icon left>mdi-fire</v-icon>
             {{ $t('resume.experiences.current') }}
           </v-chip>
           <v-chip
+            v-if="experience.place"
             label
             outlined
             class="mb-1"
-            :href="job.placeUri"
+            :href="experience.placeUri"
             target="_blank"
             rel="noopener">
             <v-icon left>mdi-map-marker-outline</v-icon>
-            {{ job.place }}
+            {{ experience.place }}
           </v-chip>
         </p>
-        <p class="text--secondary font-italic">{{ job.description }}</p>
-        <div v-if="job.missions">
+        <p class="text--secondary font-italic">{{ experience.description }}</p>
+        <div v-if="experience.missions">
           <p>{{ $t('resume.experiences.missions') }}</p>
           <ul>
             <li
-              v-for="(mission, k) in job.missions"
+              v-for="(mission, k) in experience.missions"
               :key="k">
               {{ mission.title }}
             </li>
