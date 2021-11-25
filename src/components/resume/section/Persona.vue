@@ -4,7 +4,7 @@
     class="mb-2">
     <v-card-title>
       <v-list-item>
-        <v-list-item-avatar>
+        <v-list-item-avatar class="d-print-none">
           <v-img
             :alt="$t('resume.persona.image')"
             :src="persona.thumbnail"
