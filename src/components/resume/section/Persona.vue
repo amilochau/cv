@@ -2,9 +2,9 @@
   <v-card
     elevation="1"
     class="mb-2">
-    <v-card-title>
+    <v-card-title class="d-print-none">
       <v-list-item>
-        <v-list-item-avatar class="d-print-none">
+        <v-list-item-avatar>
           <v-img
             :alt="$t('resume.persona.image')"
             :src="persona.thumbnail"
@@ -21,18 +21,23 @@
         </v-list-item-content>
       </v-list-item>
     </v-card-title>
-    <v-card-text>
+    <v-card-title class="d-none d-print-block text-center">
+      <h1 class="text-h6">{{ persona.name }}</h1>
+      <h2 class="text-subtitle-1">{{ persona.job }}</h2>
+    </v-card-title>
+    <v-card-text class="text-center">
       {{ persona.description }}
     </v-card-text>
     <v-card-text class="d-print-none pt-0">
       <list-items :list="persona.actions"/>
     </v-card-text>
-    <v-card-text class="d-none d-print-block pt-0">
+    <v-card-text class="d-none d-print-block text-center pt-0">
       <v-chip
         v-for="(action, i) in persona.actions.items"
         :key="i"
         label
         outlined
+        small
         class="mr-2 mb-1">
         <v-icon left>
           {{ action.icon}}

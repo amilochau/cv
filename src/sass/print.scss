@@ -5,9 +5,24 @@
   max-width: percentage($size / $grid-columns);
 }
 
+$print-card-subtitle-padding: 8px;
+$print-card-title-font-size: 16px;
+
 // Styles on print
 
 @media print {
+
+  // Define page size
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  
+  html, body {
+    width: 210mm;
+    height: 297mm;
+  }
+
   // Force columns
   @for $i from 1 through $grid-columns {
     .p-col-#{$i} {
@@ -20,13 +35,25 @@
   @while $z >= 1 {
     .theme--light.elevation-#{$z} {
       @include elevation(0, $important: true);
-      border: thin solid map-get($material-light, 'dividers')
+      border: thin solid map-get($material-light, 'dividers');
     }
     .theme--dark.elevation-#{$z} {
       @include elevation(0, $important: true);
-      border: thin solid map-get($material-dark, 'dividers')
+      border: thin solid map-get($material-dark, 'dividers');
     }
 
     $z: $z - 1;
+  }
+
+  // Reduce margins
+  .v-card__subtitle,
+  .v-card__text,
+  .v-card__title {
+    padding: $print-card-subtitle-padding;
+  }
+
+  // Reduce font size
+  .v-card__title {
+    font-size: $print-card-title-font-size;
   }
 }

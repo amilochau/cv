@@ -1,7 +1,7 @@
 <template>
   <v-card
     elevation="1"
-    class="mb-2">
+    class="d-print-none mb-2">
     <v-card-title>
       <v-icon left>mdi-filter</v-icon>
       {{ $t('resume.keyWords.title') }}

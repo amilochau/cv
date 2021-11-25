@@ -132,7 +132,9 @@
         <v-list-item-action
           v-if="item.badge"
           class="ml-2">
-          <v-icon v-if="!item.badge.text">
+          <v-icon
+            v-if="!item.badge.text"
+            class="d-print-none">
             {{ item.badge.icon }}
           </v-icon>
           <v-chip
@@ -144,7 +146,8 @@
             <v-icon
               v-if="item.badge.icon"
               :small="item.badge.small"
-              left>
+              left
+              class="d-print-none">
               {{ item.badge.icon }}
             </v-icon>
             {{ list.disableTranslation ? item.badge.text : $t(item.badge.text) }}
