@@ -164,16 +164,8 @@ import { IList } from '../models/definitions'
 export default class ListItems extends Vue {
   @Prop({ type: Object, required: true }) public list!: IList;
 
-  public baseUrl: string = process.env.BASE_URL;
+  @Prop({ type: Boolean, default: false }) expandGroups!: boolean;
 
-  get expandGroups () {
-    if (this.list.expandGroups === 'mobile') {
-      return this.$vuetify.breakpoint.mobile
-    } else if (this.list.expandGroups === 'desktop') {
-      return !this.$vuetify.breakpoint.mobile
-    } else {
-      return this.list.expandGroups
-    }
-  }
+  public baseUrl: string = process.env.BASE_URL;
 }
 </script>

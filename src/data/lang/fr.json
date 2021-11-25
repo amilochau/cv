@@ -93,7 +93,6 @@
     }
   },
   "resume": {
-    "print": "Imprimer",
     "experiences": {
       "title": "Expériences",
       "dateFrom": "Depuis {0}",
@@ -132,7 +131,10 @@
       "startFrom": "Début d'un nouveau poste au plus tôt"
     },
     "call": {
-      "lastUpdate": "Dernière mise à jour : {0}"
+      "lastUpdate": "Dernière mise à jour : {0}",
+      "print": "Imprimer",
+      "expand": "Etendre",
+      "reduce": "Reduire"
     }
   }
 }

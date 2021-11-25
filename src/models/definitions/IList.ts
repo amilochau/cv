@@ -47,6 +47,5 @@ export interface IListItem {
 export interface IList {
   items: IListItem[];
   disableTranslation?: boolean;
-  expandGroups?: boolean | 'mobile' | 'desktop';
   threeLine?: boolean;
 }

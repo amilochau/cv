@@ -46,7 +46,6 @@
   ],
   "projects": {
     "disableTranslation": true,
-    "expandGroups": "desktop",
     "items": [
       {
         "title": { "text": "Applications" },
