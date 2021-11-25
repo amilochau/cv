@@ -28,9 +28,12 @@
             <span v-if="displayDurations">
               {{ job.startDate | formatDifference(job.endDate) }}
             </span>
+            <span v-else-if="!job.endDate">
+              {{ job.startDate | formatExperienceDate | formatText('resume.experiences.dateFrom') }}
+            </span>
             <span v-else>
               {{ job.startDate | formatExperienceDate }}
-              <span v-if="job.endDate"> — {{ job.endDate | formatExperienceDate }}</span>
+              <span> — {{ job.endDate | formatExperienceDate }}</span>
             </span>
           </v-chip>
           <v-chip
@@ -38,7 +41,7 @@
             outlined
             class="mb-1 mr-2"
             color="error"
-            v-if="job.isCurrent"
+            v-if="!job.endDate"
             @click="changeDialog = true">
             <v-icon left>mdi-fire</v-icon>
             {{ $t('resume.experiences.current') }}
