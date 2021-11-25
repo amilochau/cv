@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-row>
+    <v-row class="d-print-none">
       <v-col>
         <resume-section-call
           :call="currentResume.call"
