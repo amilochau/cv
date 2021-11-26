@@ -1,14 +1,16 @@
 <template>
   <v-list
     class="py-0"
-    dense>
+    dense
+    expand>
     <slot name="before"/>
     <list-item
       v-for="(item, i) in list.items"
       :key="i"
       :item="item"
       :disable-translation="list.disableTranslation"
-      :expanded="expanded"/>
+      :expanded="expanded"
+      @custom="$emit($event.name, $event.args)"/>
     <slot name="after"/>
   </v-list>
 </template>
@@ -23,6 +25,8 @@ export default class ListItems extends Vue {
 
   @Prop({ type: Boolean, default: false }) public expanded!: boolean;
 
-  public baseUrl: string = process.env.BASE_URL;
+  public emitCustomEvent (args: any) {
+    console.log(args)
+  }
 }
 </script>

@@ -1,6 +1,7 @@
-import { IList, IListItem } from './IList'
+import { IList, IListItem, IText } from './IList'
 
 export {
   IList,
   IListItem,
+  IText,
 }

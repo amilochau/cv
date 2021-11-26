@@ -68,11 +68,6 @@
           <list-items
             :list="experience.missions"
             :expanded="expanded">
-            <template v-slot:before>
-              <list-item
-                :item="{ header: { text: 'resume.experiences.missions' } }"
-                :expanded="expanded"/>
-            </template>
           </list-items>
         </div>
       </v-card-text>
