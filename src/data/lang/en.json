@@ -13,24 +13,18 @@
       "bar": {
         "title": "Antoine Milochau's Resume",
         "toggle": "Toggle menu"
-      },
-      "settings": {
-        "title": "Settings",
-        "languages": {
-          "title": "Languages",
-          "english": "English",
-          "french": "French"
-        },
-        "display": {
-          "title": "Display",
-          "darkMode": "Dark mode"
-        }
       }
     },
     "footer": {
       "home": "Home",
       "privacy": "Privacy",
-      "sourceCode": "Source code"
+      "sourceCode": "Source code",
+      "theme": "Theme",
+      "languages": {
+        "title": "Languages",
+        "english": "English",
+        "french": "French"
+      }
     }
   },
   "errors": {

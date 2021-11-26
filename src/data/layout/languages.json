@@ -1,15 +1,12 @@
 {
   "items": [
     {
-      "header": { "text": "app.header.settings.languages.title" }
-    },
-    {
-      "title": { "text": "app.header.settings.languages.english" },
+      "title": { "text": "app.footer.languages.english" },
       "avatar": { "src": "img/us/24.png", "label": true },
       "action": { "event": "to", "eventArg": "en" }
     },
     {
-      "title": { "text": "app.header.settings.languages.french" },
+      "title": { "text": "app.footer.languages.french" },
       "avatar": { "src": "img/fr/24.png", "label": true },
       "action": { "event": "to", "eventArg": "fr" }
     }

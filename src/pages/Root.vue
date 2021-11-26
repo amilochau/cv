@@ -1,6 +1,5 @@
 <template>
   <div class="d-flex fill-height">
-    <app-header-settings/>
     <v-main>
       <app-progress-bar :lazy-delay="200"/>
       <app-cookies/>
@@ -10,7 +9,7 @@
         </v-container>
       </v-fade-transition>
     </v-main>
-    <app-footer/>
+    <app-footer-bar/>
     <app-snackbar/>
   </div>
 </template>

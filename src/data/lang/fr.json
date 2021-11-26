@@ -13,24 +13,18 @@
       "bar": {
         "title": "CV de Antoine Milochau",
         "toggle": "Menu toggle"
-      },
-      "settings": {
-        "title": "Paramètres",
-        "languages": {
-          "title": "Langues",
-          "english": "English",
-          "french": "Français"
-        },
-        "display": {
-          "title": "Affichage",
-          "darkMode": "Mode sombre"
-        }
       }
     },
     "footer": {
       "home": "Accueil",
       "privacy": "Confidentialité",
-      "sourceCode": "Code source"
+      "sourceCode": "Code source",
+      "theme": "Thème",
+      "languages": {
+        "title": "Langues",
+        "english": "English",
+        "french": "Français"
+      }
     }
   },
   "errors": {
