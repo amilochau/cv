@@ -8,7 +8,7 @@
       v-for="(experience, i) in experiences"
       :key="i"
       elevation="0"
-      class="mb-2">
+      class="mb-2 p-avoid-break-inside">
       <v-card-title class="align-baseline">
         {{ experience.job }}
         <div v-if="experience.company" class="text-body-1 font-weight-light">

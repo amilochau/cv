@@ -2,7 +2,7 @@
   <v-card
     id="projects"
     elevation="1"
-    class="mb-2">
+    class="mb-2 p-avoid-break-inside">
     <v-card-title>
       <v-icon left>mdi-projector</v-icon>
       {{ $t('resume.projects.title') }}

@@ -2,7 +2,7 @@
   <v-card
     id="persona"
     elevation="1"
-    class="mb-2">
+    class="mb-2 p-avoid-break-inside">
     <v-card-title class="d-print-none">
       <v-list-item>
         <v-list-item-avatar>

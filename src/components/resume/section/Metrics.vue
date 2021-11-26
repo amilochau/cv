@@ -2,7 +2,7 @@
   <v-card
     id="metrics"
     elevation="1"
-    class="d-print-none mb-2">
+    class="mb-2 p-avoid-break-inside">
     <v-card-title>
       <v-icon left>mdi-ticket-confirmation</v-icon>
       {{ $t('resume.metrics.title') }}
