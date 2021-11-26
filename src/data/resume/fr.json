@@ -328,24 +328,59 @@
       "job": "Ingénieur Contrôle Avancé",
       "place": "Feyzin, FR",
       "placeUri": "https://www.google.com/maps/place/TotalEnergies+-+Plateforme+de+Feyzin/@45.6744667,4.8373246,15z/data=!4m5!3m4!1s0x47f4c3278e39ab05:0x17090fcabb1b7b9e!8m2!3d45.6737454!4d4.8471493",
-      "startDate": "2014-09-12",
-      "endDate": "2017-11-03"
-    },
-    {
-      "company": "TOTAL Raffinage Chimie",
-      "job": "Apprenti Ingénieur",
-      "place": "Feyzin, FR",
-      "placeUri": "https://www.google.com/maps/place/TotalEnergies+-+Plateforme+de+Feyzin/@45.6744667,4.8373246,15z/data=!4m5!3m4!1s0x47f4c3278e39ab05:0x17090fcabb1b7b9e!8m2!3d45.6737454!4d4.8471493",
       "startDate": "2011-12-05",
-      "endDate": "2014-09-11"
-    },
-    {
-      "company": "TOTAL Raffinage Chimie",
-      "job": "Apprenti Ingénieur",
-      "place": "Leuna, DE",
-      "placeUri": "https://www.google.com/maps/place/TotalEnergies+Raffinerie+Mitteldeutschland+GmbH/@51.2844604,11.9829694,14z/data=!4m5!3m4!1s0x4171b83845c9fa2b:0xdcbcc2fa8c5bc63c!8m2!3d51.281246!4d11.9858734",
-      "startDate": "2013-05-06",
-      "endDate": "2013-08-30"
+      "endDate": "2017-11-03",
+      "description": "L'optimisation des mélanges de carburant nécessite des algorithmes et des modélisations étudiées, puis implémentées dans des outils d'optimisation temps réel",
+      "missions": {
+        "disableTranslation": true,
+        "items": [
+          {
+            "title": { "text": "Création d'algorithmes d'optimisation mathématique" },
+            "icon": "mdi-calculator-variant",
+            "items": [
+              {
+                "title": { "text": "Méta-modélisation de modèles d'émission de polluants, par SVM et réseaux de neurones" }
+              },
+              {
+                "title": { "text": "Création et implémentation d'algorithmes d'optimisation non-linéaire" }
+              },
+              {
+                "title": { "text": "Estimation en temps réel de propriétés de carburants, gestion des incertitudes par des méthodes type filtres de Kalman" }
+              }
+            ]
+          },
+          {
+            "title": { "text": "Architecture des solutions APC mélanges" },
+            "icon": "mdi-compass",
+            "items": [
+              {
+                "title": { "text": "Réécriture complète d'une application d'optimisation temps réel (20 M €/an de gains)" }
+              },
+              {
+                "title": { "text": "Conception et développement d'applications de suivi de la production en temps réel" }
+              },
+              {
+                "title": { "text": "Optimisations de performances Front-End (division du temps de chargement par 3)" }
+              }
+            ]
+          },
+          {
+            "title": { "text": "Assistance et formation aux sites industriels" },
+            "icon": "mdi-help-network",
+            "items": [
+              {
+                "title": { "text": "Assistance technique et économique aux raffineries du groupe (France, Allemagne, Etats-Unis)" }
+              },
+              {
+                "title": { "text": "Troubleshooting des applications de contrôle avancé (dernier niveau)" }
+              },
+              {
+                "title": { "text": "Organisation des séminaires d'optimisation des mélanges pour les scientifiques, ingénieurs et techniciens du groupe" }
+              }
+            ]
+          }
+        ]
+      }
     }
   ],
   "trainings": {
