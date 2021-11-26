@@ -311,6 +311,12 @@
             "items": [
               {
                 "title": { "text": "Evolutions Front-End et Back-End des applications du groupe SeLoger" }
+              },
+              {
+                "title": { "text": "Optimisations SEO pour les sites SeLoger et ImmoStreet" }
+              },
+              {
+                "title": { "text": "Optimisations de performances Front-End (division du temps de chargement par 3)" }
               }
             ]
           }
