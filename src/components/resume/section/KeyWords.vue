@@ -2,7 +2,7 @@
   <v-card
     id="keywords"
     elevation="1"
-    class="d-print-none mb-2">
+    class="d-print-none mb-2 p-avoid-break-inside">
     <v-card-title>
       <v-icon left>mdi-filter</v-icon>
       {{ $t('resume.keyWords.title') }}
