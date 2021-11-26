@@ -129,7 +129,11 @@
       "place": "Suresnes, FR",
       "placeUri": "https://www.google.com/maps/place/AssurWare/@48.8713031,2.2275824,17z/data=!3m1!4b1!4m5!3m4!1s0x47e6652271fa816d:0x1dcd7d131570fb85!8m2!3d48.8713119!4d2.2297834",
       "startDate": "2020-05-04",
-      "description": "SPVIE Technology develops and deploys the main business applications for the SPVIE group. "
+      "description": "SPVIE Technology develops and deploys the main business applications for the SPVIE group.",
+      "missions": {
+        "disableTranslation": true,
+        "items": []
+      }
     },
     {
       "company": "MONOPRIX ONLINE",
@@ -137,7 +141,11 @@
       "place": "Clichy, FR",
       "placeUri": "https://www.google.com/maps/place/Monoprix+Online/@48.9114806,2.3075256,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66fa859a7648f:0x9f092451007f953!8m2!3d48.9114745!4d2.3097094",
       "startDate": "2019-07-01",
-      "endDate": "2020-04-30"
+      "endDate": "2020-04-30",
+      "missions": {
+        "disableTranslation": true,
+        "items": []
+      }
     },
     {
       "company": "TOTAL Refining & Chemicals",
@@ -145,7 +153,11 @@
       "place": "Courbevoie, FR",
       "placeUri": "https://www.google.com/maps/place/Total+Tour+Coupole/@48.8927778,2.2411446,17z/data=!3m1!4b1!4m5!3m4!1s0x47fa657a1827f5af:0x968cbd4e5b7000ea!8m2!3d48.8930013!4d2.2434948",
       "startDate": "2018-04-01",
-      "endDate": "2019-06-20"
+      "endDate": "2019-06-20",
+      "missions": {
+        "disableTranslation": true,
+        "items": []
+      }
     },
     {
      "company": "Infeeny",
@@ -154,7 +166,11 @@
       "place": "Paris, FR",
       "placeUri": "https://www.google.com/maps/place/SeLoger/@48.8912719,2.3484074,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66e66d3362e2b:0xbec65ee69f11fe85!8m2!3d48.8912719!4d2.3505961",
       "startDate": "2017-11-06",
-      "endDate": "2018-03-23"
+      "endDate": "2018-03-23",
+      "missions": {
+        "disableTranslation": true,
+        "items": []
+      }
     },
     {
       "company": "TOTAL Refining & Chemicals",
@@ -162,7 +178,11 @@
       "place": "Feyzin, FR",
       "placeUri": "https://www.google.com/maps/place/TotalEnergies+-+Plateforme+de+Feyzin/@45.6744667,4.8373246,15z/data=!4m5!3m4!1s0x47f4c3278e39ab05:0x17090fcabb1b7b9e!8m2!3d45.6737454!4d4.8471493",
       "startDate": "2014-09-12",
-      "endDate": "2017-11-03"
+      "endDate": "2017-11-03",
+      "missions": {
+        "disableTranslation": true,
+        "items": []
+      }
     },
     {
       "company": "TOTAL Refining & Chemicals",
@@ -170,7 +190,11 @@
       "place": "Feyzin, FR",
       "placeUri": "https://www.google.com/maps/place/TotalEnergies+-+Plateforme+de+Feyzin/@45.6744667,4.8373246,15z/data=!4m5!3m4!1s0x47f4c3278e39ab05:0x17090fcabb1b7b9e!8m2!3d45.6737454!4d4.8471493",
       "startDate": "2011-12-05",
-      "endDate": "2014-09-11"
+      "endDate": "2014-09-11",
+      "missions": {
+        "disableTranslation": true,
+        "items": []
+      }
     },
     {
       "company": "TOTAL Refining & Chemicals",
@@ -178,7 +202,11 @@
       "place": "Leuna, DE",
       "placeUri": "https://www.google.com/maps/place/TotalEnergies+Raffinerie+Mitteldeutschland+GmbH/@51.2844604,11.9829694,14z/data=!4m5!3m4!1s0x4171b83845c9fa2b:0xdcbcc2fa8c5bc63c!8m2!3d51.281246!4d11.9858734",
       "startDate": "2013-05-06",
-      "endDate": "2013-08-30"
+      "endDate": "2013-08-30",
+      "missions": {
+        "disableTranslation": true,
+        "items": []
+      }
     }
   ],
   "trainings": {
@@ -244,7 +272,7 @@
   "call": {
     "icon": "mdi-human-greeting",
     "color": "success",
-    "message": "Welcome on my resume!",
-    "lastUpdate": "2021-11-24"
+    "message": "Welcome on my resume! This English version is not fully translated from French yet.",
+    "lastUpdate": "2021-11-26"
   }
 }

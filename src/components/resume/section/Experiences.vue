@@ -59,16 +59,16 @@
             {{ experience.place }}
           </v-chip>
         </p>
-        <p class="text--secondary font-italic">{{ experience.description }}</p>
+        <p
+          v-if="expanded"
+          class="text--secondary font-italic">
+          {{ experience.description }}
+        </p>
         <div v-if="experience.missions">
-          <p>{{ $t('resume.experiences.missions') }}</p>
-          <ul>
-            <li
-              v-for="(mission, k) in experience.missions"
-              :key="k">
-              {{ mission.title }}
-            </li>
-          </ul>
+          <list-items
+            :list="experience.missions"
+            :expanded="expanded">
+          </list-items>
         </div>
       </v-card-text>
     </v-card>
@@ -88,6 +88,8 @@ export default class Experiences extends Vue {
   @Prop({ type: Array, required: true }) public experiences!: [];
 
   @Prop({ type: Object, required: true }) public change!: any;
+
+  @Prop({ type: Boolean, required: true }) public expanded!: boolean;
 
   public displayDurations = this.$vuetify.breakpoint.mobile;
 

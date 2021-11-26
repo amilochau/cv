@@ -26,7 +26,8 @@
       <v-col cols="12" md="8" class="p-col-8">
         <resume-section-experiences
           :experiences="currentResume.experiences"
-          :change="currentResume.change"/>
+          :change="currentResume.change"
+          :expanded="expanded"/>
       </v-col>
     </v-row>
   </div>

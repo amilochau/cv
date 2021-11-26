@@ -97,9 +97,7 @@
       "title": "Expériences",
       "divider": "/",
       "dateFrom": "Depuis {0}",
-      "current": "En cours",
-      "missions": "Principales missions :",
-      "realizations": "Principales réalisations :"
+      "current": "En cours"
     },
     "keyWords": {
       "title": "Mots-clés"

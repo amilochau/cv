@@ -14,30 +14,42 @@
           {{ call.lastUpdate | formatUpdateDate | formatText('resume.call.lastUpdate') }}
         </div>
       </v-col>
-      <v-col class="d-flex align-end pt-2">
+      <v-col class="d-flex shrink align-end flex-column">
         <v-spacer/>
         <v-btn
           v-if="expanded"
+          :icon="$vuetify.breakpoint.smAndDown"
           text
-          color="deep-purple accent-4"
           @click="$emit('reduce')">
-          <v-icon left>mdi-unfold-less-horizontal</v-icon>
-          {{ $t('resume.call.reduce') }}
+          <v-icon :left="!$vuetify.breakpoint.smAndDown">
+            mdi-unfold-less-horizontal
+          </v-icon>
+          <span v-if="!$vuetify.breakpoint.smAndDown">
+            {{ $t('resume.call.reduce') }}
+          </span>
         </v-btn>
         <v-btn
           v-else
+          :icon="$vuetify.breakpoint.smAndDown"
           text
-          color="deep-purple accent-4"
           @click="$emit('expand')">
-          <v-icon left>mdi-unfold-more-horizontal</v-icon>
-          {{ $t('resume.call.expand') }}
+          <v-icon :left="!$vuetify.breakpoint.smAndDown">
+            mdi-unfold-more-horizontal
+          </v-icon>
+          <span v-if="!$vuetify.breakpoint.smAndDown">
+            {{ $t('resume.call.expand') }}
+          </span>
         </v-btn>
         <v-btn
+          :icon="$vuetify.breakpoint.smAndDown"
           text
-          color="deep-purple accent-4"
           @click="print">
-          <v-icon left>mdi-printer</v-icon>
-          {{ $t('resume.call.print') }}
+          <v-icon :left="!$vuetify.breakpoint.smAndDown">
+            mdi-printer
+          </v-icon>
+          <span v-if="!$vuetify.breakpoint.smAndDown">
+            {{ $t('resume.call.print') }}
+          </span>
         </v-btn>
       </v-col>
     </v-row>

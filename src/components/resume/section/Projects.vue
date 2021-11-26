@@ -7,7 +7,7 @@
       {{ $t('resume.projects.title') }}
     </v-card-title>
     <v-card-text>
-      <list-items :list="projects" :expand-groups="expanded"/>
+      <list-items :list="projects" :expanded="expanded"/>
     </v-card-text>
   </v-card>
 </template>

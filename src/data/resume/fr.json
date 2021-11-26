@@ -129,63 +129,69 @@
       "place": "Suresnes, FR",
       "placeUri": "https://www.google.com/maps/place/AssurWare/@48.8713031,2.2275824,17z/data=!3m1!4b1!4m5!3m4!1s0x47e6652271fa816d:0x1dcd7d131570fb85!8m2!3d48.8713119!4d2.2297834",
       "startDate": "2020-05-04",
-      "context": "SPVIE Technology, DSI du groupe SPVIE Assurances",
-      "description": "SPVIE Technology développe les principales applications business pour le groupe SPVIE. L'environnement est 100% Web, 100% Azure, 100% Microsoft.",
-      "missions": [
-        {
-          "title": "Améliorations d'architecture",
-          "items": [
-            {
-              "title": "Migration des applications existantes (vers .NET Core/.NET 6.0)"
-            },
-            {
-              "title": "Revue d'architecture : mise en place de N-Tiers sur les applications legacy, pattern microservices sur les nouveaux projets"
-            },
-            {
-              "title": "Création de frameworks d'entreprise : applications en ASP.NET Core ou Azure Functions, templates YAML de déploiement"
-            },
-            {
-              "title": "Définition de schémas d'architecte et plans de migration vers une architecture scalable, résiliente"
-            }
-          ]
-        },
-        {
-          "title": "Accompagnement des équipes",
-          "items": [
-            {
-              "title": "Team Leader d'une équipe de 6 développeurs (FR, CI, BL) pendant un an"
-            },
-            {
-              "title": "Formation des développeurs sur les technologies (.NET, monitoring, qualité, patterns d'architecture...)"
-            },
-            {
-              "title": "Accompagnement à la mise en place de méthode Scrum dans les équipes techniques"
-            }
-          ]
-        },
-        {
-          "title": "Automatisation des process (DevOps)",
-          "items": [
-            {
-              "title": "Mise en place de CI/CD sur toutes les applications"
-            },
-            {
-              "title": "Mise en place de IaC sur un scope restreint"
-            }
-          ]
-        },
-        {
-          "title": "Amélioration continue de la qualité",
-          "items": [
-            {
-              "title": "Mise en place d'outils de suivi de la qualité et des performances (SonarCloud, Application Insights, Health checks"
-            },
-            {
-              "title": "Introduction de tests unitaires et E2E sur les applications business"
-            }
-          ]
-        }
-      ]
+      "description": "SPVIE Technology développe les principales applications business du groupe SPVIE. L'environnement est 100% Web, 100% Azure, 100% Microsoft.",
+      "missions": {
+        "disableTranslation": true,
+        "items": [
+          {
+            "title": { "text": "Améliorations d'architecture" },
+            "icon": "mdi-floor-plan",
+            "items": [
+              {
+                "title": { "text": "Migration des applications existantes (vers .NET Core/.NET 6.0)" }
+              },
+              {
+                "title": { "text": "Revue d'architecture : mise en place de N-Tiers sur les applications legacy, pattern microservices sur les nouveaux projets" }
+              },
+              {
+                "title": { "text": "Création de frameworks d'entreprise : applications en ASP.NET Core ou Azure Functions, templates YAML de déploiement" }
+              },
+              {
+                "title": { "text": "Définition de schémas d'architecte et plans de migration vers une architecture scalable, résiliente" }
+              }
+            ]
+          },
+          {
+            "title": { "text": "Accompagnement des équipes" },
+            "icon": "mdi-handshake",
+            "items": [
+              {
+                "title": { "text": "Team Leader d'une équipe de 6 développeurs (FR, CI, BL) pendant un an" }
+              },
+              {
+                "title": { "text": "Formation des développeurs sur les technologies (.NET, monitoring, qualité, patterns d'architecture...)" }
+              },
+              {
+                "title": { "text": "Accompagnement à la mise en place de méthode Scrum dans les équipes techniques" }
+              }
+            ]
+          },
+          {
+            "title": { "text": "Automatisation des process (DevOps)" },
+            "icon": "mdi-microsoft-azure-devops",
+            "items": [
+              {
+                "title": { "text": "Mise en place de CI/CD sur toutes les applications" }
+              },
+              {
+                "title": { "text": "Mise en place de IaC sur un scope restreint" }
+              }
+            ]
+          },
+          {
+            "title": { "text": "Amélioration continue de la qualité" },
+            "icon": "mdi-chart-line",
+            "items": [
+              {
+                "title": { "text": "Mise en place d'outils de suivi de la qualité et des performances (SonarCloud, Application Insights, Health checks" }
+              },
+              {
+                "title": { "text": "Introduction de tests unitaires et E2E sur les applications business" }
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "company": "MONOPRIX ONLINE",
@@ -194,32 +200,36 @@
       "placeUri": "https://www.google.com/maps/place/Monoprix+Online/@48.9114806,2.3075256,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66fa859a7648f:0x9f092451007f953!8m2!3d48.9114745!4d2.3097094",
       "startDate": "2019-07-01",
       "endDate": "2020-04-30",
-      "context": "Monoprix Online, filiale IT du groupe Monoprix",
       "description": "Le site sarenza.com évolue en permanence pour répondre aux besoins des clients.",
-      "missions": [
-        {
-          "title": "Référent technique de sarenza.com",
-          "items": [
-            {
-              "title": "Evolutions fonctionnelles et techniques du site sarenza.com"
-            },
-            {
-              "title": "Définition de roadmap technique du Front-Office Sarenza"
-            },
-            {
-              "title": "Mise en place de tests unitaires et mesures de qualité (SonarCloud) sur les applications"
-            }
-          ]
-        },
-        {
-          "title": "Création et animation de communautés de développeurs",
-          "items": [
-            {
-              "title": "Création de guildes (modèles Spotify)"
-            }
-          ]
-        }
-      ]
+      "missions": {
+        "disableTranslation": true,
+        "items": [
+          {
+            "title": { "text": "Référent technique de sarenza.com" },
+            "icon": "mdi-account-alert",
+            "items": [
+              {
+                "title": { "text": "Evolutions fonctionnelles et techniques du site sarenza.com" }
+              },
+              {
+                "title": { "text": "Définition de roadmap technique du Front-Office Sarenza" }
+              },
+              {
+                "title": { "text": "Mise en place de tests unitaires et mesures de qualité (SonarCloud) sur les applications" }
+              }
+            ]
+          },
+          {
+            "title": { "text": "Création et animation de communautés de développeurs" },
+            "icon": "mdi-account-group",
+            "items": [
+              {
+                "title": { "text": "Création de guildes (modèles Spotify)" }
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "company": "TOTAL Raffinage Chimie",
@@ -228,26 +238,28 @@
       "placeUri": "https://www.google.com/maps/place/Total+Tour+Coupole/@48.8927778,2.2411446,17z/data=!3m1!4b1!4m5!3m4!1s0x47fa657a1827f5af:0x968cbd4e5b7000ea!8m2!3d48.8930013!4d2.2434948",
       "startDate": "2018-04-01",
       "endDate": "2019-06-20",
-      "context": "Division 'Supply, Sales & Optimization', spécialisé dans l'optimisation des mélanges de carburant",
       "description": "Des outils (applications) et des méthodes (algorithmes et réglages de machines) permettent aux raffineries d'optimiser leur production.",
-      "missions": [
-        {
-          "title": "Management de projets",
-          "description": "Gestion des projets d'applications (existantes et futures) : priorisation des besoins, coordination des travaux, architecture IT, reporting."
-        },
-        {
-          "title": "Lead technique",
-          "desccription": "Définition des architectures et technologies cibles, lien avec les développeurs (internes et externes, prestations au forfait et en régie). Participation au développement d'applications Web et Desktop. Technlologies utilisées en développement : ASP.NET Core, vue.js. Environ 20 projets, 35 applications suivis (dont 10 applications en tant que propriétaire)."
-        },
-        {
-          "title": "Scrum Master",
-          "description": "Mise en place d'une organisation agile (Scrum): sprints, rituels, dashboards, conduite du changement."
-        },
-        {
-          "title": "DevOps",
-          "description": "Mise en place d'Azure DevOps, depuis le ticketing au déploiement continu. Configuration des agents privés, introduction de code review, déploiement on premise et dans Azure. Gestion de la transformation des process et accompagnement des utilisateurs."
-        }
-      ]
+      "missions": {
+        "disableTranslation": true,
+        "items": [
+          {
+            "title": "Management de projets",
+            "description": "Gestion des projets d'applications (existantes et futures) : priorisation des besoins, coordination des travaux, architecture IT, reporting."
+          },
+          {
+            "title": "Lead technique",
+            "desccription": "Définition des architectures et technologies cibles, lien avec les développeurs (internes et externes, prestations au forfait et en régie). Participation au développement d'applications Web et Desktop. Technlologies utilisées en développement : ASP.NET Core, vue.js. Environ 20 projets, 35 applications suivis (dont 10 applications en tant que propriétaire)."
+          },
+          {
+            "title": "Scrum Master",
+            "description": "Mise en place d'une organisation agile (Scrum): sprints, rituels, dashboards, conduite du changement."
+          },
+          {
+            "title": "DevOps",
+            "description": "Mise en place d'Azure DevOps, depuis le ticketing au déploiement continu. Configuration des agents privés, introduction de code review, déploiement on premise et dans Azure. Gestion de la transformation des process et accompagnement des utilisateurs."
+          }
+        ]
+      }
     },
     {
       "company": "Infeeny",
@@ -257,18 +269,21 @@
       "placeUri": "https://www.google.com/maps/place/SeLoger/@48.8912719,2.3484074,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66e66d3362e2b:0xbec65ee69f11fe85!8m2!3d48.8912719!4d2.3505961",
       "startDate": "2017-11-06",
       "endDate": "2018-03-23",
-      "context": "DSI du groupe SeLoger",
       "description": "Le groupe SeLoger fait évoluer des sites à fort trafic, pour les particuliers et les agences immobilières.",
-      "missions": [
-        {
-          "title": "Développement d'applications Web",
-          "items": [
-            {
-              "title": "Evolutions Front-End et Back-End des applications du groupe SeLoger"
-            }
-          ]
-        }
-      ]
+      "missions": {
+        "disableTranslation": true,
+        "items": [
+          {
+            "title": { "text": "Développement d'applications Web" },
+            "icon": "mdi-account-hard-hat",
+            "items": [
+              {
+                "title": { "text": "Evolutions Front-End et Back-End des applications du groupe SeLoger" }
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "company": "TOTAL Raffinage Chimie",
@@ -359,6 +374,6 @@
     "icon": "mdi-human-greeting",
     "color": "success",
     "message": "Bienvenue sur mon CV !",
-    "lastUpdate": "2021-11-24"
+    "lastUpdate": "2021-11-26"
   }
 }

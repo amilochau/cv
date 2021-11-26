@@ -47,5 +47,4 @@ export interface IListItem {
 export interface IList {
   items: IListItem[];
   disableTranslation?: boolean;
-  threeLine?: boolean;
 }
