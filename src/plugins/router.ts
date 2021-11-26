@@ -60,6 +60,8 @@ const scrollBehavior: (to: Route, from: Route, savedPosition: void | Position) =
   if (to.hash) {
     return {
       selector: to.hash,
+      offset: { x: 0, y: 16 },
+      behavior: 'smooth',
     }
   } else if (savedPosition) {
     return {
