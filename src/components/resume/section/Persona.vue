@@ -46,7 +46,7 @@
       </v-chip>
     </v-card-text>
     <v-dialog v-model="pictureDialog" width="600px">
-      <resume-dialog-change
+      <resume-dialog-picture
         :persona="persona"
         @close="pictureDialog = false"/>
     </v-dialog>
