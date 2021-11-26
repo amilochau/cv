@@ -5,6 +5,7 @@
     :disabled="item.disabled"
     :inactive="!item.action"
     :target="item.action && item.action.href ? '_blank' : undefined"
+    :ripple="!!item.action"
     exact
     rel="noopener"
     :class="itemClass"
