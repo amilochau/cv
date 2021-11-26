@@ -1,5 +1,6 @@
 <template>
   <v-card
+    id="persona"
     elevation="1"
     class="mb-2">
     <v-card-title class="d-print-none">

@@ -1,5 +1,6 @@
 <template>
   <v-card
+    id="training"
     elevation="1"
     class="mb-2">
     <v-card-title>

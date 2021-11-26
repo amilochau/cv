@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="experiences">
     <v-card-title>
       <v-icon left>mdi-briefcase</v-icon>
       {{ $t('resume.experiences.title') }}
@@ -101,7 +101,8 @@ export default class Experiences extends Vue {
 }
 </script>
 
-<style lang="sass">
-.experience-date
-  text-transform: capitalize
+<style lang="scss">
+.experience-date {
+  text-transform: capitalize;
+}
 </style>
