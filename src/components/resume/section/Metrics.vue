@@ -1,5 +1,6 @@
 <template>
   <v-card
+    id="metrics"
     elevation="1"
     class="d-print-none mb-2">
     <v-card-title>

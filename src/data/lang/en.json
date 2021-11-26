@@ -103,6 +103,7 @@
       "title": "Metrics"
     },
     "persona": {
+      "title": "Presentation",
       "image": "Persona"
     },
     "training": {
@@ -125,6 +126,7 @@
     },
     "call": {
       "lastUpdate": "Last update: {0}",
+      "navigation": "Navigation",
       "print": "Print",
       "expand": "Expand",
       "reduce": "Reduce"

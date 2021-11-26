@@ -103,6 +103,7 @@
       "title": "Métriques"
     },
     "persona": {
+      "title": "Présentation",
       "image": "Persona"
     },
     "training": {
@@ -125,6 +126,7 @@
     },
     "call": {
       "lastUpdate": "Dernière mise à jour : {0}",
+      "navigation": "Navigation",
       "print": "Imprimer",
       "expand": "Etendre",
       "reduce": "Reduire"
