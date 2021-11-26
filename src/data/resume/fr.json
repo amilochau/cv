@@ -243,20 +243,52 @@
         "disableTranslation": true,
         "items": [
           {
-            "title": "Management de projets",
-            "description": "Gestion des projets d'applications (existantes et futures) : priorisation des besoins, coordination des travaux, architecture IT, reporting."
+            "title": { "text": "Management de projets" },
+            "icon": "mdi-chart-gantt",
+            "items": [
+              {
+                "title": { "text": "Gestion des projets d'applications (existantes et futures) pour l'optimisation des mélanges de carburant" }
+              },
+              {
+                "title": { "text": "Lien avec les prestataires et sous-traitants" }
+              }
+            ]
           },
           {
-            "title": "Lead technique",
-            "desccription": "Définition des architectures et technologies cibles, lien avec les développeurs (internes et externes, prestations au forfait et en régie). Participation au développement d'applications Web et Desktop. Technlologies utilisées en développement : ASP.NET Core, vue.js. Environ 20 projets, 35 applications suivis (dont 10 applications en tant que propriétaire)."
+            "title": { "text": "Lead technique" },
+            "icon": "mdi-account-wrench",
+            "items": [
+              {
+                "title": { "text": "Définition des architectures et technologies cibles" }
+              },
+              {
+                "title": { "text": "Définition des plans de migration vers des applications Web, sur Azure" }
+              },
+              {
+                "title": { "text": "Participation aux développements d'applications Web et Desktop" }
+              }
+            ]
           },
           {
-            "title": "Scrum Master",
-            "description": "Mise en place d'une organisation agile (Scrum): sprints, rituels, dashboards, conduite du changement."
+            "title": { "text": "Automatisation des process (DevOps)" },
+            "icon": "mdi-microsoft-azure-devops",
+            "items": [
+              {
+                "title": { "text": "Mise en place d'Azure DevOps (boards, repositories, pipelines) pour les applications du Raffinage" }
+              },
+              {
+                "title": { "text": "Configuration des déploiements des applications, On Premise et vers Azure" }
+              }
+            ]
           },
           {
-            "title": "DevOps",
-            "description": "Mise en place d'Azure DevOps, depuis le ticketing au déploiement continu. Configuration des agents privés, introduction de code review, déploiement on premise et dans Azure. Gestion de la transformation des process et accompagnement des utilisateurs."
+            "title": { "text": "Accompagnement des équipes" },
+            "icon": "mdi-handshake",
+            "items": [
+              {
+                "title": { "text": "Mise en place d'une organisation agile (Scrum): sprints, rituels, dashboards, conduite du changement" }
+              }
+            ]
           }
         ]
       }
