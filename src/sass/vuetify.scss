@@ -8,3 +8,10 @@
   margin-top: 0px !important;
   margin-bottom: 0px !important;
 }
+
+/* Add a 'tile' style on chips */
+.v-chip--tile {
+  border-radius: 0 !important;
+  padding-left: 4px;
+  padding-right: 4px;
+}

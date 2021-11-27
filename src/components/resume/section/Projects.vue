@@ -9,6 +9,18 @@
     </v-card-title>
     <v-card-text>
       <list-items :list="projects" :expanded="expanded"/>
+      <div
+        v-if="expanded && projects.tags"
+        class="mt-3">
+        <v-chip
+          v-for="(tag, i) in projects.tags"
+          :key="i"
+          outlined
+          small
+          class="mr-1 mb-1 v-chip--tile">
+          {{ tag.label }}
+        </v-chip>
+      </div>
     </v-card-text>
   </v-card>
 </template>
