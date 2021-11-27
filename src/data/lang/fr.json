@@ -95,6 +95,7 @@
     },
     "keyWords": {
       "title": "Mots-clés",
+      "select": "Sélectionner un mot-clé pour le mettre en évidence sur la page.",
       "expand": "Afficher les mots-clés"
     },
     "projects": {
