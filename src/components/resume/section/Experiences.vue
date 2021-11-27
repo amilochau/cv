@@ -8,8 +8,8 @@
       v-for="(experience, i) in experiences"
       :key="i"
       elevation="0"
-      class="mb-2 p-avoid-break-inside">
-      <v-card-title class="align-baseline">
+      class="mb-2">
+      <v-card-title class="align-baseline p-avoid-break-inside">
         {{ experience.job }}
         <div v-if="experience.company" class="text-body-1 font-weight-light">
           <span class="px-2">{{ $t('resume.experiences.divider') }}</span>
@@ -18,7 +18,7 @@
         </div>
       </v-card-title>
       <v-card-text class="text--primary">
-        <p>
+        <p class="p-avoid-break-inside">
           <v-chip
             label
             outlined
@@ -60,7 +60,7 @@
         </p>
         <p
           v-if="expanded"
-          class="text--secondary font-italic">
+          class="text--secondary font-italic p-avoid-break-inside">
           {{ experience.description }}
         </p>
         <list-items
@@ -70,7 +70,7 @@
         </list-items>
         <div
           v-if="expanded && experience.tags"
-          class="mt-3">
+          class="mt-3 p-avoid-break-inside">
           <v-chip
             v-for="(tag, i) in experience.tags"
             :key="i"

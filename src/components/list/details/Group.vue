@@ -4,7 +4,8 @@
     :value="expanded"
     no-action
     eager
-    color="">
+    color=""
+    class="p-avoid-break-inside">
     <template #activator>
       <v-list-item-content>
         <v-list-item-title class="multi-line">{{ disableTranslation ? item.title.text :  $t(item.title.text) }}</v-list-item-title>

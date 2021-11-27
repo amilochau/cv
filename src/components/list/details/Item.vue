@@ -85,6 +85,7 @@ export default class ListDetailsItem extends Vue {
   get itemClass () {
     return {
       'pl-4': true,
+      'p-avoid-break-inside': true,
       'thin-list-item': this.thin,
     }
   }

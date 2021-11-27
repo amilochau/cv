@@ -2,8 +2,8 @@
   <v-card
     id="projects"
     elevation="1"
-    class="mb-2 p-avoid-break-inside">
-    <v-card-title>
+    class="mb-2">
+    <v-card-title class="p-avoid-break-inside">
       <v-icon left>mdi-projector</v-icon>
       {{ $t('resume.projects.title') }}
     </v-card-title>
@@ -11,7 +11,7 @@
       <list-items :list="projects" :expanded="expanded"/>
       <div
         v-if="expanded && projects.tags"
-        class="mt-3">
+        class="mt-3 p-avoid-break-inside">
         <v-chip
           v-for="(tag, i) in projects.tags"
           :key="i"
