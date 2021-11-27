@@ -14,7 +14,9 @@
         <resume-section-persona
           :persona="currentResume.persona"/>
         <resume-section-key-words
-          :topics="currentResume.topics"/>
+          :topics="currentResume.topics"
+          :expanded="expanded"
+          @expand="expand"/>
         <resume-section-training
           :trainings="currentResume.trainings"/>
         <resume-section-metrics

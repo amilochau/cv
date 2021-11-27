@@ -94,7 +94,8 @@
       "current": "Current"
     },
     "keyWords": {
-      "title": "Top topics"
+      "title": "Top topics",
+      "expand": "Display top topics"
     },
     "projects": {
       "title": "Personal projects"

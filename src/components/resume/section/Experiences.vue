@@ -17,8 +17,7 @@
           <span v-else>{{ experience.company }}</span>
         </div>
       </v-card-title>
-      <v-card-text
-        class="text--primary">
+      <v-card-text class="text--primary">
         <p>
           <v-chip
             label
@@ -64,11 +63,22 @@
           class="text--secondary font-italic">
           {{ experience.description }}
         </p>
-        <div v-if="experience.missions">
-          <list-items
-            :list="experience.missions"
-            :expanded="expanded">
-          </list-items>
+        <list-items
+          v-if="experience.missions"
+          :list="experience.missions"
+          :expanded="expanded">
+        </list-items>
+        <div
+          v-if="expanded && experience.tags"
+          class="mt-3">
+          <v-chip
+            v-for="(tag, i) in experience.tags"
+            :key="i"
+            outlined
+            small
+            class="mr-1 mb-1 v-chip--tile">
+            {{ tag.label }}
+          </v-chip>
         </div>
       </v-card-text>
     </v-card>
