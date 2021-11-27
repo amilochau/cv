@@ -552,9 +552,6 @@
               },
               {
                 "title": { "text": "Conception et développement d'applications de suivi de la production en temps réel" }
-              },
-              {
-                "title": { "text": "Optimisations de performances Front-End (division du temps de chargement par 3)" }
               }
             ]
           },
