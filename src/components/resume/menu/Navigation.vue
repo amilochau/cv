@@ -12,7 +12,7 @@
         color="info"
         fab
         small>
-        <v-icon>{{ fab ? 'mdi-close' : 'mdi-menu' }}</v-icon>
+        <v-icon>{{ fab ? 'mdi-close' : 'mdi-dots-vertical' }}</v-icon>
       </v-btn>
     </template>
     <v-btn
