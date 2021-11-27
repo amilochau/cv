@@ -74,7 +74,8 @@
           <v-chip
             v-for="(tag, i) in experience.tags"
             :key="i"
-            outlined
+            :color="selectedTopic === tag.key ? 'primary' : undefined"
+             outlined
             small
             class="mr-1 mb-1 v-chip--tile">
             {{ tag.label }}
@@ -100,6 +101,8 @@ export default class Experiences extends Vue {
   @Prop({ type: Object, required: true }) public change!: any;
 
   @Prop({ type: Boolean, required: true }) public expanded!: boolean;
+
+  @Prop({ type: String, required: true }) public selectedTopic!: string;
 
   public displayDurations = this.$vuetify.breakpoint.mobile;
 

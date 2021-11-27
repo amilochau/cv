@@ -95,6 +95,7 @@
     },
     "keyWords": {
       "title": "Top topics",
+      "select": "Select a topic to highlight it on the page.",
       "expand": "Display top topics"
     },
     "projects": {

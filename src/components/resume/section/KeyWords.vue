@@ -7,14 +7,18 @@
       <v-icon left>mdi-filter</v-icon>
       {{ $t('resume.keyWords.title') }}
     </v-card-title>
+    <v-card-subtitle class="text--disabled font-italic">
+      {{ $t('resume.keyWords.select') }}
+    </v-card-subtitle>
     <v-card-text class="text-center">
       <v-chip-group
+        @change="$emit('change', $event)"
         column
-        multiple
         active-class="primary--text">
         <v-chip
           v-for="(topic, i) in topics"
           :key="i"
+          :value="topic.key"
           outlined
           small
           class="mr-2 mb-1 v-chip--tile">

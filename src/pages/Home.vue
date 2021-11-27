@@ -16,6 +16,7 @@
         <resume-section-key-words
           :topics="currentResume.topics"
           :expanded="expanded"
+          @change="$event ? selectedTopic = $event : selectedTopic = ''"
           @expand="expand"/>
         <resume-section-training
           :trainings="currentResume.trainings"/>
@@ -29,7 +30,8 @@
         <resume-section-experiences
           :experiences="currentResume.experiences"
           :change="currentResume.change"
-          :expanded="expanded"/>
+          :expanded="expanded"
+          :selected-topic="selectedTopic"/>
       </v-col>
     </v-row>
   </div>
@@ -45,6 +47,8 @@ export default class HomePage extends Vue {
   public resume = resume;
 
   public expanded = !this.$vuetify.breakpoint.mobile
+
+  public selectedTopic = ''
 
   get currentCulture () {
     if (!this.$route.params.lang.localeCompare('fr', undefined, { sensitivity: 'base' })) {
