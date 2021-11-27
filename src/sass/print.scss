@@ -56,6 +56,11 @@ $print-card-title-font-size: 16px;
   .v-card__title {
     font-size: $print-card-title-font-size;
   }
+
+  // Hide list item groups append buttons
+  .v-list-group__header__append-icon {
+    display: none !important;
+  }
 }
 
 // Default styles to be applied on print
