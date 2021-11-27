@@ -28,20 +28,28 @@
   },
   "topics": [
     {
-      "key": "dev",
-      "title": "Develoment"
+      "key": "management",
+      "title": "Management"
+    },
+    {
+      "key": "architecture",
+      "title": "Architecture"
+    },
+    {
+      "key": "infrastructure",
+      "title": "Infrastructure"
     },
     {
       "key": "devops",
       "title": "DevOps"
     },
     {
-      "key": "archi",
-      "title": "Architecture"
+      "key": "development",
+      "title": "Development"
     },
     {
-      "key": "management",
-      "title": "Management"
+      "key": "quality",
+      "title": "Quality"
     }
   ],
   "projects": {
@@ -119,6 +127,40 @@
             "badge": { "text": "WIP", "color": "info", "small": true }
           }
         ]
+      }
+    ],
+    "tags": [
+      {
+        "label": "Azure",
+        "key": "infrastructure"
+      },
+      {
+        "label": "SQL Server",
+        "key": "infrastructure"
+      },
+      {
+        "label": "Service Bus",
+        "key": "infrastructure"
+      },
+      {
+        "label": "Azure DevOps",
+        "key": "devops"
+      },
+      {
+        "label": "GitHub",
+        "key": "devops"
+      },
+      {
+        "label": "Bicep",
+        "key": "devops"
+      },
+      {
+        "label": ".NET Core",
+        "key": "development"
+      },
+      {
+        "label":"vue.js",
+        "key": "development"
       }
     ]
   },
@@ -273,6 +315,6 @@
     "icon": "mdi-human-greeting",
     "color": "success",
     "message": "Welcome on my resume! This English version is not fully translated from French yet.",
-    "lastUpdate": "2021-11-26"
+    "lastUpdate": "2021-11-27"
   }
 }

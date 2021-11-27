@@ -94,7 +94,8 @@
       "current": "En cours"
     },
     "keyWords": {
-      "title": "Mots-clés"
+      "title": "Mots-clés",
+      "expand": "Afficher les mots-clés"
     },
     "projects": {
       "title": "Projets personnels"
