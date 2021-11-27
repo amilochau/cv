@@ -174,8 +174,120 @@
       "description": "SPVIE Technology develops and deploys the main business applications for the SPVIE group.",
       "missions": {
         "disableTranslation": true,
-        "items": []
-      }
+        "items": [
+          {
+            "title": { "text": "Architecture improvements" },
+            "icon": "mdi-floor-plan",
+            "items": [
+              {
+                "title": { "text": "Migration of existing applications (to .NET Core/.NET 6.0)" }
+              },
+              {
+                "title": { "text": "Architecture review: implementation of N-Tiers on legacy applications, microservices pattern on new projects" }
+              },
+              {
+                "title": { "text": "Creation of entreprise frameworks: applications in ASP.NET Core or Azure Functions, YAML deployment templates" }
+              },
+              {
+                "title": { "text": "Definition of architecture diagrams and migration plans towards a scalable, resilient architecture" }
+              }
+            ]
+          },
+          {
+            "title": { "text": "Support for teams" },
+            "icon": "mdi-handshake",
+            "items": [
+              {
+                "title": { "text": "Team Leader of a 6-developers team (FR, CI, BL) during one yead " }
+              },
+              {
+                "title": { "text": "Training of the developers on technologies (.NET, monitoring, quality, architecture patterns...)" }
+              },
+              {
+                "title": { "text": "Support for the implementaiton of the Scrum methon in technical teams" }
+              }
+            ]
+          },
+          {
+            "title": { "text": "Process automation (DevOps)" },
+            "icon": "mdi-microsoft-azure-devops",
+            "items": [
+              {
+                "title": { "text": "Implementation of CI/CD on all applications" }
+              },
+              {
+                "title": { "text": "Implementation of IaC on a restricted scope" }
+              }
+            ]
+          },
+          {
+            "title": { "text": "Continuous quality improvement" },
+            "icon": "mdi-chart-line",
+            "items": [
+              {
+                "title": { "text": "Implementation of quality and performance monitoring tools (SonarCloud, Application Insights, Health checks...)" }
+              },
+              {
+                "title": { "text": "Introduction of unit and E2E tests on business applications" }
+              }
+            ]
+          }
+        ]
+      },
+      "tags": [
+        {
+          "label": "Scrum + Kanban",
+          "key": "management"
+        },
+        {
+          "label": "Team lead",
+          "key": "management"
+        },
+        {
+          "label": "Technical roadmap",
+          "key": "management"
+        },
+        {
+          "label": "Microservices",
+          "key": "architecture"
+        },
+        {
+          "label": "Messaging",
+          "key": "architecture"
+        },
+        {
+          "label": "Azure",
+          "key": "infrastructure"
+        },
+        {
+          "label": "MongoDB",
+          "key": "infrastructure"
+        },
+        {
+          "label": "Bicep",
+          "key": "devops"
+        },
+        {
+          "label": "Azure DevOps",
+          "key": "devops"
+        },
+        {
+          "label": ".NET Core",
+          "key": "development"
+        },
+        {
+          "label": "Angular",
+          "key": "development"
+        },
+        {
+          "label": "SonarCloud",
+          "key": "quality"
+        },
+        {
+          "label": "cypress",
+          "key": "quality"
+        }
+      ]
     },
     {
       "company": "MONOPRIX ONLINE",
@@ -184,10 +296,66 @@
       "placeUri": "https://www.google.com/maps/place/Monoprix+Online/@48.9114806,2.3075256,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66fa859a7648f:0x9f092451007f953!8m2!3d48.9114745!4d2.3097094",
       "startDate": "2019-07-01",
       "endDate": "2020-04-30",
+      "description": "The sarenza.com site is constantly evolving to meet the customer needs.",
       "missions": {
         "disableTranslation": true,
-        "items": []
-      }
+        "items": [
+          {
+            "title": { "text": "Technical referent of sarenza.com" },
+            "icon": "mdi-account-alert",
+            "items": [
+              {
+                "title": { "text": "Functional and technical developments of the sarenza.com site" }
+              },
+              {
+                "title": { "text": "Definition of the technical roadmap for Sarenza Front-Office" }
+              },
+              {
+                "title": { "text": "Implementation of unit tests and quality measures (SonarCloud) on applications" }
+              }
+            ]
+          },
+          {
+            "title": { "text": "Creation and animation of developer communities" },
+            "icon": "mdi-account-group",
+            "items": [
+              {
+                "title": { "text": "Creation of guilds (Spotify method)" }
+              }
+            ]
+          }
+        ]
+      },
+      "tags": [
+        {
+          "label": "Scrum",
+          "key": "management"
+        },
+        {
+          "label": "Guild",
+          "key": "management"
+        },
+        {
+          "label": "Azure DevOps",
+          "key": "devops"
+        },
+        {
+          "label": ".NET Framework",
+          "key": "development"
+        },
+        {
+          "label": "T-SQL",
+          "key": "development"
+        },
+        {
+          "label": "SonarCloud",
+          "key": "quality"
+        },
+        {
+          "label": "MS Tests",
+          "key": "quality"
+        }
+      ]
     },
     {
       "company": "TOTAL Refining & Chemicals",
@@ -196,10 +364,98 @@
       "placeUri": "https://www.google.com/maps/place/Total+Tour+Coupole/@48.8927778,2.2411446,17z/data=!3m1!4b1!4m5!3m4!1s0x47fa657a1827f5af:0x968cbd4e5b7000ea!8m2!3d48.8930013!4d2.2434948",
       "startDate": "2018-04-01",
       "endDate": "2019-06-20",
+      "description": "Tools (applications) and methods (algorithms and machine tuning) allow refineries to optimize their production.",
       "missions": {
         "disableTranslation": true,
-        "items": []
-      }
+        "items": [
+          {
+            "title": { "text": "Project management" },
+            "icon": "mdi-chart-gantt",
+            "items": [
+              {
+                "title": { "text": "Project management of applications (existing and future) for fuel blend optimization" }
+              },
+              {
+                "title": { "text": "Link with service providers and subcontractors" }
+              }
+            ]
+          },
+          {
+            "title": { "text": "Technical lead" },
+            "icon": "mdi-account-wrench",
+            "items": [
+              {
+                "title": { "text": "Definition of target architectures and technologies" }
+              },
+              {
+                "title": { "text": "Definition of migration plans to web applications, on Azure" }
+              },
+              {
+                "title": { "text": "Participation in the development of Web and Desktop applications" }
+              }
+            ]
+          },
+          {
+            "title": { "text": "Process automation (DevOps)" },
+            "icon": "mdi-microsoft-azure-devops",
+            "items": [
+              {
+                "title": { "text": "Implementation of Azure DevOps (boards, repositories, pipelines) for Refining applications" }
+              },
+              {
+                "title": { "text": "Configuration of application deployments, On Premise and to Azure" }
+              }
+            ]
+          },
+          {
+            "title": { "text": "Support for teams" },
+            "icon": "mdi-handshake",
+            "items": [
+              {
+                "title": { "text": "Setting up an agile organization (Scrum): sprints, rituals, dashboards, change management" }
+              }
+            ]
+          }
+        ]
+      },
+      "tags": [
+        {
+          "label": "Scrum",
+          "key": "management"
+        },
+        {
+          "label": "Business roadmap",
+          "key": "management"
+        },
+        {
+          "label": "Microservices",
+          "key": "architecture"
+        },
+        {
+          "label": "Azure",
+          "key": "infrastructure"
+        },
+        {
+          "label": "HPC",
+          "key": "infrastructure"
+        },
+        {
+          "label": "Azure DevOps",
+          "key": "devops"
+        },
+        {
+          "label": ".NET Core",
+          "key": "development"
+        },
+        {
+          "label": "vue.js",
+          "key": "development"
+        },
+        {
+          "label": "SonarCloud",
+          "key": "quality"
+        }
+      ]
     },
     {
      "company": "Infeeny",
@@ -209,46 +465,163 @@
       "placeUri": "https://www.google.com/maps/place/SeLoger/@48.8912719,2.3484074,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66e66d3362e2b:0xbec65ee69f11fe85!8m2!3d48.8912719!4d2.3505961",
       "startDate": "2017-11-06",
       "endDate": "2018-03-23",
+      "description": "The SeLoger group develops high traffic websites for individual and real estate agencies.",
       "missions": {
         "disableTranslation": true,
-        "items": []
-      }
+        "items": [
+          {
+            "title": { "text": "Web applications development" },
+            "icon": "mdi-account-hard-hat",
+            "items": [
+              {
+                "title": { "text": "Front-End and Back-End developments for the SeLoger group applications" }
+              },
+              {
+                "title": { "text": "SEO optimizations for SeLoger and ImmoStreet websites" }
+              },
+              {
+                "title": { "text": "Front-End performance optimizations (dividing loading time by 3)" }
+              }
+            ]
+          }
+        ]
+      },
+      "tags": [
+        {
+          "label": "Scrum",
+          "key": "management"
+        },
+        {
+          "label": "NHibernate",
+          "tag": "infrastructure"
+        },
+        {
+          "label": "Jira",
+          "key": "devops"
+        },
+        {
+          "label": "TeamCity + Octopus",
+          "key": "devops"
+        },
+        {
+          "label": ".NET Core",
+          "key": "development"
+        },
+        {
+          "label": ".NET Framework",
+          "key": "development"
+        },
+        {
+          "label": "SEO",
+          "key": "quality"
+        }
+      ]
     },
     {
       "company": "TOTAL Refining & Chemicals",
       "job": "Advanced Process Control Engineer",
       "place": "Feyzin, FR",
       "placeUri": "https://www.google.com/maps/place/TotalEnergies+-+Plateforme+de+Feyzin/@45.6744667,4.8373246,15z/data=!4m5!3m4!1s0x47f4c3278e39ab05:0x17090fcabb1b7b9e!8m2!3d45.6737454!4d4.8471493",
-      "startDate": "2014-09-12",
-      "endDate": "2017-11-03",
-      "missions": {
-        "disableTranslation": true,
-        "items": []
-      }
-    },
-    {
-      "company": "TOTAL Refining & Chemicals",
-      "job": "Apprentice",
-      "place": "Feyzin, FR",
-      "placeUri": "https://www.google.com/maps/place/TotalEnergies+-+Plateforme+de+Feyzin/@45.6744667,4.8373246,15z/data=!4m5!3m4!1s0x47f4c3278e39ab05:0x17090fcabb1b7b9e!8m2!3d45.6737454!4d4.8471493",
       "startDate": "2011-12-05",
-      "endDate": "2014-09-11",
+      "endDate": "2017-11-03",
+      "description": "The fuel blend optimization requires algorithms and models to be studied then implemented in real-time optimization tools",
       "missions": {
         "disableTranslation": true,
-        "items": []
-      }
-    },
-    {
-      "company": "TOTAL Refining & Chemicals",
-      "job": "Apprentice",
-      "place": "Leuna, DE",
-      "placeUri": "https://www.google.com/maps/place/TotalEnergies+Raffinerie+Mitteldeutschland+GmbH/@51.2844604,11.9829694,14z/data=!4m5!3m4!1s0x4171b83845c9fa2b:0xdcbcc2fa8c5bc63c!8m2!3d51.281246!4d11.9858734",
-      "startDate": "2013-05-06",
-      "endDate": "2013-08-30",
-      "missions": {
-        "disableTranslation": true,
-        "items": []
-      }
+        "items": [
+          {
+            "title": { "text": "Creation of mathematical optimization algorithms" },
+            "icon": "mdi-calculator-variant",
+            "items": [
+              {
+                "title": { "text": "Meta-modeling of pollutant emission models, with SVM and neural networks" }
+              },
+              {
+                "title": { "text": "Creation and implementation of non-lineal optimization algorithms" }
+              },
+              {
+                "title": { "text": "Real-time estimation of fuel properties dealing with uncertainties, with methods as Kalman filters" }
+              }
+            ]
+          },
+          {
+            "title": { "text": "Architecture of APC solutions for offsites" },
+            "icon": "mdi-compass",
+            "items": [
+              {
+                "title": { "text": "Complete rewrite of a real-time optimization application (20 M€/y in earnings)" }
+              },
+              {
+                "title": { "text": "Design and development of real-time production monitoring applications" }
+              }
+            ]
+          },
+          {
+            "title": { "text": "Assistance and training at industrial sites" },
+            "icon": "mdi-help-network",
+            "items": [
+              {
+                "title": { "text": "Technical and economic assistance to the group's refineries (France, Germany, United States)" }
+              },
+              {
+                "title": { "text": "Troubleshooting advanced control applications (last level)" }
+              },
+              {
+                "title": { "text": "Organization of blend optimization seminars for scientists, engineers and technicians of the group" }
+              }
+            ]
+          }
+        ]
+      },
+      "tags": [
+        {
+          "label": "Projects management",
+          "key": "management"
+        },
+        {
+          "label": "IIS",
+          "key": "infrastructure"
+        },
+        {
+          "label": "PowerShell",
+          "key": "devops"
+        },
+        {
+          "label": "Mercurial",
+          "key": "devops"
+        },
+        {
+          "label": "SVM",
+          "key": "development"
+        },
+        {
+          "label": "Neural networks",
+          "key": "development"
+        },
+        {
+          "label": "Ipopt",
+          "key": "development"
+        },
+        {
+          "label": "MATLAB",
+          "key": "development"
+        },
+        {
+          "label": ".NET Core",
+          "key": "development"
+        },
+        {
+          "label": ".NET Framework",
+          "key": "development"
+        },
+        {
+          "label": "Winforms",
+          "key": "development"
+        },
+        {
+          "label": "C / C++",
+          "key": "development"
+        }
+      ]
     }
   ],
   "trainings": {
@@ -314,7 +687,7 @@
   "call": {
     "icon": "mdi-human-greeting",
     "color": "success",
-    "message": "Welcome on my resume! This English version is not fully translated from French yet.",
+    "message": "Welcome on my resume!",
     "lastUpdate": "2021-11-27"
   }
 }
