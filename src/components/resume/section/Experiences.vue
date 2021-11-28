@@ -1,6 +1,6 @@
 <template>
   <div id="experiences">
-    <v-card-title>
+    <v-card-title @dblclick="copyExperiences">
       <v-icon left>mdi-briefcase</v-icon>
       {{ $t('resume.experiences.title') }}
     </v-card-title>
@@ -92,6 +92,8 @@
 </template>
 
 <script lang="ts">
+import EventBus from '@/event-bus'
+import { IListItem } from '@/models/definitions'
 import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component
@@ -110,6 +112,47 @@ export default class Experiences extends Vue {
 
   toggleDatesDisplay () {
     this.displayDurations = !this.displayDurations
+  }
+
+  copyExperiences () {
+    let exportedExperiences = ''
+
+    this.experiences.forEach((experience: any) => {
+      if (experience.client) {
+        exportedExperiences += `${experience.job} (${experience.client})\n\n`
+      } else {
+        exportedExperiences += `${experience.job} (${experience.company})\n\n`
+      }
+
+      experience.missions.items.forEach((mission: IListItem) => {
+        if (mission.icon && mission.icon.unicode) {
+          exportedExperiences += `${mission.icon.unicode} ${mission.title?.text}\n`
+        } else {
+          exportedExperiences += `${mission.title?.text}\n`
+        }
+        if (mission.items) {
+          mission.items.forEach((item) => {
+            exportedExperiences += `▪️ ${item.title?.text}\n`
+          })
+        }
+        exportedExperiences += '\n'
+      })
+
+      exportedExperiences += '\n'
+      exportedExperiences += `${this.$i18n.t('resume.experiences.tags')} `
+      exportedExperiences += experience.tags.map((tag: any) => tag.label).reduce((previous: any, current: any) => `${previous}, ${current}`)
+      exportedExperiences += '\n'
+      if (experience.client) {
+        exportedExperiences += `${this.$i18n.t('resume.experiences.via')} ${experience.company}`
+      }
+      exportedExperiences += '\n\n'
+      exportedExperiences += '----------'
+      exportedExperiences += '\n\n'
+    })
+
+    navigator.clipboard.writeText(exportedExperiences)
+
+    EventBus.$emit('info', { message: this.$i18n.t('resume.experiences.copied') })
   }
 }
 </script>

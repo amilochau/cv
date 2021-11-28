@@ -91,7 +91,10 @@
       "title": "Expériences",
       "divider": "/",
       "dateFrom": "Depuis {0}",
-      "current": "En cours"
+      "current": "En cours",
+      "copied": "Les expériences ont été copiées dans le presse-papier.",
+      "tags": "Tags :",
+      "via": "Via"
     },
     "keyWords": {
       "title": "Mots-clés",

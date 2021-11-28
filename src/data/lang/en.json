@@ -91,7 +91,10 @@
       "title": "Experiences",
       "divider": "/",
       "dateFrom": "From {0}",
-      "current": "Current"
+      "current": "Current",
+      "copied": "Experiences have been copied to the clipboard.",
+      "tags": "Tags:",
+      "via": "Via"
     },
     "keyWords": {
       "title": "Top topics",

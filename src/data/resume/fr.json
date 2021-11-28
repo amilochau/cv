@@ -195,7 +195,7 @@
           },
           {
             "title": { "text": "Accompagnement des équipes" },
-            "icon": { "mdi": "mdi-handshake" },
+            "icon": { "mdi": "mdi-handshake", "unicode": "🤝" },
             "items": [
               {
                 "title": { "text": "Team Leader d'une équipe de 6 développeurs (FR, CI, BL) pendant un an" }
@@ -210,7 +210,7 @@
           },
           {
             "title": { "text": "Automatisation des process (DevOps)" },
-            "icon": { "mdi": "mdi-microsoft-azure-devops" },
+            "icon": { "mdi": "mdi-microsoft-azure-devops", "unicode": "⚙️" },
             "items": [
               {
                 "title": { "text": "Mise en place de CI/CD sur toutes les applications" }
@@ -222,7 +222,7 @@
           },
           {
             "title": { "text": "Amélioration continue de la qualité" },
-            "icon": { "mdi": "mdi-chart-line" },
+            "icon": { "mdi": "mdi-chart-line", "unicode": "📈" },
             "items": [
               {
                 "title": { "text": "Mise en place d'outils de suivi de la qualité et des performances (SonarCloud, Application Insights, Health checks" }
@@ -302,7 +302,7 @@
         "items": [
           {
             "title": { "text": "Référent technique de sarenza.com" },
-            "icon": { "mdi": "mdi-account-alert" },
+            "icon": { "mdi": "mdi-account-alert", "unicode": "👨‍💻" },
             "items": [
               {
                 "title": { "text": "Evolutions fonctionnelles et techniques du site sarenza.com" }
@@ -317,7 +317,7 @@
           },
           {
             "title": { "text": "Création et animation de communautés de développeurs" },
-            "icon": { "mdi": "mdi-account-group" },
+            "icon": { "mdi": "mdi-account-group", "unicode": "🤝" },
             "items": [
               {
                 "title": { "text": "Création de guildes (modèles Spotify)" }
@@ -374,7 +374,7 @@
         "items": [
           {
             "title": { "text": "Management de projets" },
-            "icon": { "mdi": "mdi-chart-gantt" },
+            "icon": { "mdi": "mdi-chart-gantt", "unicode": "📊" },
             "items": [
               {
                 "title": { "text": "Gestion des projets d'applications (existantes et futures) pour l'optimisation des mélanges de carburant" }
@@ -389,7 +389,7 @@
           },
           {
             "title": { "text": "Lead technique" },
-            "icon": { "mdi": "mdi-account-wrench" },
+            "icon": { "mdi": "mdi-account-wrench", "unicode": "👨‍💻" },
             "items": [
               {
                 "title": { "text": "Définition des architectures et technologies cibles, découpage des applications en domaines fonctionnels, clarification des flux de données" }
@@ -404,7 +404,7 @@
           },
           {
             "title": { "text": "Automatisation des process (DevOps)" },
-            "icon": { "mdi": "mdi-microsoft-azure-devops" },
+            "icon": { "mdi": "mdi-microsoft-azure-devops", "unicode": "⚙️" },
             "items": [
               {
                 "title": { "text": "Mise en place d'Azure DevOps (boards, repositories, pipelines) pour les applications du Raffinage" }
@@ -416,7 +416,7 @@
           },
           {
             "title": { "text": "Accompagnement des équipes" },
-            "icon": { "mdi": "mdi-handshake" },
+            "icon": { "mdi": "mdi-handshake", "unicode": "🤝" },
             "items": [
               {
                 "title": { "text": "Mise en place d'une organisation agile (Scrum): sprints, rituels, dashboards, conduite du changement" }
@@ -478,7 +478,7 @@
         "items": [
           {
             "title": { "text": "Développement d'applications Web" },
-            "icon": { "mdi": "mdi-account-hard-hat" },
+            "icon": { "mdi": "mdi-account-hard-hat", "unicode": "👨‍💻" },
             "items": [
               {
                 "title": { "text": "Evolutions Front-End et Back-End des applications du groupe SeLoger" }
@@ -541,7 +541,7 @@
         "items": [
           {
             "title": { "text": "Création d'algorithmes d'optimisation mathématique" },
-            "icon": { "mdi": "mdi-calculator-variant" },
+            "icon": { "mdi": "mdi-calculator-variant", "unicode": "👨‍🔬" },
             "items": [
               {
                 "title": { "text": "Méta-modélisation de modèles d'émission de polluants, par SVM et réseaux de neurones" }
@@ -556,7 +556,7 @@
           },
           {
             "title": { "text": "Architecture des solutions APC mélanges" },
-            "icon": { "mdi": "mdi-compass" },
+            "icon": { "mdi": "mdi-compass", "unicode": "📐" },
             "items": [
               {
                 "title": { "text": "Conception et développement d'applications de suivi de la production en temps réel" }
@@ -571,7 +571,7 @@
           },
           {
             "title": { "text": "Assistance et formation aux sites industriels" },
-            "icon": { "mdi": "mdi-help-network" },
+            "icon": { "mdi": "mdi-help-network", "unicode": "🤝" },
             "items": [
               {
                 "title": { "text": "Assistance technique et économique aux raffineries du groupe (France, Allemagne, Etats-Unis)" }
