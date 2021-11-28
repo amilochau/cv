@@ -1,7 +1,7 @@
 <template>
   <v-alert
     :color="call.color"
-    :icon="call.icon"
+    :icon="call.icon ? call.icon.mdi : undefined"
     colored-border
     border="bottom"
     class="d-print-none mb-0 pr-16">

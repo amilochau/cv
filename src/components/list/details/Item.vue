@@ -11,7 +11,7 @@
     :class="itemClass"
     @click="item.action && item.action.event ? $emit('custom', { name: item.action.event, args: item.action.eventArg }) : null">
     <v-list-item-action v-if="item.icon">
-      <v-icon>{{ item.icon }}</v-icon>
+      <v-icon>{{ item.icon.mdi }}</v-icon>
     </v-list-item-action>
     <v-list-item-avatar
       v-else-if="item.avatar"
@@ -45,7 +45,7 @@
       <v-icon
         v-if="!item.badge.text"
         class="d-print-none">
-        {{ item.badge.icon }}
+        {{ item.badge.icon.mdi }}
       </v-icon>
       <v-chip
         v-else
@@ -58,7 +58,7 @@
           :small="item.badge.small"
           left
           class="d-print-none">
-          {{ item.badge.icon }}
+          {{ item.badge.icon.mdi }}
         </v-icon>
         {{ disableTranslation ? item.badge.text : $t(item.badge.text) }}
       </v-chip>

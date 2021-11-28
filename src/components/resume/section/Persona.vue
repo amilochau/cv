@@ -41,7 +41,7 @@
         small
         class="mr-2 mb-1">
         <v-icon left>
-          {{ action.icon}}
+          {{ action.icon }}
         </v-icon>
         {{ action.title.replacement ? action.title.replacement : action.title.text }}
       </v-chip>

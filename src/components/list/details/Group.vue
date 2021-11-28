@@ -1,6 +1,6 @@
 <template>
   <v-list-group
-    :prepend-icon="item.icon"
+    :prepend-icon="item.icon ? item.icon.mdi : undefined"
     :value="expanded"
     no-action
     eager
