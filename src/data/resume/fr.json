@@ -9,9 +9,9 @@
       "disableTranslation": true,
       "items": [
         {
-          "title": { "text": "LinkedIn", "replacement": "antoine-milochau" },
+          "title": { "text": "LinkedIn", "replacement": "amilochau" },
           "icon": "mdi-linkedin",
-          "action": { "href": "https://www.linkedin.com/in/antoine-milochau" }
+          "action": { "href": "https://www.linkedin.com/in/amilochau" }
         },
         {
           "title": { "text": "GitHub", "replacement": "amilochau" },
