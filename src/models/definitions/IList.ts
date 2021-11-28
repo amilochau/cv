@@ -11,12 +11,17 @@ export interface IAction {
   eventArg?: string;
 }
 
+export interface IIcon {
+  mdi: string;
+  unicode?: string;
+}
+
 export interface IBadge {
   title: IText;
   label?: boolean;
   outlined?: boolean;
   color?: string;
-  icon?: string;
+  icon?: IIcon;
   small?: boolean;
 }
 
@@ -39,7 +44,7 @@ export interface IListItem {
 
   disabled?: boolean;
 
-  icon?: string;
+  icon?: IIcon;
   avatar?: IAvatar;
   badge?: IBadge;
 }

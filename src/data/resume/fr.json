@@ -10,17 +10,17 @@
       "items": [
         {
           "title": { "text": "LinkedIn", "replacement": "amilochau" },
-          "icon": "mdi-linkedin",
+          "icon": { "mdi": "mdi-linkedin" },
           "action": { "href": "https://www.linkedin.com/in/amilochau" }
         },
         {
           "title": { "text": "GitHub", "replacement": "amilochau" },
-          "icon": "mdi-github",
+          "icon": { "mdi": "mdi-github" },
           "action": { "href": "https://github.com/amilochau" }
         },
         {
           "title": { "text": "Asnières-sur-Seine, FR" },
-          "icon": "mdi-map-marker-distance",
+          "icon": { "mdi": "mdi-map-marker-distance" },
           "action": { "href": "https://www.google.com/maps/dir/Rue+de+l'Alma,+92600+Asni%C3%A8res-sur-Seine//@48.9140613,2.2888171,15z/data=!4m9!4m8!1m5!1m1!1s0x47e66f60e621aff3:0xdf738d390509c25a!2m2!1d2.2854697!2d48.9157538!1m0!3e3" }
         }
       ]
@@ -60,29 +60,29 @@
         "items": [
           {
             "title": { "text": "milochau.com" },
-            "icon": "mdi-cog-outline",
+            "icon": { "mdi": "mdi-cog-outline" },
             "action": { "href": "https://milochau.com" }
           },
           {
             "title": { "text": "Carte de voyages" },
-            "icon": "mdi-map-marker-outline",
+            "icon": { "mdi": "mdi-map-marker-outline" },
             "badge": { "text": "WIP", "color": "info", "small": true },
             "action": { "href": "https://trips.milochau.com" }
           },
           {
             "title": { "text": "Service d'emails" },
-            "icon": "mdi-email-outline",
+            "icon": { "mdi": "mdi-email-outline" },
             "action": { "href": "https://github.com/amilochau/emails" }
           },
           {
             "title": { "text": "CV" },
-            "icon": "mdi-card-account-details-outline",
+            "icon": { "mdi": "mdi-card-account-details-outline" },
             "badge": { "text": "WIP", "color": "info", "small": true },
             "action": { "href": "https://cv.milochau.com" }
           },
           {
             "title": { "text": "Mariage" },
-            "icon": "mdi-ring"
+            "icon": { "mdi": "mdi-ring" }
           }
         ]
       },
@@ -91,18 +91,18 @@
         "items": [
           {
             "title": { "text": "NuGet - Milochau.Core" },
-            "icon": "mdi-dot-net",
+            "icon": { "mdi": "mdi-dot-net" },
             "action": { "href": "https://www.nuget.org/packages?q=Milochau.Core.*" }
           },
           {
             "title": { "text": "NuGet - MilNet" },
-            "icon": "mdi-dot-net",
+            "icon": { "mdi": "mdi-dot-net" },
             "badge": { "text": "Déprécié", "color": "warning", "small": true },
             "action": { "href": "https://www.nuget.org/packages?q=MilNet.*" }
           },
           {
             "title": { "text": "npm - milnode" },
-            "icon": "mdi-nodejs",
+            "icon": { "mdi": "mdi-nodejs" },
             "badge": { "text": "Déprécié", "color": "warning", "small": true },
             "action": { "href": "https://www.npmjs.com/package/milnode" }
           }
@@ -113,17 +113,17 @@
         "items": [
           {
             "title": { "text": "Vision" },
-            "icon": "mdi-television-ambient-light",
+            "icon": { "mdi": "mdi-television-ambient-light" },
             "badge": { "text": "WIP", "color": "info", "small": true }
           },
           {
             "title": { "text": "Roadmap" },
-            "icon": "mdi-chart-gantt",
+            "icon": { "mdi": "mdi-chart-gantt" },
             "action": { "href": "https://github.com/amilochau/.github/blob/main/docs/roadmap.md" }
           },
           {
             "title": { "text": "Architecture" },
-            "icon": "mdi-sitemap-outline",
+            "icon": { "mdi": "mdi-sitemap-outline" },
             "badge": { "text": "WIP", "color": "info", "small": true }
           }
         ]
@@ -177,7 +177,7 @@
         "items": [
           {
             "title": { "text": "Améliorations d'architecture" },
-            "icon": "mdi-floor-plan",
+            "icon": { "mdi": "mdi-floor-plan", "unicode": "📐" },
             "items": [
               {
                 "title": { "text": "Migration des applications existantes (vers .NET Core/.NET 6.0)" }
@@ -195,7 +195,7 @@
           },
           {
             "title": { "text": "Accompagnement des équipes" },
-            "icon": "mdi-handshake",
+            "icon": { "mdi": "mdi-handshake" },
             "items": [
               {
                 "title": { "text": "Team Leader d'une équipe de 6 développeurs (FR, CI, BL) pendant un an" }
@@ -210,7 +210,7 @@
           },
           {
             "title": { "text": "Automatisation des process (DevOps)" },
-            "icon": "mdi-microsoft-azure-devops",
+            "icon": { "mdi": "mdi-microsoft-azure-devops" },
             "items": [
               {
                 "title": { "text": "Mise en place de CI/CD sur toutes les applications" }
@@ -222,7 +222,7 @@
           },
           {
             "title": { "text": "Amélioration continue de la qualité" },
-            "icon": "mdi-chart-line",
+            "icon": { "mdi": "mdi-chart-line" },
             "items": [
               {
                 "title": { "text": "Mise en place d'outils de suivi de la qualité et des performances (SonarCloud, Application Insights, Health checks" }
@@ -302,7 +302,7 @@
         "items": [
           {
             "title": { "text": "Référent technique de sarenza.com" },
-            "icon": "mdi-account-alert",
+            "icon": { "mdi": "mdi-account-alert" },
             "items": [
               {
                 "title": { "text": "Evolutions fonctionnelles et techniques du site sarenza.com" }
@@ -317,7 +317,7 @@
           },
           {
             "title": { "text": "Création et animation de communautés de développeurs" },
-            "icon": "mdi-account-group",
+            "icon": { "mdi": "mdi-account-group" },
             "items": [
               {
                 "title": { "text": "Création de guildes (modèles Spotify)" }
@@ -374,7 +374,7 @@
         "items": [
           {
             "title": { "text": "Management de projets" },
-            "icon": "mdi-chart-gantt",
+            "icon": { "mdi": "mdi-chart-gantt" },
             "items": [
               {
                 "title": { "text": "Gestion des projets d'applications (existantes et futures) pour l'optimisation des mélanges de carburant" }
@@ -389,7 +389,7 @@
           },
           {
             "title": { "text": "Lead technique" },
-            "icon": "mdi-account-wrench",
+            "icon": { "mdi": "mdi-account-wrench" },
             "items": [
               {
                 "title": { "text": "Définition des architectures et technologies cibles, découpage des applications en domaines fonctionnels, clarification des flux de données" }
@@ -404,7 +404,7 @@
           },
           {
             "title": { "text": "Automatisation des process (DevOps)" },
-            "icon": "mdi-microsoft-azure-devops",
+            "icon": { "mdi": "mdi-microsoft-azure-devops" },
             "items": [
               {
                 "title": { "text": "Mise en place d'Azure DevOps (boards, repositories, pipelines) pour les applications du Raffinage" }
@@ -416,7 +416,7 @@
           },
           {
             "title": { "text": "Accompagnement des équipes" },
-            "icon": "mdi-handshake",
+            "icon": { "mdi": "mdi-handshake" },
             "items": [
               {
                 "title": { "text": "Mise en place d'une organisation agile (Scrum): sprints, rituels, dashboards, conduite du changement" }
@@ -478,7 +478,7 @@
         "items": [
           {
             "title": { "text": "Développement d'applications Web" },
-            "icon": "mdi-account-hard-hat",
+            "icon": { "mdi": "mdi-account-hard-hat" },
             "items": [
               {
                 "title": { "text": "Evolutions Front-End et Back-End des applications du groupe SeLoger" }
@@ -541,7 +541,7 @@
         "items": [
           {
             "title": { "text": "Création d'algorithmes d'optimisation mathématique" },
-            "icon": "mdi-calculator-variant",
+            "icon": { "mdi": "mdi-calculator-variant" },
             "items": [
               {
                 "title": { "text": "Méta-modélisation de modèles d'émission de polluants, par SVM et réseaux de neurones" }
@@ -556,7 +556,7 @@
           },
           {
             "title": { "text": "Architecture des solutions APC mélanges" },
-            "icon": "mdi-compass",
+            "icon": { "mdi": "mdi-compass" },
             "items": [
               {
                 "title": { "text": "Conception et développement d'applications de suivi de la production en temps réel" }
@@ -571,7 +571,7 @@
           },
           {
             "title": { "text": "Assistance et formation aux sites industriels" },
-            "icon": "mdi-help-network",
+            "icon": { "mdi": "mdi-help-network" },
             "items": [
               {
                 "title": { "text": "Assistance technique et économique aux raffineries du groupe (France, Allemagne, Etats-Unis)" }
@@ -655,12 +655,12 @@
       {
         "title": { "text": "Ecole Centrale de Nantes" },
         "subtitle": { "text": "Diplôme d'Ingénieur généraliste" },
-        "badge": { "text": "2014", "label": true, "outlined": true, "icon": "mdi-calendar-range-outline", "small": true }
+        "badge": { "text": "2014", "label": true, "outlined": true, "icon": { "mdi": "mdi-calendar-range-outline" }, "small": true }
       },
       {
         "title": { "text": "TOEIC" },
         "subtitle": { "text": "915 / 990" },
-        "badge": { "text": "2014", "label": true, "outlined": true, "icon": "mdi-calendar-range-outline", "small": true }
+        "badge": { "text": "2014", "label": true, "outlined": true, "icon": { "mdi": "mdi-calendar-range-outline" }, "small": true }
       },
       {
         "divider": true
@@ -670,12 +670,12 @@
       },
       {
         "title": { "text": "Microsoft Learn" },
-        "icon": "mdi-microsoft-azure",
+        "icon": { "mdi": "mdi-microsoft-azure" },
         "action": { "href": "https://docs.microsoft.com/fr-fr/users/amilochau" }
       },
       {
         "title": { "text": "Sauveteur Secouriste au Travail" },
-        "icon": "mdi-lifebuoy"
+        "icon": { "mdi": "mdi-lifebuoy" }
       }
     ]
   },
@@ -707,7 +707,7 @@
     "isDepartureEndOfMonth": false
   },
   "call": {
-    "icon": "mdi-human-greeting",
+    "icon": { "mdi": "mdi-human-greeting" },
     "color": "success",
     "message": "Bienvenue sur mon CV !",
     "lastUpdate": "2021-11-27"
