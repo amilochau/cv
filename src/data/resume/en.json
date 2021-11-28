@@ -336,6 +336,10 @@
           "key": "management"
         },
         {
+          "label": "SQL Server",
+          "key": "infrastructure"
+        },
+        {
           "label": "Azure DevOps",
           "key": "devops"
         },
@@ -376,7 +380,10 @@
                 "title": { "text": "Project management of applications (existing and future) for fuel blend optimization" }
               },
               {
-                "title": { "text": "Link with service providers and subcontractors" }
+                "title": { "text": "Functional an technical coordination, piloting, reporting to management" }
+              },
+              {
+                "title": { "text": "Link with service providers and subcontractors (~ 10 developers)" }
               }
             ]
           },
@@ -385,7 +392,7 @@
             "icon": "mdi-account-wrench",
             "items": [
               {
-                "title": { "text": "Definition of target architectures and technologies" }
+                "title": { "text": "Definition of target architectures and technologies, division of applications into functional domains, clarification of data flows" }
               },
               {
                 "title": { "text": "Definition of migration plans to web applications, on Azure" }
@@ -480,7 +487,7 @@
                 "title": { "text": "SEO optimizations for SeLoger and ImmoStreet websites" }
               },
               {
-                "title": { "text": "Front-End performance optimizations (dividing loading time by 3)" }
+                "title": { "text": "Front-End performance optimizations (dividing loading time by 10)" }
               }
             ]
           }
@@ -492,8 +499,12 @@
           "key": "management"
         },
         {
+          "label": "IIS",
+          "key": "infrastructure"
+        },
+        {
           "label": "NHibernate",
-          "tag": "infrastructure"
+          "key": "infrastructure"
         },
         {
           "label": "Jira",
@@ -548,10 +559,13 @@
             "icon": "mdi-compass",
             "items": [
               {
-                "title": { "text": "Complete rewrite of a real-time optimization application (20 M€/y in earnings)" }
+                "title": { "text": "Design and development of real-time production monitoring applications" }
               },
               {
-                "title": { "text": "Design and development of real-time production monitoring applications" }
+                "title": { "text": "Referent for a real-time monitoring application for APC solutions" }
+              },
+              {
+                "title": { "text": "Complete rewrite of a real-time optimization application (30 M€/y in earnings)" }
               }
             ]
           },
@@ -579,6 +593,10 @@
         },
         {
           "label": "IIS",
+          "key": "infrastructure"
+        },
+        {
+          "label": "MySQL",
           "key": "infrastructure"
         },
         {
@@ -620,6 +638,10 @@
         {
           "label": "C / C++",
           "key": "development"
+        },
+        {
+          "label": "ISO 9001",
+          "key": "quality"
         }
       ]
     }

@@ -336,6 +336,10 @@
           "key": "management"
         },
         {
+          "label": "SQL Server",
+          "key": "infrastructure"
+        },
+        {
           "label": "Azure DevOps",
           "key": "devops"
         },
@@ -376,7 +380,10 @@
                 "title": { "text": "Gestion des projets d'applications (existantes et futures) pour l'optimisation des mélanges de carburant" }
               },
               {
-                "title": { "text": "Lien avec les prestataires et sous-traitants" }
+                "title": { "text": "Coordination fonctionnelle et technique, pilotage, reporting au management" }
+              },
+              {
+                "title": { "text": "Lien avec les prestataires et sous-traitants (~ 10 développeurs)" }
               }
             ]
           },
@@ -385,7 +392,7 @@
             "icon": "mdi-account-wrench",
             "items": [
               {
-                "title": { "text": "Définition des architectures et technologies cibles" }
+                "title": { "text": "Définition des architectures et technologies cibles, découpage des applications en domaines fonctionnels, clarification des flux de données" }
               },
               {
                 "title": { "text": "Définition des plans de migration vers des applications Web, sur Azure" }
@@ -480,7 +487,7 @@
                 "title": { "text": "Optimisations SEO pour les sites SeLoger et ImmoStreet" }
               },
               {
-                "title": { "text": "Optimisations de performances Front-End (division du temps de chargement par 3)" }
+                "title": { "text": "Optimisations de performances Front-End (division du temps de chargement par 10)" }
               }
             ]
           }
@@ -492,8 +499,12 @@
           "key": "management"
         },
         {
+          "label": "IIS",
+          "key": "infrastructure"
+        },
+        {
           "label": "NHibernate",
-          "tag": "infrastructure"
+          "key": "infrastructure"
         },
         {
           "label": "Jira",
@@ -548,10 +559,13 @@
             "icon": "mdi-compass",
             "items": [
               {
-                "title": { "text": "Réécriture complète d'une application d'optimisation temps réel (20 M €/an de gains)" }
+                "title": { "text": "Conception et développement d'applications de suivi de la production en temps réel" }
               },
               {
-                "title": { "text": "Conception et développement d'applications de suivi de la production en temps réel" }
+                "title": { "text": "Référent d'une application de monitoring en temps réel des solutions APC" }
+              },
+              {
+                "title": { "text": "Réécriture complète d'une application d'optimisation temps réel (30 M €/an de gains)" }
               }
             ]
           },
@@ -579,6 +593,10 @@
         },
         {
           "label": "IIS",
+          "key": "infrastructure"
+        },
+        {
+          "label": "MySQL",
           "key": "infrastructure"
         },
         {
@@ -620,6 +638,10 @@
         {
           "label": "C / C++",
           "key": "development"
+        },
+        {
+          "label": "ISO 9001",
+          "key": "quality"
         }
       ]
     }
