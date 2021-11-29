@@ -79,10 +79,6 @@
             "icon": { "mdi": "mdi-card-account-details-outline" },
             "badge": { "text": "WIP", "color": "info", "small": true },
             "action": { "href": "https://cv.milochau.com" }
-          },
-          {
-            "title": { "text": "Mariage" },
-            "icon": { "mdi": "mdi-ring" }
           }
         ]
       },
