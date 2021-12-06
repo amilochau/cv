@@ -47,7 +47,6 @@ jobs:
     name: Deploy application
     needs: deploy_infra
     runs-on: ubuntu-latest
-    environment: DEV
     steps:
       - uses: actions/checkout@v2
       - name: Deploy Static Web Apps application
