@@ -143,6 +143,10 @@
         "key": "infrastructure"
       },
       {
+        "label": "Functions",
+        "key": "infrastructure"
+      },
+      {
         "label": "Azure DevOps",
         "key": "devops"
       },
@@ -151,7 +155,7 @@
         "key": "devops"
       },
       {
-        "label": "Bicep",
+        "label": "ARM Templates",
         "key": "devops"
       },
       {
@@ -213,10 +217,10 @@
             "icon": { "mdi": "mdi-microsoft-azure-devops" },
             "items": [
               {
-                "title": { "text": "Implementation of CI/CD on all applications" }
+                "title": { "text": "Implementation of CI/CD on all applications (YAML templates with Azure Pipelines)" }
               },
               {
-                "title": { "text": "Implementation of IaC on a restricted scope" }
+                "title": { "text": "Implementation of IaC on a restricted scope (ARM templates in Bicep)" }
               }
             ]
           },
@@ -260,11 +264,23 @@
           "key": "infrastructure"
         },
         {
+          "label": "Functions",
+          "key": "infrastructure"
+        },
+        {
+          "label": "Service Bus",
+          "key": "infrastructure"
+        },
+        {
+          "label": "App Insights",
+          "key": "infrastructure"
+        },
+        {
           "label": "MongoDB",
           "key": "infrastructure"
         },
         {
-          "label": "Bicep",
+          "label": "ARM Templates",
           "key": "devops"
         },
         {
@@ -305,7 +321,7 @@
             "icon": { "mdi": "mdi-account-alert" },
             "items": [
               {
-                "title": { "text": "Functional and technical developments of the sarenza.com site" }
+                "title": { "text": "Functional and technical developments of the sarenza.com site (.NET Framework, T-SQL)" }
               },
               {
                 "title": { "text": "Definition of the technical roadmap for Sarenza Front-Office" }
@@ -398,7 +414,7 @@
                 "title": { "text": "Definition of migration plans to web applications, on Azure" }
               },
               {
-                "title": { "text": "Participation in the development of Web and Desktop applications" }
+                "title": { "text": "Participation in the development of Web and Desktop applications (.NET Core / vue.js)" }
               }
             ]
           },
@@ -481,7 +497,7 @@
             "icon": { "mdi": "mdi-account-hard-hat" },
             "items": [
               {
-                "title": { "text": "Front-End and Back-End developments for the SeLoger group applications" }
+                "title": { "text": "Front-End and Back-End developments for the SeLoger group applications (.NET Framework / .NET Core)" }
               },
               {
                 "title": { "text": "SEO optimizations for SeLoger and ImmoStreet websites" }
@@ -547,7 +563,7 @@
                 "title": { "text": "Meta-modeling of pollutant emission models, with SVM and neural networks" }
               },
               {
-                "title": { "text": "Creation and implementation of non-lineal optimization algorithms" }
+                "title": { "text": "Creation and implementation of non-lineal optimization algorithms (Matlab, C++)" }
               },
               {
                 "title": { "text": "Real-time estimation of fuel properties dealing with uncertainties, with methods as Kalman filters" }
@@ -559,13 +575,13 @@
             "icon": { "mdi": "mdi-compass" },
             "items": [
               {
-                "title": { "text": "Design and development of real-time production monitoring applications" }
+                "title": { "text": "Design and development of real-time production monitoring applications (.NET Framework / .NET Core)" }
               },
               {
                 "title": { "text": "Referent for a real-time monitoring application for APC solutions" }
               },
               {
-                "title": { "text": "Complete rewrite of a real-time optimization application (30 M€/y in earnings)" }
+                "title": { "text": "Complete rewrite of a real-time optimization application (C to C++, 30 M€/y in earnings)" }
               }
             ]
           },

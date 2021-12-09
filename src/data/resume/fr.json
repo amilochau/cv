@@ -143,6 +143,10 @@
         "key": "infrastructure"
       },
       {
+        "label": "Functions",
+        "key": "infrastructure"
+      },
+      {
         "label": "Azure DevOps",
         "key": "devops"
       },
@@ -151,7 +155,7 @@
         "key": "devops"
       },
       {
-        "label": "Bicep",
+        "label": "ARM Templates",
         "key": "devops"
       },
       {
@@ -213,10 +217,10 @@
             "icon": { "mdi": "mdi-microsoft-azure-devops", "unicode": "⚙️" },
             "items": [
               {
-                "title": { "text": "Mise en place de CI/CD sur toutes les applications" }
+                "title": { "text": "Mise en place de CI/CD sur toutes les applications (templates YAML avec Azure Pipelines)" }
               },
               {
-                "title": { "text": "Mise en place de IaC sur un scope restreint" }
+                "title": { "text": "Mise en place de IaC sur un scope restreint (templates ARM en Bicep)" }
               }
             ]
           },
@@ -225,7 +229,7 @@
             "icon": { "mdi": "mdi-chart-line", "unicode": "📈" },
             "items": [
               {
-                "title": { "text": "Mise en place d'outils de suivi de la qualité et des performances (SonarCloud, Application Insights, Health checks" }
+                "title": { "text": "Mise en place d'outils de suivi de la qualité et des performances (SonarCloud, Application Insights, Health checks...)" }
               },
               {
                 "title": { "text": "Introduction de tests unitaires et E2E sur les applications business" }
@@ -260,11 +264,23 @@
           "key": "infrastructure"
         },
         {
+          "label": "Functions",
+          "key": "infrastructure"
+        },
+        {
+          "label": "Service Bus",
+          "key": "infrastructure"
+        },
+        {
+          "label": "App Insights",
+          "key": "infrastructure"
+        },
+        {
           "label": "MongoDB",
           "key": "infrastructure"
         },
         {
-          "label": "Bicep",
+          "label": "ARM Templates",
           "key": "devops"
         },
         {
@@ -305,7 +321,7 @@
             "icon": { "mdi": "mdi-account-alert", "unicode": "👨‍💻" },
             "items": [
               {
-                "title": { "text": "Evolutions fonctionnelles et techniques du site sarenza.com" }
+                "title": { "text": "Evolutions fonctionnelles et techniques du site sarenza.com (.NET Framework, T-SQL)" }
               },
               {
                 "title": { "text": "Définition de roadmap technique du Front-Office Sarenza" }
@@ -398,7 +414,7 @@
                 "title": { "text": "Définition des plans de migration vers des applications Web, sur Azure" }
               },
               {
-                "title": { "text": "Participation aux développements d'applications Web et Desktop" }
+                "title": { "text": "Participation aux développements d'applications Web et Desktop (.NET Core / vue.js)" }
               }
             ]
           },
@@ -481,7 +497,7 @@
             "icon": { "mdi": "mdi-account-hard-hat", "unicode": "👨‍💻" },
             "items": [
               {
-                "title": { "text": "Evolutions Front-End et Back-End des applications du groupe SeLoger" }
+                "title": { "text": "Evolutions Front-End et Back-End des applications du groupe SeLoger (.NET Framework / .NET Core)" }
               },
               {
                 "title": { "text": "Optimisations SEO pour les sites SeLoger et ImmoStreet" }
@@ -547,7 +563,7 @@
                 "title": { "text": "Méta-modélisation de modèles d'émission de polluants, par SVM et réseaux de neurones" }
               },
               {
-                "title": { "text": "Création et implémentation d'algorithmes d'optimisation non-linéaire" }
+                "title": { "text": "Création et implémentation d'algorithmes d'optimisation non-linéaire (Matlab, C++)" }
               },
               {
                 "title": { "text": "Estimation en temps réel de propriétés de carburants, gestion des incertitudes par des méthodes type filtres de Kalman" }
@@ -559,13 +575,13 @@
             "icon": { "mdi": "mdi-compass", "unicode": "📐" },
             "items": [
               {
-                "title": { "text": "Conception et développement d'applications de suivi de la production en temps réel" }
+                "title": { "text": "Conception et développement d'applications de suivi de la production en temps réel (.NET Framework / .NET Core)" }
               },
               {
                 "title": { "text": "Référent d'une application de monitoring en temps réel des solutions APC" }
               },
               {
-                "title": { "text": "Réécriture complète d'une application d'optimisation temps réel (30 M €/an de gains)" }
+                "title": { "text": "Réécriture complète d'une application d'optimisation temps réel (C vers C++, 30 M€/an de gains)" }
               }
             ]
           },
