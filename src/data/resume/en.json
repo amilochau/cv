@@ -1,4 +1,10 @@
 {
+  "call": {
+    "icon": { "mdi": "mdi-human-greeting" },
+    "color": "success",
+    "message": "Welcome on my resume!",
+    "lastUpdate": "2021-12-09"
+  },
   "persona": {
     "image": "https://mil-content-prd-cdnedp-1.azureedge.net/web/Cover.jpg",
     "thumbnail": "https://mil-content-prd-cdnedp-1.azureedge.net/web/Cover.jpg",
@@ -19,7 +25,7 @@
           "action": { "href": "https://github.com/amilochau" }
         },
         {
-          "title": { "text": "Asnières-sur-Seine, FR" },
+          "title": { "text": "Paris, FR" },
           "icon": { "mdi": "mdi-map-marker-distance" },
           "action": { "href": "https://www.google.com/maps/dir/Rue+de+l'Alma,+92600+Asni%C3%A8res-sur-Seine//@48.9140613,2.2888171,15z/data=!4m9!4m8!1m5!1m1!1s0x47e66f60e621aff3:0xdf738d390509c25a!2m2!1d2.2854697!2d48.9157538!1m0!3e3" }
         }
@@ -66,8 +72,7 @@
           {
             "title": { "text": "Trips maps" },
             "icon": { "mdi": "mdi-map-marker-outline" },
-            "badge": { "text": "WIP", "color": "info", "small": true },
-            "action": { "href": "https://trips.milochau.com" }
+            "badge": { "text": "WIP", "color": "info", "small": true, "outlined": true }
           },
           {
             "title": { "text": "Emails service" },
@@ -92,13 +97,13 @@
           {
             "title": { "text": "NuGet - MilNet" },
             "icon": { "mdi": "mdi-dot-net" },
-            "badge": { "text": "Deprecated", "color": "warning", "small": true },
+            "badge": { "text": "Deprecated", "color": "warning", "small": true, "outlined": true },
             "action": { "href": "https://www.nuget.org/packages?q=MilNet.*" }
           },
           {
             "title": { "text": "npm - milnode" },
             "icon": { "mdi": "mdi-nodejs" },
-            "badge": { "text": "Deprecated", "color": "warning", "small": true },
+            "badge": { "text": "Deprecated", "color": "warning", "small": true, "outlined": true },
             "action": { "href": "https://www.npmjs.com/package/milnode" }
           }
         ]
@@ -109,7 +114,7 @@
           {
             "title": { "text": "Vision" },
             "icon": { "mdi": "mdi-television-ambient-light" },
-            "badge": { "text": "WIP", "color": "info", "small": true }
+            "badge": { "text": "WIP", "color": "info", "small": true, "outlined": true }
           },
           {
             "title": { "text": "Roadmap" },
@@ -119,7 +124,7 @@
           {
             "title": { "text": "Architecture" },
             "icon": { "mdi": "mdi-sitemap-outline" },
-            "badge": { "text": "WIP", "color": "info", "small": true }
+            "badge": { "text": "WIP", "color": "info", "small": true, "outlined": true }
           }
         ]
       }
@@ -181,7 +186,7 @@
                 "title": { "text": "Architecture review: implementation of N-Tiers on legacy applications, microservices pattern on new projects" }
               },
               {
-                "title": { "text": "Creation of entreprise frameworks: applications in ASP.NET Core or Azure Functions, YAML deployment templates" }
+                "title": { "text": "Creation of enterprise frameworks: applications in ASP.NET Core or Azure Functions, YAML deployment templates" }
               },
               {
                 "title": { "text": "Definition of architecture diagrams and migration plans towards a scalable, resilient architecture" }
@@ -193,13 +198,13 @@
             "icon": { "mdi": "mdi-handshake" },
             "items": [
               {
-                "title": { "text": "Team Leader of a 6-developers team (FR, CI, BL) during one yead " }
+                "title": { "text": "Team Leader of a 6-developers team (FR, CI, BL) during one year " }
               },
               {
                 "title": { "text": "Training of the developers on technologies (.NET, monitoring, quality, architecture patterns...)" }
               },
               {
-                "title": { "text": "Support for the implementaiton of the Scrum methon in technical teams" }
+                "title": { "text": "Support for the implementation of the Scrum method in technical teams" }
               }
             ]
           },
@@ -627,7 +632,7 @@
           "key": "development"
         },
         {
-          "label": "Winforms",
+          "label": "WinForms",
           "key": "development"
         },
         {
@@ -700,11 +705,5 @@
     "noticePeriodInDays": 90,
     "noticePeriodBufferInDays": 21,
     "isDepartureEndOfMonth": false
-  },
-  "call": {
-    "icon": { "mdi": "mdi-human-greeting" },
-    "color": "success",
-    "message": "Welcome on my resume!",
-    "lastUpdate": "2021-11-27"
   }
 }

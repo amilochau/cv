@@ -34,16 +34,16 @@
     </v-card-text>
     <v-card-text class="d-none d-print-block text-center pt-0">
       <v-chip
-        v-for="(action, i) in persona.actions.items"
+        v-for="(item, i) in persona.actions.items"
         :key="i"
         label
         outlined
         small
         class="mr-2 mb-1">
-        <v-icon left>
-          {{ action.icon }}
+        <v-icon left small>
+          {{ item.icon.mdi }}
         </v-icon>
-        {{ action.title.replacement ? action.title.replacement : action.title.text }}
+        {{ item.title.replacement ? item.title.replacement : item.title.text }}
       </v-chip>
     </v-card-text>
     <v-dialog v-model="pictureDialog" width="600px">
