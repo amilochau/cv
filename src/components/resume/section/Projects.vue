@@ -26,12 +26,12 @@
 </template>
 
 <script lang="ts">
-import { IList } from '@/models/definitions'
+import { IResumeProjects } from '@/models/business/Resume'
 import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component
 export default class Projects extends Vue {
-  @Prop({ type: Object, required: true }) public projects!: IList;
+  @Prop({ type: Object, required: true }) public projects!: IResumeProjects;
 
   @Prop({ type: Boolean, required: true }) public expanded!: boolean;
 }

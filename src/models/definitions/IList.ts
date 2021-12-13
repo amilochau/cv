@@ -17,7 +17,7 @@ export interface IIcon {
 }
 
 export interface IBadge {
-  title: IText;
+  text: string;
   label?: boolean;
   outlined?: boolean;
   color?: string;

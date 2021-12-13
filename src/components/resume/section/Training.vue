@@ -14,11 +14,11 @@
 </template>
 
 <script lang="ts">
-import { IList } from '@/models/definitions'
+import { IResumeTraining } from '@/models/business/Resume'
 import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component
 export default class Training extends Vue {
-  @Prop({ type: Object, required: true }) public trainings!: IList;
+  @Prop({ type: Object, required: true }) public trainings!: IResumeTraining;
 }
 </script>

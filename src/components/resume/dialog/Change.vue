@@ -40,30 +40,34 @@
           </v-icon>
           {{ change.isDepartureNotice ? $t('resume.change.departureNoticed') : $t('resume.change.noNotice') }}
         </v-chip>
-        <v-divider class="my-4"/>
-        <div>{{ $t('resume.change.changeLikelihood') }}</div>
-        <p class="text-h4 text--primary">
-          {{ change.changeLikelihoodInPercent | formatPercents }}
-        </p>
-        <v-chip
-          label
-          outlined
-          class="mb-1"
-          :color="change.ongoingProcess ? 'info' : 'grey darken-1'">
-          <v-icon left>
-            {{ change.ongoingProcess ? 'mdi-briefcase-search' : 'mdi-progress-close' }}
-          </v-icon>
-          {{ change.ongoingProcess ? $t('resume.change.ongoingProcess') : $t('resume.change.noProcess') }}
-        </v-chip>
-        <v-divider class="my-4"/>
-        <div>{{ $t('resume.change.noticePeriod') }}</div>
-        <p class="text-h4 text--primary">
-          {{ change.noticePeriodInDays | formatDays }}
-        </p>
-        <div>{{ $t('resume.change.startFrom') }}</div>
-        <p class="text-h4 text--primary">
-          {{ change.noticePeriodInDays + change.noticePeriodBufferInDays | formatDateFrom(change.isDepartureEndOfMonth) }}
-        </p>
+        <section v-if="change.changeLikelihoodInPercent !== undefined">
+          <v-divider class="my-4"/>
+          <div>{{ $t('resume.change.changeLikelihood') }}</div>
+          <p class="text-h4 text--primary">
+            {{ change.changeLikelihoodInPercent | formatPercents }}
+          </p>
+          <v-chip
+            label
+            outlined
+            class="mb-1"
+            :color="change.ongoingProcess ? 'info' : 'grey darken-1'">
+            <v-icon left>
+              {{ change.ongoingProcess ? 'mdi-briefcase-search' : 'mdi-progress-close' }}
+            </v-icon>
+            {{ change.ongoingProcess ? $t('resume.change.ongoingProcess') : $t('resume.change.noProcess') }}
+          </v-chip>
+        </section>
+        <section v-if="change.noticePeriodInDays !== undefined">
+          <v-divider class="my-4"/>
+          <div>{{ $t('resume.change.noticePeriod') }}</div>
+          <p class="text-h4 text--primary">
+            {{ change.noticePeriodInDays | formatDays }}
+          </p>
+          <div>{{ $t('resume.change.startFrom') }}</div>
+          <p class="text-h4 text--primary">
+            {{ change.noticePeriodBufferInDays ? change.noticePeriodInDays + change.noticePeriodBufferInDays : change.noticePeriodInDays | formatDateFrom(change.isDepartureEndOfMonth) }}
+          </p>
+        </section>
       </div>
     </v-card-text>
   </v-card>

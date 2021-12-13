@@ -1,4 +1,4 @@
-import { CultureType } from '@/models/business/application'
+import { CultureType } from '@/models/business'
 import en from './en.json'
 import fr from './fr.json'
 
