@@ -3,6 +3,9 @@
     "snackbar": {
       "close": "Fermer"
     },
+    "progressbar": {
+      "label": "Progression"
+    },
     "cookies": {
       "title": "Ce site utilise des cookies pour fonctionner.",
       "read": "Lire",
