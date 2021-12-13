@@ -2,6 +2,7 @@
 
 const webpack = require('webpack')
 const RobotstxtPlugin = require('./scripts/robotstxt-webpack-plugin/cjs')
+const SitemapPlugin = require('./scripts/sitemap-webpack-plugin/cjs')
 
 module.exports = {
   transpileDependencies: [
@@ -13,6 +14,7 @@ module.exports = {
     plugins: [
       new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /en|fr/),
       new RobotstxtPlugin(),
+      new SitemapPlugin(),
     ],
   },
   chainWebpack: config => {
