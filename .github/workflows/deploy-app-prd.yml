@@ -11,6 +11,7 @@ env:
   INFRA_RG_NAME: 'mil-cv-prd-rg'
   INFRA_RG_LOCATION: 'westeurope'
   INFRA_APP_NAME: 'mil-cv-prd-swa'
+  NODE_ENVIRONMENT: 'Production'
   TEMPLATES_VERSION: v6
 
 jobs:

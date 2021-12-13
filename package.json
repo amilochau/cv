@@ -209,5 +209,8 @@
     "defaults",
     "not IE 11",
     "maintained node versions"
-  ]
+  ],
+  "robots-txt": {
+    "sitemap": "https://cv.milochau.com/sitemap.xml"
+  }
 }
