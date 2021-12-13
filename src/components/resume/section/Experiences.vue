@@ -1,11 +1,13 @@
 <template>
-  <div id="experiences">
+  <div
+    v-if="experiences.items"
+    id="experiences">
     <v-card-title @dblclick="copyExperiences">
       <v-icon left>mdi-briefcase</v-icon>
       {{ $t('resume.experiences.title') }}
     </v-card-title>
     <v-card
-      v-for="(experience, i) in experiences"
+      v-for="(experience, i) in experiences.items"
       :key="i"
       elevation="0"
       class="mb-2">
@@ -59,7 +61,7 @@
           </v-chip>
         </p>
         <p
-          v-if="expanded"
+          v-if="expanded && experience.description"
           class="text--secondary font-italic p-avoid-break-inside">
           {{ experience.description }}
         </p>
@@ -93,12 +95,13 @@
 
 <script lang="ts">
 import EventBus from '@/event-bus'
+import { IResumeExperiences } from '@/models/business/Resume'
 import { IListItem } from '@/models/definitions'
 import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component
 export default class Experiences extends Vue {
-  @Prop({ type: Array, required: true }) public experiences!: [];
+  @Prop({ type: Object, required: true }) public experiences!: IResumeExperiences;
 
   @Prop({ type: Object, required: true }) public change!: any;
 
@@ -117,11 +120,17 @@ export default class Experiences extends Vue {
   copyExperiences () {
     let exportedExperiences = ''
 
-    this.experiences.forEach((experience: any) => {
+    if (!this.experiences.items) {
+      return
+    }
+
+    this.experiences.items.forEach((experience: any) => {
       if (experience.client) {
         exportedExperiences += `${experience.job} (${experience.client})\n\n`
-      } else {
+      } else if (experience.company) {
         exportedExperiences += `${experience.job} (${experience.company})\n\n`
+      } else {
+        exportedExperiences += `${experience.job}\n\n`
       }
 
       experience.missions.items.forEach((mission: IListItem) => {

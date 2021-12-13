@@ -8,7 +8,9 @@
     <h3 class="text-h6">
       {{ call.message }}
     </h3>
-    <div class="text-body text--secondary font-weight-light">
+    <div
+      v-if="call.lastUpdate"
+      class="text-body text--secondary font-weight-light">
       {{ call.lastUpdate | formatUpdateDate | formatText('resume.call.lastUpdate') }}
     </div>
     <resume-menu-navigation
@@ -19,11 +21,12 @@
 </template>
 
 <script lang="ts">
+import { IResumeCall } from '@/models/business/Resume'
 import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component
 export default class KeyWords extends Vue {
-  @Prop({ type: Object, required: true }) public call!: any;
+  @Prop({ type: Object, required: true }) public call!: IResumeCall;
 
   @Prop({ type: Boolean, required: true }) public expanded!: boolean;
 }

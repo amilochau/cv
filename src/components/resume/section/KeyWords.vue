@@ -1,5 +1,6 @@
 <template>
   <v-card
+    v-if="topics.items"
     id="keywords"
     elevation="1"
     class="d-print-none mb-2 p-avoid-break-inside">
@@ -16,7 +17,7 @@
         column
         active-class="primary--text">
         <v-chip
-          v-for="(topic, i) in topics"
+          v-for="(topic, i) in topics.items"
           :key="i"
           :value="topic.key"
           outlined
@@ -38,11 +39,12 @@
 </template>
 
 <script lang="ts">
+import { IResumeTopics } from '@/models/business/Resume'
 import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component
 export default class KeyWords extends Vue {
-  @Prop({ type: Array, required: true }) public topics!: [];
+  @Prop({ type: Object, required: true }) public topics!: IResumeTopics;
 
   @Prop({ type: Boolean, required: true }) public expanded!: boolean;
 }
