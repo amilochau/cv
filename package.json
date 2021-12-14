@@ -222,6 +222,11 @@
         "changefreq": "daily",
         "priority": 1.0
       }
+    ],
+    "languages": [
+      { "lang": "x-default", "base": "" },
+      { "lang": "en", "base": "/en" },
+      { "lang": "fr", "base": "/fr" }
     ]
   }
 }

@@ -42,18 +42,36 @@ class SitemapPlugin {
   }
 }
 
-function generatePathAttributes ({ url, changefreq, ...rest }, options) {
-  const pathAttributes = {
-    ...options,
-    ...rest,
-    url,
-  }
+function writePathAttributes (sitemap, { url, changefreq, lastmod, priority }, languages) {
+  if (languages?.length) {
+    // Manage languages
+    languages.forEach(l1 => {
+      const pathAttributes = {
+        url: `${l1.base}${url}`.replace(/\/$/, ''),
+        lastmod,
+        changefreq,
+        priority,
+        links: [],
+      }
 
-  if (changefreq) {
-    pathAttributes.changefreq = changefreq
-  }
+      languages.forEach(l2 => {
+        pathAttributes.links.push({
+          lang: l2.lang,
+          url: `${l2.base}${url}`.replace(/\/$/, ''),
+        })
+      })
 
-  return pathAttributes
+      sitemap.write(pathAttributes)
+    })
+  } else {
+    // No language defined
+    sitemap.write({
+      url,
+      lastmod,
+      changefreq,
+      priority,
+    })
+  }
 }
 
 function buildConfig (configFile = null) {
@@ -83,12 +101,12 @@ function sitemap ({
   base,
   configFile = null,
   paths = [],
-  changefreq,
+  languages = [],
 } = {}) {
   let options = {
     base,
     paths,
-    changefreq,
+    languages,
     lastmod: new Date().toISOString().split('T')[0],
   }
 
@@ -108,7 +126,7 @@ function sitemap ({
           const sitemap = new SitemapStream({ hostname: options.base })
 
           options.paths.forEach(path => {
-            sitemap.write(generatePathAttributes(path, options))
+            writePathAttributes(sitemap, { url: path.url, changefreq: path.changefreq, lastmod: options.lastmod, priority: path.priority }, options.languages)
           })
 
           sitemap.end()
