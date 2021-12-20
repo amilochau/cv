@@ -3,7 +3,7 @@
     "icon": { "mdi": "mdi-human-greeting" },
     "color": "success",
     "message": "Welcome on my resume!",
-    "lastUpdate": "2021-12-09"
+    "lastUpdate": "2021-12-20"
   },
   "persona": {
     "image": "https://mil-content-prd-cdnedp-1.azureedge.net/web/images/cover-antoine-milochau.webp",
@@ -730,8 +730,8 @@
     "busy": true,
     "isTrialPeriod": false,
     "isDepartureNotice": false,
-    "changeLikelihoodInPercent": 0.8,
-    "ongoingProcess": false,
+    "changeLikelihoodInPercent": 0.9,
+    "ongoingProcess": true,
     "noticePeriodInDays": 90,
     "noticePeriodBufferInDays": 21,
     "isDepartureEndOfMonth": false
