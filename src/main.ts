@@ -7,6 +7,7 @@ import App from '@/App.vue'
 import '@/components'
 import { createValidate, createVuetify, i18n, router, store } from '@/plugins'
 import { logInformation, LogStyle } from './plugins/logger'
+import resume from '@/data/resume'
 
 Vue.config.productionTip = false
 
@@ -48,7 +49,5 @@ logInformation('Don\'t hesitate to contact me:')
 logInformation('  - if you want to learn more on my projects')
 logInformation('  - if you want to hire me :)')
 logInformation('===================', LogStyle.Header)
-logInformation('Discover my GitHub projects here: https://github.com/amilochau')
-logInformation('Discover my LinkedIn page here: https://linkedin.com/in/amilochau')
-logInformation('Contact me here: https://calendly.com/amilochau/entretien')
+logInformation(`Contact me here: ${resume[0].persona.contact.url}`)
 logInformation('===================', LogStyle.Header)
