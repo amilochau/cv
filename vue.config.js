@@ -1,8 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 
 const webpack = require('webpack')
-const RobotstxtPlugin = require('./scripts/robotstxt-webpack-plugin/cjs')
-const SitemapPlugin = require('./scripts/sitemap-webpack-plugin/cjs')
+const SeoWebpackPlugin = require('@amilochau/seo-webpack-plugin').default
 
 module.exports = {
   transpileDependencies: [
@@ -13,8 +12,9 @@ module.exports = {
   configureWebpack: {
     plugins: [
       new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /en|fr/),
-      new RobotstxtPlugin(),
-      new SitemapPlugin(),
+      new SeoWebpackPlugin({
+        disableSeoCondition: () => process.env.NODE_ENVIRONMENT !== 'Production',
+      }),
     ],
   },
   chainWebpack: config => {
