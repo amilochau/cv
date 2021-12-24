@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@amilochau/eslint-config-vue": "^0.1.0",
-    "@amilochau/seo-webpack-plugin": "^0.1.1",
+    "@amilochau/seo-webpack-plugin": "^0.1.2",
     "@types/numeral": "^2.0.2",
     "@vue/cli-plugin-babel": "^4.5.15",
     "@vue/cli-plugin-eslint": "~4.5.15",
