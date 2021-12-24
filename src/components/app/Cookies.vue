@@ -4,22 +4,30 @@
     dense
     class="cookies-menu primary white--text d-print-none"
     height="72px">
-    <v-icon color="white">mdi-cookie</v-icon>
+    <v-icon color="white">
+      mdi-cookie
+    </v-icon>
     <span class="mx-4 nowrap cookies-title">{{ $t('app.cookies.title') }}</span>
     <template #extension>
-      <v-spacer/>
+      <v-spacer />
       <v-btn
         class="info mr-1"
         text
-        :to="{ name: 'Privacy' }">{{ $t('app.cookies.read') }}</v-btn>
+        :to="{ name: 'Privacy' }">
+        {{ $t('app.cookies.read') }}
+      </v-btn>
       <v-btn
         class="success mr-1"
         text
-        @click="acceptCookies">{{ $t('app.cookies.accept') }}</v-btn>
+        @click="acceptCookies">
+        {{ $t('app.cookies.accept') }}
+      </v-btn>
       <v-btn
         class="error mr-1"
         text
-        @click="refuseCookies">{{ $t('app.cookies.refuse') }}</v-btn>
+        @click="refuseCookies">
+        {{ $t('app.cookies.refuse') }}
+      </v-btn>
     </template>
   </v-toolbar>
 </template>

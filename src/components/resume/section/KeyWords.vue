@@ -5,7 +5,9 @@
     elevation="1"
     class="d-print-none mb-2 p-avoid-break-inside">
     <v-card-title>
-      <v-icon left>mdi-filter</v-icon>
+      <v-icon left>
+        mdi-filter
+      </v-icon>
       {{ $t('resume.keyWords.title') }}
     </v-card-title>
     <v-card-subtitle class="text--disabled font-italic">
@@ -13,9 +15,9 @@
     </v-card-subtitle>
     <v-card-text class="text-center">
       <v-chip-group
-        @change="$emit('change', $event)"
         column
-        active-class="primary--text">
+        active-class="primary--text"
+        @change="$emit('change', $event)">
         <v-chip
           v-for="(topic, i) in topics.items"
           :key="i"
@@ -31,7 +33,9 @@
       <v-btn
         text
         @click="$emit('expand')">
-        <v-icon left>mdi-unfold-more-horizontal</v-icon>
+        <v-icon left>
+          mdi-unfold-more-horizontal
+        </v-icon>
         {{ $t('resume.keyWords.expand') }}
       </v-btn>
     </v-card-actions>

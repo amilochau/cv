@@ -9,7 +9,7 @@
         justify="center">
         <v-progress-circular
           indeterminate
-          color="primary"/>
+          color="primary" />
       </v-row>
     </template>
   </v-img>

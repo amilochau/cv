@@ -8,8 +8,12 @@
     class="p-avoid-break-inside">
     <template #activator>
       <v-list-item-content>
-        <v-list-item-title class="multi-line">{{ disableTranslation ? item.title.text :  $t(item.title.text) }}</v-list-item-title>
-        <v-list-item-subtitle v-if="item.subtitle" class="multi-line">{{ disableTranslation ? item.subtitle.text :  $t(item.subtitle.text) }}</v-list-item-subtitle>
+        <v-list-item-title class="multi-line">
+          {{ disableTranslation ? item.title.text : $t(item.title.text) }}
+        </v-list-item-title>
+        <v-list-item-subtitle v-if="item.subtitle" class="multi-line">
+          {{ disableTranslation ? item.subtitle.text : $t(item.subtitle.text) }}
+        </v-list-item-subtitle>
       </v-list-item-content>
     </template>
     <list-item
@@ -18,7 +22,7 @@
       :item="subItem"
       :disable-translation="disableTranslation"
       :expanded="expanded"
-      thin/>
+      thin />
   </v-list-group>
 </template>
 

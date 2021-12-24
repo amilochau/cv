@@ -6,10 +6,10 @@
     attach>
     <template #activator="menu">
       <v-btn
-        v-on="menu.on"
         :aria-label="$t('app.footer.languages.title')"
         class="ma-2"
-        icon>
+        icon
+        v-on="menu.on">
         <v-icon>mdi-earth</v-icon>
       </v-btn>
     </template>
@@ -17,7 +17,7 @@
       <list-items
         :list="languages"
         dense
-        @to="setLanguage"/>
+        @to="setLanguage" />
     </v-card>
   </v-menu>
 </template>

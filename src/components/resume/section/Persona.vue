@@ -10,7 +10,7 @@
             :alt="$t('resume.persona.image')"
             :src="!persona.thumbnail ? persona.image : persona.thumbnail"
             class="cursor-pointer"
-            @click="pictureDialog = true"/>
+            @click="pictureDialog = true" />
         </v-list-item-avatar>
         <v-list-item-content>
           <v-list-item-title>
@@ -23,8 +23,12 @@
       </v-list-item>
     </v-card-title>
     <v-card-title class="d-none d-print-block text-center">
-      <h1 class="text-h6">{{ persona.name }}</h1>
-      <h2 v-if="persona.job" class="text-subtitle-1">{{ persona.job }}</h2>
+      <h1 class="text-h6">
+        {{ persona.name }}
+      </h1>
+      <h2 v-if="persona.job" class="text-subtitle-1">
+        {{ persona.job }}
+      </h2>
     </v-card-title>
     <v-card-text
       v-if="persona.description"
@@ -32,7 +36,7 @@
       {{ persona.description }}
     </v-card-text>
     <v-card-text class="d-print-none pt-0">
-      <list-items :list="persona.actions"/>
+      <list-items :list="persona.actions" />
     </v-card-text>
     <v-card-text
       v-if="persona.actions"
@@ -53,7 +57,7 @@
     <v-dialog v-model="pictureDialog" width="600px">
       <resume-dialog-picture
         :persona="persona"
-        @close="pictureDialog = false"/>
+        @close="pictureDialog = false" />
     </v-dialog>
   </v-card>
 </template>

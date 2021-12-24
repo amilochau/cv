@@ -16,7 +16,7 @@
     <resume-menu-navigation
       :expanded="expanded"
       @reduce="$emit('reduce')"
-      @expand="$emit('expand')"/>
+      @expand="$emit('expand')" />
   </v-alert>
 </template>
 

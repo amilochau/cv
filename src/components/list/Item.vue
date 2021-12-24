@@ -3,19 +3,19 @@
     v-if="item.items"
     :item="item"
     :disable-translation="disableTranslation"
-    :expanded="expanded"/>
+    :expanded="expanded" />
   <list-details-subheader
     v-else-if="item.header"
     :header="item.header"
-    :disable-translation="disableTranslation"/>
+    :disable-translation="disableTranslation" />
   <list-details-divider
-    v-else-if="item.divider"/>
+    v-else-if="item.divider" />
   <list-details-item
     v-else
     :item="item"
     :disable-translation="disableTranslation"
     :thin="thin"
-    @custom="$emit('custom', $event)"/>
+    @custom="$emit('custom', $event)" />
 </template>
 
 <script lang="ts">

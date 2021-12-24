@@ -1,16 +1,16 @@
 <template>
   <div class="d-flex fill-height">
     <v-main>
-      <app-progress-bar :lazy-delay="200"/>
-      <app-cookies/>
+      <app-progress-bar :lazy-delay="200" />
+      <app-cookies />
       <v-fade-transition mode="out-in">
         <v-container class="fill-height py-0">
-          <router-view/>
+          <router-view />
         </v-container>
       </v-fade-transition>
     </v-main>
-    <app-footer-bar/>
-    <app-snackbar/>
+    <app-footer-bar />
+    <app-snackbar />
   </div>
 </template>
 
@@ -83,7 +83,9 @@ export default class RootPage extends Vue {
   }
 
   public bootstrapMeta () {
-    if (typeof document === 'undefined') { return }
+    if (typeof document === 'undefined') {
+      return
+    }
     this.setMeta()
   }
 

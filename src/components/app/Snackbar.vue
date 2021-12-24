@@ -1,8 +1,8 @@
 <template>
   <v-snackbar
+    v-model="enabled"
     :timeout="errorMessages.timeout"
     :color="errorMessages.color"
-    v-model="enabled"
     top
     right
     class="d-print-none">
@@ -21,8 +21,12 @@
           icon
           class="ml-2"
           @click.native="expanded = !expanded">
-          <v-icon v-if="expanded">mdi-chevron-up</v-icon>
-          <v-icon v-else>mdi-chevron-down</v-icon>
+          <v-icon v-if="expanded">
+            mdi-chevron-up
+          </v-icon>
+          <v-icon v-else>
+            mdi-chevron-down
+          </v-icon>
         </v-btn>
         <v-btn
           text
@@ -31,7 +35,10 @@
           {{ $t('app.snackbar.close') }}
         </v-btn>
       </v-col>
-      <v-col v-if="expanded && errorMessages.details" cols="12" class="mt-4 mb-2">
+      <v-col
+        v-if="expanded && errorMessages.details"
+        cols="12"
+        class="mt-4 mb-2">
         <span style="white-space: pre-wrap">{{ errorMessages.details }}</span>
       </v-col>
     </v-row>
