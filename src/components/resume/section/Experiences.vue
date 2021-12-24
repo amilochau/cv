@@ -74,8 +74,8 @@
           v-if="expanded && experience.tags"
           class="mt-3 p-avoid-break-inside">
           <v-chip
-            v-for="(tag, i) in experience.tags"
-            :key="i"
+            v-for="(tag, j) in experience.tags"
+            :key="j"
             :color="selectedTopic === tag.key ? 'primary' : undefined"
              outlined
             small
