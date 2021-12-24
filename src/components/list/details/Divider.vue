@@ -1,6 +1,6 @@
 <template>
   <v-divider
-    class="my-2 p-avoid-break-inside"/>
+    class="my-2 p-avoid-break-inside" />
 </template>
 
 <script lang="ts">

@@ -4,11 +4,13 @@
     elevation="1"
     class="mb-2 p-avoid-break-inside">
     <v-card-title>
-      <v-icon left>mdi-school</v-icon>
+      <v-icon left>
+        mdi-school
+      </v-icon>
       {{ $t('resume.training.title') }}
     </v-card-title>
     <v-card-text>
-      <list-items :list="trainings"/>
+      <list-items :list="trainings" />
     </v-card-text>
   </v-card>
 </template>

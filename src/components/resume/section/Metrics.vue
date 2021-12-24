@@ -4,11 +4,13 @@
     elevation="1"
     class="mb-2 p-avoid-break-inside">
     <v-card-title>
-      <v-icon left>mdi-ticket-confirmation</v-icon>
+      <v-icon left>
+        mdi-ticket-confirmation
+      </v-icon>
       {{ $t('resume.metrics.title') }}
     </v-card-title>
     <v-card-text>
-      <list-items :list="metrics"/>
+      <list-items :list="metrics" />
     </v-card-text>
   </v-card>
 </template>

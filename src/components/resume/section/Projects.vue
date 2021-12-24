@@ -4,11 +4,13 @@
     elevation="1"
     class="mb-2">
     <v-card-title class="p-avoid-break-inside">
-      <v-icon left>mdi-projector</v-icon>
+      <v-icon left>
+        mdi-projector
+      </v-icon>
       {{ $t('resume.projects.title') }}
     </v-card-title>
     <v-card-text>
-      <list-items :list="projects" :expanded="expanded"/>
+      <list-items :list="projects" :expanded="expanded" />
       <div
         v-if="expanded && projects.tags"
         class="mt-3 p-avoid-break-inside">

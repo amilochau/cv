@@ -3,11 +3,13 @@
     <v-app-bar
       flat
       dense>
-      <v-icon left>mdi-run-fast</v-icon>
+      <v-icon left>
+        mdi-run-fast
+      </v-icon>
       <v-toolbar-title>
         {{ $t('resume.change.title') }}
       </v-toolbar-title>
-      <v-spacer/>
+      <v-spacer />
       <v-btn
         icon
         @click="$emit('close')">
@@ -41,7 +43,7 @@
           {{ change.isDepartureNotice ? $t('resume.change.departureNoticed') : $t('resume.change.noNotice') }}
         </v-chip>
         <section v-if="change.changeLikelihoodInPercent !== undefined">
-          <v-divider class="my-4"/>
+          <v-divider class="my-4" />
           <div>{{ $t('resume.change.changeLikelihood') }}</div>
           <p class="text-h4 text--primary">
             {{ change.changeLikelihoodInPercent | formatPercents }}
@@ -58,7 +60,7 @@
           </v-chip>
         </section>
         <section v-if="change.noticePeriodInDays !== undefined">
-          <v-divider class="my-4"/>
+          <v-divider class="my-4" />
           <div>{{ $t('resume.change.noticePeriod') }}</div>
           <p class="text-h4 text--primary">
             {{ change.noticePeriodInDays | formatDays }}

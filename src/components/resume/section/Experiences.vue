@@ -3,7 +3,9 @@
     v-if="experiences.items"
     id="experiences">
     <v-card-title @dblclick="copyExperiences">
-      <v-icon left>mdi-briefcase</v-icon>
+      <v-icon left>
+        mdi-briefcase
+      </v-icon>
       {{ $t('resume.experiences.title') }}
     </v-card-title>
     <v-card
@@ -26,7 +28,9 @@
             outlined
             class="mb-1 mr-2 experience-date"
             @click="toggleDatesDisplay">
-            <v-icon left>mdi-calendar-range-outline</v-icon>
+            <v-icon left>
+              mdi-calendar-range-outline
+            </v-icon>
             <span v-if="displayDurations">
               {{ experience.startDate | formatDifference(experience.endDate) }}
             </span>
@@ -45,7 +49,9 @@
             class="mb-1 mr-2"
             color="error"
             @click="changeDialog = true">
-            <v-icon left>mdi-fire</v-icon>
+            <v-icon left>
+              mdi-fire
+            </v-icon>
             {{ $t('resume.experiences.current') }}
           </v-chip>
           <v-chip
@@ -56,7 +62,9 @@
             :href="experience.placeUri"
             target="_blank"
             rel="noopener">
-            <v-icon left>mdi-map-marker-outline</v-icon>
+            <v-icon left>
+              mdi-map-marker-outline
+            </v-icon>
             {{ experience.place }}
           </v-chip>
         </p>
@@ -68,8 +76,7 @@
         <list-items
           v-if="experience.missions"
           :list="experience.missions"
-          :expanded="expanded">
-        </list-items>
+          :expanded="expanded" />
         <div
           v-if="expanded && experience.tags"
           class="mt-3 p-avoid-break-inside">
@@ -77,7 +84,7 @@
             v-for="(tag, j) in experience.tags"
             :key="j"
             :color="selectedTopic === tag.key ? 'primary' : undefined"
-             outlined
+            outlined
             small
             class="mr-1 mb-1 v-chip--tile">
             {{ tag.label }}
@@ -88,7 +95,7 @@
     <v-dialog v-model="changeDialog" width="400px">
       <resume-dialog-change
         :change="change"
-        @close="changeDialog = false"/>
+        @close="changeDialog = false" />
     </v-dialog>
   </div>
 </template>

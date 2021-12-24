@@ -6,38 +6,44 @@
           :call="currentResume.call"
           :expanded="expanded"
           @expand="expanded = true"
-          @reduce="expanded = false"/>
+          @reduce="expanded = false" />
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="12" md="4" class="p-col-4">
+      <v-col
+        cols="12"
+        md="4"
+        class="p-col-4">
         <resume-section-persona
           v-if="currentResume.persona"
-          :persona="currentResume.persona"/>
+          :persona="currentResume.persona" />
         <resume-section-key-words
           v-if="currentResume.topics"
           :topics="currentResume.topics"
           :expanded="expanded"
           @change="$event ? selectedTopic = $event : selectedTopic = ''"
-          @expand="expanded = true"/>
+          @expand="expanded = true" />
         <resume-section-training
           v-if="currentResume.trainings"
-          :trainings="currentResume.trainings"/>
+          :trainings="currentResume.trainings" />
         <resume-section-metrics
           v-if="currentResume.metrics"
-          :metrics="currentResume.metrics"/>
+          :metrics="currentResume.metrics" />
         <resume-section-projects
           v-if="currentResume.projects"
           :projects="currentResume.projects"
-          :expanded="expanded"/>
+          :expanded="expanded" />
       </v-col>
-      <v-col cols="12" md="8" class="p-col-8">
+      <v-col
+        cols="12"
+        md="8"
+        class="p-col-8">
         <resume-section-experiences
           v-if="currentResume.experiences"
           :experiences="currentResume.experiences"
           :change="currentResume.change"
           :expanded="expanded"
-          :selected-topic="selectedTopic"/>
+          :selected-topic="selectedTopic" />
       </v-col>
     </v-row>
   </div>

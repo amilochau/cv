@@ -3,7 +3,7 @@
     :active="lazyProgress"
     :indeterminate="progress.indeterminate"
     :aria-label="$t('app.progressbar.label')"
-    class="progress-bar mt-0 mb-0 d-print-none"/>
+    class="progress-bar mt-0 mb-0 d-print-none" />
 </template>
 
 <script lang="ts">

@@ -3,15 +3,15 @@
     class="py-0"
     dense
     expand>
-    <slot name="before"/>
+    <slot name="before" />
     <list-item
       v-for="(item, i) in list.items"
       :key="i"
       :item="item"
       :disable-translation="list.disableTranslation"
       :expanded="expanded"
-      @custom="$emit($event.name, $event.args)"/>
-    <slot name="after"/>
+      @custom="$emit($event.name, $event.args)" />
+    <slot name="after" />
   </v-list>
 </template>
 
