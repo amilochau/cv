@@ -109,13 +109,6 @@ export default class RootPage extends Vue {
     EventBus.$on('goto-notfound', () => {
       this.$router.push({ name: 'NotFound' })
     })
-    EventBus.$on('goto-login', () => {
-      if (window.location.pathname) {
-        this.$router.push({ name: 'account/Login', query: { returnUrl: window.location.pathname } })
-      } else {
-        this.$router.push({ name: 'account/Login' })
-      }
-    })
   }
 }
 </script>
