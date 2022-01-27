@@ -3,7 +3,7 @@
     "icon": { "mdi": "mdi-human-greeting" },
     "color": "success",
     "message": "Welcome on my resume!",
-    "lastUpdate": "2022-01-07"
+    "lastUpdate": "2022-01-27"
   },
   "persona": {
     "image": "https://mil-content-prd-cdnedp-1.azureedge.net/web/images/cover-antoine-milochau.webp",
@@ -219,6 +219,9 @@
               "items": [
                 {
                   "title": { "text": "Team Leader of a 6-developers team (FR, CI, BL) during one year " }
+                },
+                {
+                  "title": { "text": "Recruitment of developer profiles for the SPVIE group" }
                 },
                 {
                   "title": { "text": "Training of the developers on technologies (.NET, monitoring, quality, architecture patterns...)" }
