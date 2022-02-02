@@ -28,11 +28,6 @@
           "action": { "href": "https://www.linkedin.com/in/amilochau" }
         },
         {
-          "title": { "text": "Calendly", "replacement": "amilochau" },
-          "icon": { "mdi": "mdi-calendar-plus" },
-          "action": { "href": "https://calendly.com/amilochau/entretien" }
-        },
-        {
           "title": { "text": "GitHub", "replacement": "amilochau" },
           "icon": { "mdi": "mdi-github" },
           "action": { "href": "https://github.com/amilochau" }
