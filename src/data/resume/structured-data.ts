@@ -1,7 +1,7 @@
 export default {
   '@context': 'https://schema.org/',
   '@type': 'Person',
-  name: 'Party Coffee Cake',
+  name: 'Antoine Milochau',
   givenName: 'Antoine',
   familyName: 'Milochau',
   jobTitle: 'Software Architect',
