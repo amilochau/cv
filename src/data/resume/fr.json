@@ -3,7 +3,7 @@
     "icon": { "mdi": "mdi-human-greeting" },
     "color": "success",
     "message": "Bienvenue sur mon CV !",
-    "lastUpdate": "2022-02-19"
+    "lastUpdate": "2022-03-08"
   },
   "persona": {
     "image": "https://mil-content-prd-cdnedp-1.azureedge.net/web/images/cover-antoine-milochau.webp",
@@ -141,24 +141,28 @@
     ],
     "tags": [
       {
-        "label": "Azure",
+        "label": "Azure PaaS",
         "key": "infrastructure"
       },
       {
-        "label": "SQL Server",
+        "label": "Azure API Management",
         "key": "infrastructure"
       },
       {
-        "label": "Service Bus",
+        "label": "Azure Functions",
         "key": "infrastructure"
       },
       {
-        "label": "Functions",
+        "label": "Azure Service Bus",
         "key": "infrastructure"
       },
       {
-        "label": "Azure DevOps",
-        "key": "devops"
+        "label": "Azure CosmosDB",
+        "key": "infrastructure"
+      },
+      {
+        "label": "Azure SQL",
+        "key": "infrastructure"
       },
       {
         "label": "GitHub",
@@ -191,20 +195,35 @@
           "disableTranslation": true,
           "items": [
             {
-              "title": { "text": "Améliorations d'architecture" },
+              "title": { "text": "Architecture fonctionnelle et applicative" },
               "icon": { "mdi": "mdi-floor-plan", "unicode": "📐" },
               "items": [
                 {
-                  "title": { "text": "Migration des applications existantes (vers .NET Core/.NET 6.0)" }
+                  "title": { "text": "Cadrage et suivi des projets business et techniques (estimations, études d'impact, accompagnement des équipes, suivi du respect des préconisations)" }
                 },
                 {
                   "title": { "text": "Revue d'architecture : mise en place de N-Tiers sur les applications legacy, pattern microservices sur les nouveaux projets" }
                 },
                 {
-                  "title": { "text": "Création de frameworks d'entreprise : applications en ASP.NET Core ou Azure Functions, templates YAML de déploiement" }
+                  "title": { "text": "Définition de schémas d'architecture et plans de migration vers une architecture scalable, résiliente (serverless, secretless)" }
                 },
                 {
-                  "title": { "text": "Définition de schémas d'architecture et plans de migration vers une architecture scalable, résiliente" }
+                  "title": { "text": "Création de frameworks et templates d'entreprise : applications en ASP.NET Core / Azure Functions / Angular, templates YAML de déploiement" }
+                }
+              ]
+            },
+            {
+              "title": { "text": "Architecture Cloud & Automatisation" },
+              "icon": { "mdi": "mdi-microsoft-azure", "unicode": "⚙️" },
+              "items": [
+                {
+                  "title": { "text": "Définition d'architectures Cloud, mise en place d'une stack Azure PaaS, soutenant la migration des applications en microservices" }
+                },
+                {
+                  "title": { "text": "Mise en place de CI/CD sur toutes les applications (templates YAML avec Azure Pipelines)" }
+                },
+                {
+                  "title": { "text": "Mise en place de IaC pour la refonte de l'infrastructure en microservices (templates ARM en Bicep)" }
                 }
               ]
             },
@@ -216,10 +235,10 @@
                   "title": { "text": "Team Leader d'une équipe de 6 développeurs (FR, CI, BL) pendant un an" }
                 },
                 {
-                  "title": { "text": "Recrutement des profils développeurs pour le groupe SPVIE" }
+                  "title": { "text": "Recrutement des profils techniques (développeurs, QA, DevOps, architectes) pour le groupe SPVIE" }
                 },
                 {
-                  "title": { "text": "Formation des développeurs sur les technologies (.NET, monitoring, qualité, patterns d'architecture...)" }
+                  "title": { "text": "Formation des équipes techniques sur les technologies (.NET, monitoring, qualité, patterns d'architecture...)" }
                 },
                 {
                   "title": { "text": "Accompagnement à la mise en place de méthode Scrum dans les équipes techniques" }
@@ -227,19 +246,7 @@
               ]
             },
             {
-              "title": { "text": "Automatisation des process (DevOps)" },
-              "icon": { "mdi": "mdi-microsoft-azure-devops", "unicode": "⚙️" },
-              "items": [
-                {
-                  "title": { "text": "Mise en place de CI/CD sur toutes les applications (templates YAML avec Azure Pipelines)" }
-                },
-                {
-                  "title": { "text": "Mise en place de IaC sur un scope restreint (templates ARM en Bicep)" }
-                }
-              ]
-            },
-            {
-              "title": { "text": "Amélioration continue de la qualité" },
+              "title": { "text": "Amélioration continue de la qualité et de la sécurité" },
               "icon": { "mdi": "mdi-chart-line", "unicode": "📈" },
               "items": [
                 {
@@ -247,6 +254,9 @@
                 },
                 {
                   "title": { "text": "Introduction de tests unitaires et E2E sur les applications business" }
+                },
+                {
+                  "title": { "text": "Audit de sécurité sur les applications et l'infrastructure, suivi des remédiations par les équipes techniques" }
                 }
               ]
             }
@@ -270,23 +280,35 @@
             "key": "architecture"
           },
           {
-            "label": "Messaging",
-            "key": "architecture"
-          },
-          {
-            "label": "Azure",
+            "label": "Azure PaaS",
             "key": "infrastructure"
           },
           {
-            "label": "Functions",
+            "label": "Azure API Management",
             "key": "infrastructure"
           },
           {
-            "label": "Service Bus",
+            "label": "Azure Functions",
             "key": "infrastructure"
           },
           {
-            "label": "App Insights",
+            "label": "Azure Service Bus",
+            "key": "infrastructure"
+          },
+          {
+            "label": "Azure App Insights",
+            "key": "infrastructure"
+          },
+          {
+            "label": "Azure Key Vault",
+            "key": "infrastructure"
+          },
+          {
+            "label": "Azure CosmosDB",
+            "key": "infrastructure"
+          },
+          {
+            "label": "Azure SQL",
             "key": "infrastructure"
           },
           {
@@ -733,7 +755,7 @@
     "busy": true,
     "isTrialPeriod": false,
     "isDepartureNotice": false,
-    "changeLikelihoodInPercent": 0.4,
+    "changeLikelihoodInPercent": 0.9,
     "ongoingProcess": true,
     "noticePeriodInDays": 90,
     "noticePeriodBufferInDays": 21,

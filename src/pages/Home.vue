@@ -32,7 +32,8 @@
         <resume-section-projects
           v-if="currentResume.projects"
           :projects="currentResume.projects"
-          :expanded="expanded" />
+          :expanded="expanded"
+          :selected-topic="selectedTopic" />
       </v-col>
       <v-col
         cols="12"

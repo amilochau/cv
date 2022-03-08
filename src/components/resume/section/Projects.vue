@@ -17,6 +17,7 @@
         <v-chip
           v-for="(tag, i) in projects.tags"
           :key="i"
+          :color="selectedTopic === tag.key ? 'primary' : undefined"
           outlined
           small
           class="mr-1 mb-1 v-chip--tile">
@@ -36,5 +37,7 @@ export default class Projects extends Vue {
   @Prop({ type: Object, required: true }) public projects!: IResumeProjects;
 
   @Prop({ type: Boolean, required: true }) public expanded!: boolean;
+
+  @Prop({ type: String, required: true }) public selectedTopic!: string;
 }
 </script>
