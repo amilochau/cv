@@ -8,6 +8,11 @@
     <h3 class="text-h6">
       {{ call.message }}
     </h3>
+    <p
+      v-if="call.description"
+      class="text-subtitle-1">
+      {{ call.description }}
+    </p>
     <div
       v-if="call.lastUpdate"
       class="text-body text--secondary font-weight-light">

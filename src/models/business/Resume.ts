@@ -4,6 +4,7 @@ export interface IResumeCall {
   icon?: IIcon
   color?: string
   message: string
+  description?: string
   lastUpdate?: string
 }
 
