@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: PRD
     steps:
-      - uses: actions/checkout@v2 # For parameters file
+      - uses: actions/checkout@v3 # For parameters file
         with:
           path: application
       - name: Deploy infrastructure
@@ -38,7 +38,7 @@ jobs:
     needs: deploy_infra
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Deploy Static Web Apps application
         uses: amilochau/github-actions/deploy/static-web-apps@v1
         with:
